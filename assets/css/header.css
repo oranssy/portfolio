@@ -55,9 +55,12 @@
     top: 31vh;
     line-height: 0.8;
 }
-.header__title h3 {
+.headerSubject {
     font-size: 15.8vw;
     color: var(--title);
+}
+.headerSubject span {
+    display: inline-block;
 }
 .headerDesc1 {
     font-family: var(--font-kor);
@@ -72,4 +75,8 @@
     position: absolute;
     left: 8vw;
     bottom: 7.5vh;
+}
+.headerDesc2 span {
+    display: inline-block;
+    margin-right: 1vw;
 }

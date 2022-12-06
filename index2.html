@@ -747,7 +747,7 @@
         // 헤더 영역 gsap 애니메이션 효과 주기
 
         // (1) 가운데 무지개 빛방울 서서히 나타나기
-        gsap.fromTo(".header-bg", {autoAlpha: 0}, {autoAlpha: 1, duration: 20});
+        gsap.fromTo(".header-bg", {autoAlpha: 0}, {autoAlpha: 1, delay: 0.2, duration: 30});
 
 
         // (2) 타이틀 교차하듯 만나게 나타내기
@@ -765,12 +765,18 @@
         let letter3 = document.querySelector(".headerSubject span:nth-child(3)");
         let letter4 = document.querySelector(".headerSubject span:nth-child(4)");
         let letter5 = document.querySelector(".headerSubject span:nth-child(5)");
+
+        // TweenLite.from(letter1, 5.5, {y:"-300px", x: "-300", opacity:"0"});
+        // TweenLite.from(letter2, 5.5, {y:"900px", x:"300", opacity:"0"});
+        // TweenLite.from(letter3, 5.5, {y:"-300px", x: "-300", opacity:"0"});
+        // TweenLite.from(letter4, 5.5, {y:"600px", x:"300", opacity:"0"});
+        // TweenLite.from(letter5, 5.5, {y:"-300px", x: "-300", opacity:"0"});
         
-        TweenLite.from(letter1, 15, {y:"-100px", x: "-100", opacity:"0"});
-        TweenLite.from(letter2, 15, {y:"200px",x:"100", opacity:"0"});
-        TweenLite.from(letter3, 15, {y:"-100px",  x: "-100",opacity:"0"});
-        TweenLite.from(letter4, 15, {y:"100px",x:"100", opacity:"0"});
-        TweenLite.from(letter5, 15, {y:"-100px",  x: "-100",opacity:"0"});
+        TweenLite.from(letter1, 6, {delay: 2, y:"-300px", x: "-500", opacity:"0"});
+        TweenLite.from(letter2, 6, {delay: 2, y:"900px", x:"400", opacity:"0"});
+        TweenLite.from(letter3, 6, {delay: 2, y:"-500px", x: "-200", opacity:"0"});
+        TweenLite.from(letter4, 6, {delay: 2, y:"600px", x:"300", opacity:"0"});
+        TweenLite.from(letter5, 6, {delay: 2, y:"-300px", x: "-100", opacity:"0"});
 
 
 
@@ -804,31 +810,31 @@
             opacity: 0,
         },
         {
-            delay: 2, // 2초 후에 진행됨
-            duration: 0.5,    // 0.5초 동안
+            delay: 0, // 3 : 2초 후에 진행됨
+            duration: 3,    // 0.5초 동안
             x: 0,
             opacity: 1,
             ease: 'power3.easeOut',
             stagger: {
                 from: 'start', // 왼쪽부터 진행
-                amount: 0.7, // 0.7초 간격으로
+                amount: 1, // 0.7초 간격으로
             },
         })
 
-        // leftFlow2 왼쪽 글자부터 나타나기
+        // leftFlow2 오른쪽 글자부터 나타나기
         gsap.fromTo('.leftFlow2 span', {
             x: 50,
             opacity: 0,
         },
         {
-            delay: 3, // 2초 후에 진행됨
-            duration: 0.5,    // 0.5초 동안
+            delay: 3.2,
+            duration: 3,
             x: 0,
             opacity: 1,
             ease: 'power3.easeOut',
             stagger: {
-                from: 'end', // 왼쪽부터 진행
-                amount: 0.7, // 0.7초 간격으로
+                from: 'start',
+                amount: 1,
             },
         })
 
@@ -873,9 +879,9 @@
         console.log(WD2);
         console.log(WD3);
         
-        TweenMax.staggerFrom(WD1[0].children, .45, {y: -50, opacity: 0}, 0.5);
-        TweenMax.staggerFrom(WD2[0].children, .45, {y: -50, opacity: 0}, 0.8);
-        TweenMax.staggerFrom(WD3[0].children, .45, {y: -50, opacity: 0}, 1.1);
+        TweenMax.staggerFrom(WD1[0].children, 1, {delay: 5, y: -50, opacity: 0}, .18);
+        TweenMax.staggerFrom(WD2[0].children, 1, {delay: 5.4, y: -50, opacity: 0}, .18);
+        TweenMax.staggerFrom(WD3[0].children, 1, {delay: 5.9, y: -50, opacity: 0}, .18);
 
 
         // console.clear();
