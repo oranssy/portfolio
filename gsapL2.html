@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>gsapL</title>
+    <style>
+      @font-face {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 400;
+        src: url(https://fonts.gstatic.com/s/poppins/v20/pxiEyp8kv8JHgFVrJJfedw.ttf) format('truetype');
+      }
+      .ts-line {
+        overflow: hidden;
+        padding: 0 0 0.2em 0;
+        margin: 0 0 -0.1em;
+      }
+      /* ////////////////////////////////////////////////////////////////////////// */
+      html {
+        height: 100%;
+        display: flex;
+        background: #352f44;
+        color: #a5ebc5;
+        font-family: "Poppins", sans-serif;
+      }
+      body {
+        margin: auto;
+      }
+      blockquote {
+        cursor: pointer;
+        display: block;
+        font-size: 3.5em;
+        max-width: 10em;
+        margin: auto;
+        line-height: 1;
+      }
+      blockquote small {
+        margin-top: 0.2em;
+        text-align: right;
+        display: block;
+        font-size: 0.6em;
+      }
+      .note {
+        text-align: center;
+        color: #fff;
+        font-size: 0.8em;
+        opacity: 0;
+      }
+
+    </style>
+</head>
+
+
+<body>
+  <blockquote>
+    Famous quotes are mostly made up.
+    <small>- Nobody</small>
+  </blockquote>
+  
+  <p class="note">Click to transition out.</p>
+  
+
+
+
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.20.2/TweenMax.min.js"></script>
+  <!-- <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/SplitText.min.js?v=2017b"></script>
+  <script src="https://codepen.io/shshaw/pen/epmrgO.js"></script> -->
+  <script>
+    console.clear();
+
+      var el = document.querySelector('blockquote');
+
+
+      var s = new SplitText(
+        el, 
+        {
+          type:"lines, words", 
+          linesClass:"ts-line"
+        }
+      );
+      
+      var tl = new TimelineMax({ 
+        delay: 0.5,
+        repeatDelay: 0.5,
+        repeat: -1
+      });
+
+      tl.addLabel('enter');
+
+      tl.staggerFromTo(
+          s.words, 
+          0.6, 
+          {
+            yPercent: 100,
+          },
+          {
+            yPercent: 0,
+            ease: 'Circ.easeOut'
+          },
+          0.2,
+          'enter'
+        );
+        
+      tl.staggerFromTo(
+          s.words, 
+          0.6, 
+          {
+            opacity: 0,
+          },
+          {
+            opacity: 1,
+            ease: 'Power1.easeOut'
+          },
+          0.2,
+        'enter'
+        );
+
+
+      tl.fromTo('.note', 1, { opacity: 0 },{ opacity: 0.6, ease: 'Linear.easeNone' });
+      tl.addPause();
+
+      tl.addLabel('exit');
+
+      tl.to('.note', 0.5, { opacity: 0, ease: 'Linear.easeNone' });
+
+      tl.staggerTo(
+          s.words, 
+          0.4, 
+          {
+            yPercent: -200,
+            ease: 'Circ.easeIn'
+          }, 
+          0.1,
+          'exit'
+        );
+
+      tl.staggerTo(
+          s.words, 
+          0.4, 
+          {
+            opacity: 0,
+            ease: 'Power1.easeIn'
+          }, 
+          0.1,
+          'exit'
+        );
+
+      el.addEventListener('click',function(){
+        console.log('click!');
+        tl.play(); // tl.reversed() ? tl.play() : tl.reverse()
+      });
+  </script>
+</body>
+</html>

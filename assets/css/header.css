@@ -59,14 +59,14 @@
     font-size: 15.8vw;
     color: var(--title);
 }
-.header__title .desc1 {
+.headerDesc1 {
     font-family: var(--font-kor);
     font-size: 0.9vw;
     font-weight: 100;
     line-height: 1.63;
     margin-left: 0.65vw;
 }
-#header .desc2 {
+.headerDesc2 {
     font-size: 3.12vw;
     line-height: 1.2;
     position: absolute;

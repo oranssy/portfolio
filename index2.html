@@ -52,13 +52,13 @@
 
         <div class="header__title">
             <h3>Ideas</h3>
-            <p class="desc1">
-                저를 새롭게 두근거리게 하는 <br>
-                코딩에 대한 꿈과 생각이 빛날 수 있도록
-            </p>
+            <div class="headerDesc1">
+                <p class="leftFlow1">저를 새롭게 두근거리게 하는</p>
+                <p class="leftFlow2">코딩에 대한 꿈과 생각이 빛날 수 있도록</p>
+            </div>
         </div>
         <!-- //header__title -->
-        <p class="desc2">
+        <p class="headerDesc2">
             I want to create <br>
             an ingenious websites <br>
             with you.
@@ -736,6 +736,71 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
     <!-- ScrollTrigger 플러그인 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <script>
+        // 헤더 영역 gsap 애니메이션 효과 주기
+
+        // (1) 가운데 무지개 빛방울 서서히 나타나기
+        gsap.fromTo(".header-bg", {autoAlpha: 0}, {autoAlpha: 1, duration: 12});
+
+        // (2) 
+
+        // (3) headerDesc1 나타나기
+        // leftFlow1 문장을 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
+        document.querySelectorAll(".leftFlow1").forEach(text => {
+            let splitText = text.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+
+            splitWrap = "<span aria-hidden='true' class='' >" + splitWrap + "</span>";
+            text.innerHTML = splitWrap;
+            text.setAttribute("aria-label", splitText);
+        });
+
+        // leftFlow2 문장을 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
+        document.querySelectorAll(".leftFlow2").forEach(text => {
+            let splitText = text.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+
+            splitWrap = "<span aria-hidden='true' class='' >" + splitWrap + "</span>";
+            text.innerHTML = splitWrap;
+            text.setAttribute("aria-label", splitText);
+        });
+
+        // leftFlow1 왼쪽 글자부터 나타나기
+        gsap.fromTo('.leftFlow1 span', {
+            x: 50,
+            opacity: 0,
+        },
+        {
+            delay: 2, // 1초 후에 진행됨
+            duration: 1,    // 1초 동안
+            x: 0,
+            opacity: 1,
+            ease: 'power3.easeOut',
+            stagger: {
+                from: 'start', // 왼쪽부터 진행
+                amount: 0.7, // 0.7초 간격으로
+            },
+        })
+
+        // leftFlow2 왼쪽 글자부터 나타나기
+        gsap.fromTo('.leftFlow2 span', {
+            x: 50,
+            opacity: 0,
+        },
+        {
+            delay: 2, // 1초 후에 진행됨
+            duration: 1,    // 1초 동안
+            x: 0,
+            opacity: 1,
+            ease: 'power3.easeOut',
+            stagger: {
+                from: 'end', // 왼쪽부터 진행
+                amount: 0.7, // 0.7초 간격으로
+            },
+        })
+    </script>
+
     <script>
         // introduce section 마우스 오버시 내용 띄우기 (반복문으로 바꾸기!!)
         const Select1 = document.querySelector(".select01");
@@ -826,11 +891,9 @@
 
 
         // Website section 가로 모드
-        // 스크롤할 때 움직이도록 gsap 플러그인 설정
-        gsap.registerPlugin(ScrollTrigger);
+        gsap.registerPlugin(ScrollTrigger);        // 스크롤할 때 움직이도록 gsap 플러그인 설정
 
-        // 섹션 모두를 선택
-        const sections = gsap.utils.toArray(".horizon");
+        const sections = gsap.utils.toArray(".horizon");        // 섹션 모두를 선택
 
         gsap.to(sections, {
             // xPercent : x좌표의 위치를 %로 표현 ( - 는 오른쪽방향으로 넘기기 위함 / 100은 %이기 때문에 곱해줌 / length에 -1을 해주는 이유는 처음에 뜨는 화면을 포함하지 않기 위함 / -1을 없애면 다음 섹션만큼 빈 공간이 생김)
