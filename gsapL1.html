@@ -6,16 +6,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>gsapL</title>
     <style>
+      *{
+        margin:0;
+        padding:0;
+      }
       body {
-        margin: 10px;
+        width: 100vw;
       }
-
-      .box {
-        display: block;
+      .headerSubject{
+        text-align:center;
+        padding-top: 70px;
       }
-
-      .pink {
-        background-color: pink;
+      .letter{
+        display:inline-block;
+        font-size: 15.8vw;
+        font-weight: 600;
       }
 
     </style>
@@ -23,13 +28,27 @@
 
 
 <body>
-  <div class="box green"></div>
-  <div class="box orange"></div>
-  <div class="box grey"></div>
+  <h3 class="headerSubject">
+    <span class="letter">I</span>
+    <span class="letter">d</span>
+    <span class="letter">e</span>
+    <span class="letter">a</span>
+    <span class="letter">s</span>
+  </h3>
   
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
   <script>
-    gsap.fromTo(".box", {autoAlpha: 0}, {autoAlpha: 0.5, duration: 1});
+    let letter1 = document.querySelector(".letter:nth-child(1)");
+    let letter2 = document.querySelector(".letter:nth-child(2)");
+    let letter3 = document.querySelector(".letter:nth-child(3)");
+    let letter4 = document.querySelector(".letter:nth-child(4)");
+    let letter5 = document.querySelector(".letter:nth-child(5)");
+
+    TweenLite.from(letter1, 4, {y:"-100px", x: "-100", opacity:"0"});
+    TweenLite.from(letter2, 4, {y:"200px",x:"100", opacity:"0"});
+    TweenLite.from(letter3, 4, {y:"-100px",  x: "-100",opacity:"0"});
+    TweenLite.from(letter4, 4, {y:"100px",x:"100", opacity:"0"});
+    TweenLite.from(letter5, 4, {y:"-100px",  x: "-100",opacity:"0"});
   </script>
 </body>
 </html>
