@@ -1,0 +1,230 @@
+/* values */
+#values {
+    /* width: 100vw;
+    overflow: hidden; */
+}
+.values-bg {
+    margin-left: 55vw;
+    margin-top: 30vh;
+}
+.values-bg iframe {
+    width: 60vw;
+    height: 60vh;
+}
+#values h3, #values h4 {
+    font-size: 15.5vw;
+    color: var(--title);
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+}
+#values h3 {
+    margin-left: -36vw;
+    margin-top: -70vh;
+    margin-bottom: -10vh;
+}
+#values h4 {
+    margin-left: -23vw;
+    margin-top: 2vh;
+    margin-bottom: 10vh;
+}
+.values__info {
+    margin-left: 10.2vw;
+    margin-bottom: 40vh;
+}
+.values__infoTit {
+    font-family: var(--font-sub);
+    font-size: 3.6vw;
+    font-weight: 500;
+    margin-bottom: 4vh;
+}
+.values__infoDesc {
+    font-family: var(--font-kor);
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.values__brand {
+    position: relative;
+}
+.shape__arc {
+    width: 100vw;
+    height: 100vh;
+    background: url(../img/bowl.svg);
+    background-size: cover;
+    background-position: center center;
+}
+.shape__circles {}
+.shape__circles .bead2 {
+    background: url(../img/circle_02.jpg) no-repeat;
+    background-size: cover;
+    width: 28vw;
+    height: 28vw;
+    border-radius: 50%;
+    position: absolute;
+    left: 48.9vw;
+    top: -28.6vh;
+}
+.circle {
+    font-family: var(--font-kor);
+    font-size: 1.5vw;
+    color: var(--black);
+    line-height: 1.2;
+    text-align: center;
+    background: var(--circle);
+    border-radius: 50%;
+}
+.bead3 {
+    width: 15.6vw;
+    height: 15.6vw;
+    padding: 6.2vw 0;
+    position: absolute;
+    left: 6.4vw;
+    top: 13.5vh;
+    transform: rotate(80deg);
+}
+.bead4 {
+    width: 15.2vw;
+    height: 15.2vw;
+    padding: 6.5vw 0;
+    position: absolute;
+    left: 20.8vw;
+    top: 2.3vh;
+    transform: rotate(21deg);
+}
+.bead5 {
+    width: 14.8vw;
+    height: 14.8vw;
+    padding: 6.1vw 0;
+    position: absolute;
+    left: 35.9vw;
+    top: 1.7vh;
+    transform: rotate(-30deg);
+}
+.bead6 {
+    width: 12.1vw;
+    height: 12.1vw;
+    padding: 4.4vw 0;
+    position: absolute;
+    left: 45.3vw;
+    top: 26vh;
+    transform: rotate(55deg);
+}
+.bead7 {
+    width: 14.2vw;
+    height: 14.2vw;
+    padding: 5.7vw 0;
+    position: absolute;
+    left: 53.9vw;
+    top: 41.8vh;
+    transform: rotate(12deg);
+}
+.bead8 {
+    width: 14.8vw;
+    height: 14.8vw;
+    padding: 5.2vw 0;
+    position: absolute;
+    left: 65vw;
+    top: 23.3vh;
+    transform: rotate(-60deg);
+}
+.bead9 {
+    width: 11.7vw;
+    height: 11.7vw;
+    padding: 4vw 0;
+    position: absolute;
+    left: 79.7vw;
+    top: 28.9vh;
+    transform: rotate(41deg);
+}
+.bead10 {
+    width: 12.7vw;
+    height: 12.7vw;
+    padding: 5.1vw 0;
+    position: absolute;
+    left: 67.2vw;
+    top: 52.9vh;
+    transform: rotate(70deg);
+}
+.bead11 {
+    width: 11.3vw;
+    height: 11.3vw;
+    padding: 4.3vw 0;
+    position: absolute;
+    left: 52vw;
+    top: 69.5vh;
+    transform: rotate(-40deg);
+}
+.bead12 {
+    width: 9.2vw;
+    height: 9.2vw;
+    padding: 3.2vw 0;
+    position: absolute;
+    left: 43vw;
+    top: 75vh;
+    transform: rotate(10deg);
+}
+.bead13 {
+    width: 16.3vw;
+    height: 16.3vw;
+    padding: 6.8vw 0;
+    position: absolute;
+    left: 34.5vw;
+    top: 44.2vh;
+    transform: rotate(36deg);
+}
+.bead14 {
+    width: 11.3vw;
+    height: 11.3vw;
+    padding: 4.4vw 0;
+    position: absolute;
+    left: 26.3vw;
+    top: 31.7vh;
+    transform: rotate(-27deg);
+}
+.bead15 {
+    width: 12.8vw;
+    height: 12.8vw;
+    padding: 5.1vw 0;
+    position: absolute;
+    left: 17.7vw;
+    top: 48.5vh;
+    transform: rotate(8deg);
+}
+.bead16 {
+    width: 9.5vw;
+    height: 9.5vw;
+    padding: 3.4vw 0;
+    position: absolute;
+    left: 27.6vw;
+    top: 66.6vh;
+    transform: rotate(-8deg);
+}
+.bead17 {
+    width: 5vw;
+    height: 5vw;
+    position: absolute;
+    left: 37.5vw;
+    top: 34.8vh;
+}
+.bead18 {
+    width: 7vw;
+    height: 7vw;
+    position: absolute;
+    left: 63.3vw;
+    top: 72.8vh;
+}
+.bead19 {
+    width: 6.5vw;
+    height: 6.5vw;
+    position: absolute;
+    left: 12.3vw;
+    top: 45.8vh;
+}
+.bead20 {
+    width: 4.5vw;
+    height: 4.5vw;
+    position: absolute;
+    left: 79.7vw;
+    top: 57.3vh;
+}

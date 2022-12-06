@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>circle</title>
+    <style>
+        .social {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-start;
+          align-items: flex-start;
+        }
+        @media (max-width: 1023px) {
+          .social {
+            justify-content: space-between;
+          }
+        }
+        .social__item {
+          width: 5.75vw;
+          height: 5.75vw;
+          position: relative;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+        }
+        @media (max-width: 1023px) {
+          .social__item {
+            width: 17vw;
+            height: 17vw;
+          }
+        }
+        .social__item:after {
+          content: "";
+          position: absolute;
+          display: block;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          border: 0.1vw solid #252728;
+          border-radius: 50%;
+          width: 117%;
+          height: 117%;
+        }
+        .social__item-img {
+          width: 1.2vw;
+          height: 1.2vw;
+          object-fit: contain;
+          object-position: center;
+        }
+        @media (max-width: 1023px) {
+          .social__item-img {
+            width: 6vw;
+            height: 6vw;
+          }
+        }
+        .social__item-img-hover {
+          position: absolute;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+          width: 117%;
+          height: 117%;
+          z-index: 1;
+          stroke-dasharray: 302;
+          stroke-dashoffset: 302;
+          transition: all ease-out 0.5s;
+        }
+        .social__item:hover .social__item-img-hover {
+          stroke-dashoffset: 0;
+        }
+    </style>
+</head>
+
+
+<body>
+    <canvas id="cnvs" width="1920" height="1080" style="background-color: #ffffff;"></canvas>
+    
+    <script>
+        // // 반원 그리기 (html)
+        // <canvas id="cnvs" width="1920" height="1080" style="background-color: #ffffff;"></canvas>
+
+        // 반원 그리기 (1)
+        window.onload=function() {
+            let cnvs = document.getElementById("cnvs");
+            if (cnvs.getContext) {
+                let ctx = cnvs.getContext('2d');
+            
+                ctx.beginPath();  
+                // ctx.moveTo(1500, 500); // 좌표이동; 현재 불필요
+                // x = 960, y = 960 좌표 점을 기준으로 반지름 900짜리 반원 그리기 (반시계 방향으로)
+                ctx.arc(960, 0, 900, 0, Math.PI, false);
+            
+                // 도형의 테두리를 그림
+                ctx.stroke();
+            }
+            else alert('canvas를 지원하지 않는 브라우저입니다.');
+        }
+
+
+        // // 반원 그리기 (2)
+        // let chi = document.getElementById("cnvs");
+        // let chet = chi.getContext("2d");
+
+        // chet.beginPath();
+        // // chet.fillStyle = "pink";     // 반원호에 채울 색깔
+        // chet.strokeStyle = "#f00";
+        // chet.lineWidth = 10;
+        // chet.arc(960, 960, 900, 0, Math.PI, false);
+        // // chet.fill();      // 반원호에 색깔 채우기
+        // chet.stroke();
+    </script>
+</body>
+</html>

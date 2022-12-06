@@ -1,0 +1,224 @@
+/* website */
+#website {
+    /* height: 100vh; */
+    background: var(--webBG);
+}
+.horizontalWrap {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+.horizontalSection {
+    /* 브라우저에서는 기본적으로 scroll chaining이 발생 : 내부 스크롤이 끝나면 바깥쪽 혹은 같은 레벨에 있는 Element에서 스크롤이 계속됨. overscroll-behavior: none;은 scroll chaining이 발생을 방지 */
+    overscroll-behavior: none;
+    width: 900%;
+    display: flex;      /* 가로 정렬 */
+    flex-wrap: nowrap;  /* 넘쳐도 보이지 않게 */
+}
+
+
+/* website__main */
+.website__main {
+    width: 100vh;
+    /* background: rgb(234, 165, 165); */
+}
+.website__main .title {
+    font-family: var(--font-main);
+    font-size: 15.5vw;
+    padding-top: 6vh;
+    padding-bottom: 13vh;
+    margin-left: -4.5vw;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.website__cont {
+    padding: 0 5vw 6.5vh 11vw;
+    font-family: var(--font-sub);
+    display: flex;
+    flex-wrap: wrap;
+}
+.website__contL {
+    padding-top: 1vh;
+    margin-right: 26vw;
+}
+.website__contL h3 {
+    font-size: 3.6vw;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 4vh;
+}
+.website__contL p {
+    font-family: var(--font-kor);
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.website__contR {
+    font-size: 3.6vw;
+    font-weight: 500;
+    line-height: 1.1;
+    position: relative;
+}
+.web__listNum {
+    font-weight: 700;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    left: -2.8vw;
+    top: -3.7vh;
+}
+.website__list {
+    color: #f3f3f3;
+    line-height: 1.03;
+}
+.website__list li {}
+
+/* websites__view */
+.horizon {
+    width: 100%;
+    height: 100vh;
+}
+.websites__view {
+    font-family: var(--font-main);
+    /* margin-right: 40vh; */
+}
+.websites__view .webNum {
+    font-size: 26.5vw;
+    color: var(--webNum);
+    z-index: -200;
+}
+.websites__view .webImg {
+    width: 53vw;
+    height: 63vh;
+}
+.webpage__info {}
+.webpage__info h3 {
+    font-size: 5.2vw;
+    position: relative;
+    margin-bottom: 4.5vh;
+}
+.webpage__info h3 em {
+    z-index: 100;
+}
+.webpage__info h3 span {
+    display: inline-block;
+    width: 26vw;
+    height: 2.2vw;
+    border-radius: 50px;
+    background: var(--webTitBase);
+    z-index: -100;
+    position: absolute;
+    left: 11.8vw;
+    top: 3.2vw;
+}
+
+.webpage__info .webpage__desc {
+    width: 40vw;
+    font-family: var(--font-kor);
+    font-size: 1.1vw;
+    font-weight: 300;
+    line-height: 1.45;
+    margin-left: 9.5vw;
+}
+.website__link {}
+.website__link a {
+    display: inline-block;
+    color: var(--black);
+    font-size: 2.1vw;
+    background: var(--white);
+    width: 5.8vw;
+    height: 5.8vw;
+    border-radius: 50%;
+}
+.website__link a:nth-child(1) {
+    padding: 1.9vw 1vw;
+}
+.website__link a:nth-child(2) {
+    padding: 1.8vw 0.7vw;
+    margin-left: 0.2vw;
+}
+
+/* imgDown */
+.websites__view .imgDown {}
+.imgDown .webNum {
+    margin-top: -4vh;
+}
+.imgDown .webImg {
+    margin-top: -21vh;
+    margin-left: 7vw;
+    z-index: 10;
+}
+.imgDown .webpage__info {
+    margin-top: -58vh;
+    margin-left: 55.5vw;
+}
+.imgDown .website__link {
+    margin-top: 15vh;
+    margin-left: 57vw;
+}
+
+/* imgUp */
+.websites__view .imgUp {}
+.imgUp .webNum {
+    margin-top: 51vh;
+}
+.imgUp .webImg {
+    margin-top: -94vh;
+    margin-left: 11vw;
+    z-index: 10;
+}
+.imgUp .webpage__info {
+    margin-top: -31.5vh;
+    margin-left: 60vw;
+}
+.imgUp .webpage__info h3 span {
+    position: absolute;
+    left: 7vw;
+    top: 3.2vw;
+}
+.imgUp .website__link {
+    margin-top: 6.5vh;
+    margin-left: 52vw;
+}
+
+.websites__view .img01 {
+    background: url(../img/Site_Img01.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view .img02 {
+    background: url(../img/Site_Img02.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view .img03 {
+    background: url(../img/Site_Img03.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view .img04 {
+    background: url(../img/Site_Img04.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view .img05 {
+    background: url(../img/Site_Img05.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view .img06 {
+    background: url(../img/Site_Img06.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view .img07 {
+    background: url(../img/Site_Img07.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view .img08 {
+    background: url(../img/Site_Img08.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
