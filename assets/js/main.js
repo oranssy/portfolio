@@ -1,17 +1,35 @@
-// 헤더 영역 gsap 애니메이션 효과 주기
+// main
+
+// 클래스에 split를 넣어주고, 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
+document.querySelectorAll(".split").forEach(text => {
+    let splitText = text.innerText;
+    let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+
+    splitWrap = "<span aria-hidden='true' class='' >" + splitWrap + "</span>";
+    text.innerHTML = splitWrap;
+    text.setAttribute("aria-label", splitText);
+});
+
+// 클래스에 splitWord를 넣어주고, 단어로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
+document.querySelectorAll(".splitWord").forEach(text => {
+    let splitWordText = text.innerText;
+    let splitWordWrap = splitWordText.split(' ').join("</span><span aria-hidden='true'>");
+    
+    splitWordWrap = "<span aria-hidden='true' class='' >" + splitWordWrap + "</span>";
+    text.innerHTML = splitWordWrap;
+    text.setAttribute("aria-label", splitWordText);
+});
+
+// (1) mainSubject 애니메이션
+
+// (2) 
+
 
 // (1) webGL 무지개 빛방울 서서히 나타내기
 gsap.fromTo(".main-bg", {autoAlpha: 0}, {autoAlpha: 1, delay: 0.2, duration: 30});
 
 
 // (2) mainSubject 교차하듯 만나게 나타내기
-document.querySelectorAll(".mainSubject").forEach(text => {
-    let splitText0 = text.innerText;
-    let splitWrap0 = splitText0.split('').join("</span><span aria-hidden='true'>");
-    splitWrap0 = "<span aria-hidden='true' class='' >" + splitWrap0 + "</span>";
-    text.innerHTML = splitWrap0;
-    text.setAttribute("aria-label", splitText0);
-});
 
 let letter1 = document.querySelector(".mainSubject span:nth-child(1)");
 let letter2 = document.querySelector(".mainSubject span:nth-child(2)");
@@ -33,23 +51,6 @@ TweenLite.from(letter5, 6, {delay: 2, y:"-300px", x: "-100", opacity:"0"});
 
 
 // (3) mainDesc1 나타나기
-// leftFlow1 문장을 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
-document.querySelectorAll(".leftFlow1").forEach(text => {
-    let splitText1 = text.innerText;
-    let splitWrap1 = splitText1.split('').join("</span><span aria-hidden='true'>");
-    splitWrap1 = "<span aria-hidden='true' class='' >" + splitWrap1 + "</span>";
-    text.innerHTML = splitWrap1;
-    text.setAttribute("aria-label", splitText1);
-});
-
-// leftFlow2 문장을 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
-document.querySelectorAll(".leftFlow2").forEach(text => {
-    let splitText2 = text.innerText;
-    let splitWrap2 = splitText2.split('').join("</span><span aria-hidden='true'>");
-    splitWrap2 = "<span aria-hidden='true' class='' >" + splitWrap2 + "</span>";
-    text.innerHTML = splitWrap2;
-    text.setAttribute("aria-label", splitText2);
-});
 
 const gtl = gsap.timeline({repeat: -1, repeatDelay: 1});
 
@@ -89,40 +90,10 @@ gsap.fromTo('.leftFlow2 span', {
 
 
 // (4) 부제목 나타내기
-// wordDrop1 문장을 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
-document.querySelectorAll(".wordDrop1").forEach(text => {
-    let splitText3 = text.innerText;
-    let splitWrap3 = splitText3.split(' ').join(" </span><span aria-hidden='true'>");
-    splitWrap3 = "<span aria-hidden='true' class='' >" + splitWrap3 + "</span>";
-    text.innerHTML = splitWrap3;
-    text.setAttribute("aria-label", splitText3);
-});
-
-// wordDrop2 문장을 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
-document.querySelectorAll(".wordDrop2").forEach(text => {
-    let splitText4 = text.innerText;
-    let splitWrap4 = splitText4.split(' ').join(" </span><span aria-hidden='true'>");
-    splitWrap4 = "<span aria-hidden='true' class='' >" + splitWrap4 + "</span>";
-    text.innerHTML = splitWrap4;
-    text.setAttribute("aria-label", splitText4);
-});
-
-// wordDrop3 문장을 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
-document.querySelectorAll(".wordDrop3").forEach(text => {
-    let splitText5 = text.innerText;
-    let splitWrap5 = splitText5.split(' ').join(" </span><span aria-hidden='true'>");
-    splitWrap5 = "<span aria-hidden='true' class='' >" + splitWrap5 + "</span>";
-    text.innerHTML = splitWrap5;
-    text.setAttribute("aria-label", splitText5);
-});
 
 const WD1 = document.querySelectorAll('.wordDrop1');
 const WD2 = document.querySelectorAll('.wordDrop2');
 const WD3 = document.querySelectorAll('.wordDrop3');
-
-console.log(WD1);
-console.log(WD2);
-console.log(WD3);
 
 TweenMax.staggerFrom(WD1[0].children, 1, {delay: 5, y: -50, opacity: 0}, .18);
 TweenMax.staggerFrom(WD2[0].children, 1, {delay: 5.4, y: -50, opacity: 0}, .18);
