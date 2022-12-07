@@ -69,6 +69,21 @@
     line-height: 1.63;
     margin-left: 0.65vw;
 }
+.headerDesc1 span {
+    display: inline-block;
+    margin-right: 0.025vw;
+}
+.leftFlow1 span:nth-child(2),
+.leftFlow1 span:nth-child(6),
+.leftFlow1 span:nth-child(12),
+.leftFlow2 span:nth-child(3),
+.leftFlow2 span:nth-child(6),
+.leftFlow2 span:nth-child(9),
+.leftFlow2 span:nth-child(13),
+.leftFlow2 span:nth-child(16),
+.leftFlow2 span:nth-child(18) {
+    margin-right: 0.3vw;
+}
 .headerDesc2 {
     font-size: 3.12vw;
     line-height: 1.2;

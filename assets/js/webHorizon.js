@@ -14,7 +14,7 @@ gsap.to(sections, {
         pin: true,                      // 고정
         scrub: 1,                       // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
         // snap: 1 / (sections.length -1),      // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
-        end: "+=4000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
-        // markers: true,               // 보조 기준선 표시
+        end: "+=5000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
+        markers: true,               // 보조 기준선 표시
     }
 })

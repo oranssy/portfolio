@@ -1,10 +1,10 @@
 // 헤더 영역 gsap 애니메이션 효과 주기
 
-// (1) 가운데 무지개 빛방울 서서히 나타나기
+// (1) webGL 무지개 빛방울 서서히 나타내기
 gsap.fromTo(".header-bg", {autoAlpha: 0}, {autoAlpha: 1, delay: 0.2, duration: 30});
 
 
-// (2) 타이틀 교차하듯 만나게 나타내기
+// (2) headerSubject 교차하듯 만나게 나타내기
 document.querySelectorAll(".headerSubject").forEach(text => {
     let splitText0 = text.innerText;
     let splitWrap0 = splitText0.split('').join("</span><span aria-hidden='true'>");
@@ -55,12 +55,12 @@ const gtl = gsap.timeline({repeat: -1, repeatDelay: 1});
 
 // leftFlow1 왼쪽 글자부터 나타나기
 gsap.fromTo('.leftFlow1 span', {
-    x: 50,
+    x: 220,
     opacity: 0,
 },
 {
     delay: 0, // 3 : 2초 후에 진행됨
-    duration: 3,    // 0.5초 동안
+    duration: 1.5,    // 0.5초 동안
     x: 0,
     opacity: 1,
     ease: 'power3.easeOut',
@@ -72,12 +72,12 @@ gsap.fromTo('.leftFlow1 span', {
 
 // leftFlow2 오른쪽 글자부터 나타나기
 gsap.fromTo('.leftFlow2 span', {
-    x: 50,
+    x: 250,
     opacity: 0,
 },
 {
     delay: 3.2,
-    duration: 3,
+    duration: 1.5,
     x: 0,
     opacity: 1,
     ease: 'power3.easeOut',
