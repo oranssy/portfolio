@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Choi Jin Ju</title>
 
-    <!-- meta tag -->
+    <!-- meta tags -->
     <meta name="Generator" content="Visual Studio Code(1.73.1)">
     <meta http-equiv="Content-Style-Type" content="text/css">
     <meta http-equiv="Content-Scription-Type" content="text/javascription">
@@ -17,16 +18,15 @@
     <meta name="description" content="프론트엔드 개발자를 목표로 하는 최진주의 포트폴리오 페이지 입니다.">
     <meta name="keywords" content="포트폴리오, 최진주, 오란씨, oranssy, publisher, frontend, html5, css3, javascript">
 
-    <meta http-equiv="Last-Modified" content="Wed,7 Dec 2022 18:30:20">
+    <!-- <meta http-equiv="Last-Modified" content="Wed,7 Dec 2022 18:30:20">
     <meta http-equiv="Pragma" content="no-cache">
-    <meta name="robots" content="noindex,nofollow" />
-    <title>Portfolio | Choi Jin Ju</title>
+    <meta name="robots" content="noindex,nofollow" /> -->
+
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/resets.css">
     <link rel="stylesheet" href="assets/css/style.css">
-
 </head>
 
 <body>
@@ -43,36 +43,43 @@
     <!-- //skip -->
 
     <header id="header">
-        <h1 class="brand" href="#header">pOr</h1>
+        <h1 href="#header">pOr</h1>
         <nav id="menu" class="btn-menu">Menu</nav>
     </header>
     <!-- //header -->
 
     <main id="main">
-        <h2 class="blind">Ideas</h2>
-        <div class="main-bg">
-            <iframe src="https://oranssy.github.io/portfolio/rainbowDrop.html" frameborder="0" allowfullscreen=""></iframe>
-        </div>
-
-        <div class="main__title">
-            <h3 class="mainSubject split">Ideas</h3>
-            <div class="mainDesc1">
-                <p class="leftFlow1 split">저를 새롭게 두근거리게 하는</p>
-                <p class="leftFlow2 split">코딩에 대한 꿈과 생각이 빛날 수 있도록</p>
+        <section id="section1">
+            <h2 class="blind">ideas</h2>
+            <div class="sec1">
+                <div class="sec1-bg">
+                    <iframe src="https://oranssy.github.io/portfolio/rainbowDrop.html" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <!-- //sec1-bg -->
+                <div class="ideas">
+                    <h3 class="split">ideas</h3>
+                    <div class="ideas-desc">
+                        <p class="split">저를 새롭게 두근거리게 하는</p>
+                        <p class="split">코딩에 대한 꿈과 생각이 빛날 수 있도록</p>
+                    </div>
+                </div>
+                <!-- //ideas -->
+                <div class="sec1-desc">
+                    <p class="splitWord">
+                        I want to create
+                    </p>
+                    <p class="splitWord">
+                        an ingenious websites
+                    </p>
+                    <p class="splitWord">
+                        with you.
+                    </p>
+                </div>
             </div>
-        </div>
-        <!-- //main__title -->
-        <div class="mainDesc2">
-            <p class="wordDrop1 splitWord">
-                I want to create
-            </p>
-            <p class="wordDrop2 splitWord">
-                an ingenious websites
-            </p>
-            <p class="wordDrop3 splitWord">
-                with you.
-            </p>
-        </div>
+        </section>
+        <!-- //section1 -->
+
+
     </main>
     <!-- //main -->
 
@@ -258,7 +265,7 @@
     <section id="study">
             <h2 class="blind">Coding study</h2>
             <div class="study-bg">
-                <iframe src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index95.html" frameborder="0" allowfullscreen=""></iframe>
+                <iframe src="https://oranssy.github.io/portfolio/rainbowDrop.html" frameborder="0" allowfullscreen></iframe>
             </div>
             <h3>Coding study Coding</h3>
             <div class="study__info">
@@ -440,7 +447,7 @@
 
     <section id="values">
             <div class="values-bg">
-                <iframe src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index95.html" frameborder="0" allowfullscreen=""></iframe>
+                <iframe src="https://oranssy.github.io/portfolio/rainbowDrop.html" frameborder="0" allowfullscreen></iframe>
             </div>
             <h3>My values My values</h3>
             <h4>My values</h4>
@@ -604,14 +611,14 @@
     <!-- script -->
     <!-- gsap : 스크립트 애니메이션을 위한 도구 모음 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
-    <!-- Smooth Scroll (lenis 효과)  -->
-    <!-- <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
-    <script src="assets/js/lenis.js"></script> -->
+
     <!-- ScrollTrigger 플러그인 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
 
-    <!-- main 영역 (애니메이션) -->
-    <script src="assets/js/main.js"></script>
+    <!-- gsap 애니메이션 -->
+    <script src="assets/js/gsapAnimation.js"></script>
+
     <!-- introcuce 영역 -->
     <script src="assets/js/introduce.js"></script>
     <!-- websites 영역 (가로 모드) -->
@@ -622,12 +629,6 @@
     <script src="assets/js/values.js"></script>
     <!-- footer 영역 -->
     <script src="assets/js/footer.js"></script>
-
-
-    <script>
-
-    </script>
-
 
 </body>
 </html>
