@@ -1,11 +1,12 @@
 /* Partizeno */
 @font-face {
-  font-family: "Partizeno";
-  src: url("PartizenoRegular.eot");
-  src: url("PartizenoRegular.eot?#iefix") format("embedded-opentype"),
-    url("PartizenoRegular.woff2") format("woff2"),
-    url("PartizenoRegular.woff") format("woff"),
-    url("PartizenoRegular.svg#PartizenoRegular") format("svg");
+  font-family: 'Partizeno';
+  src: url('../fonts/PartizenoRegular.eot');
+  src: url('../fonts/PartizenoRegular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/PartizenoRegular.woff2') format('woff2'),
+      url('../fonts/PartizenoRegular.woff') format('woff'),
+      url('../fonts/PartizenoRegular.ttf') format('truetype'),
+      url('../fonts/PartizenoRegular.svg#PartizenoRegular') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: swap;

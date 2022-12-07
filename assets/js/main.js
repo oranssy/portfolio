@@ -1,11 +1,11 @@
 // 헤더 영역 gsap 애니메이션 효과 주기
 
 // (1) webGL 무지개 빛방울 서서히 나타내기
-gsap.fromTo(".header-bg", {autoAlpha: 0}, {autoAlpha: 1, delay: 0.2, duration: 30});
+gsap.fromTo(".main-bg", {autoAlpha: 0}, {autoAlpha: 1, delay: 0.2, duration: 30});
 
 
-// (2) headerSubject 교차하듯 만나게 나타내기
-document.querySelectorAll(".headerSubject").forEach(text => {
+// (2) mainSubject 교차하듯 만나게 나타내기
+document.querySelectorAll(".mainSubject").forEach(text => {
     let splitText0 = text.innerText;
     let splitWrap0 = splitText0.split('').join("</span><span aria-hidden='true'>");
     splitWrap0 = "<span aria-hidden='true' class='' >" + splitWrap0 + "</span>";
@@ -13,11 +13,11 @@ document.querySelectorAll(".headerSubject").forEach(text => {
     text.setAttribute("aria-label", splitText0);
 });
 
-let letter1 = document.querySelector(".headerSubject span:nth-child(1)");
-let letter2 = document.querySelector(".headerSubject span:nth-child(2)");
-let letter3 = document.querySelector(".headerSubject span:nth-child(3)");
-let letter4 = document.querySelector(".headerSubject span:nth-child(4)");
-let letter5 = document.querySelector(".headerSubject span:nth-child(5)");
+let letter1 = document.querySelector(".mainSubject span:nth-child(1)");
+let letter2 = document.querySelector(".mainSubject span:nth-child(2)");
+let letter3 = document.querySelector(".mainSubject span:nth-child(3)");
+let letter4 = document.querySelector(".mainSubject span:nth-child(4)");
+let letter5 = document.querySelector(".mainSubject span:nth-child(5)");
 
 // TweenLite.from(letter1, 5.5, {y:"-300px", x: "-300", opacity:"0"});
 // TweenLite.from(letter2, 5.5, {y:"900px", x:"300", opacity:"0"});
@@ -32,7 +32,7 @@ TweenLite.from(letter4, 6, {delay: 2, y:"600px", x:"300", opacity:"0"});
 TweenLite.from(letter5, 6, {delay: 2, y:"-300px", x: "-100", opacity:"0"});
 
 
-// (3) headerDesc1 나타나기
+// (3) mainDesc1 나타나기
 // leftFlow1 문장을 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
 document.querySelectorAll(".leftFlow1").forEach(text => {
     let splitText1 = text.innerText;
@@ -129,7 +129,7 @@ TweenMax.staggerFrom(WD2[0].children, 1, {delay: 5.4, y: -50, opacity: 0}, .18);
 TweenMax.staggerFrom(WD3[0].children, 1, {delay: 5.9, y: -50, opacity: 0}, .18);
 
 // console.clear();
-// let el = document.querySelector('headerDesc2');
+// let el = document.querySelector('mainDesc2');
 // let s = new SplitText(
 //   el, 
 //   {

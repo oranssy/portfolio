@@ -1,33 +1,41 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEO -->
-    <meta name="author" content="oranssy">
-    <mata name="description" content="최진주의 포트폴리오 입니다.">
-    <meta name="keyword" content="포트폴리오, 최진주, 오란씨, oranssy, publisher, frontend">
-    <title>Portfolio_ChoiJinJu</title>
+    <!-- meta tag -->
+    <meta name="Generator" content="Visual Studio Code(1.73.1)">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Scription-Type" content="text/javascription">
+
+    <meta name="subject" content="portfolio">
+    <meta name="Title" content="Portfolio -ChoiJinJu">
+    <meta name="author" content="최진주">
+    <meta name="description" content="프론트엔드 개발자를 목표로 하는 최진주의 포트폴리오 페이지 입니다.">
+    <meta name="keywords" content="포트폴리오, 최진주, 오란씨, oranssy, publisher, frontend, html5, css3, javascript">
+
+    <meta http-equiv="Last-Modified" content="Wed,7 Dec 2022 18:30:20">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="robots" content="noindex,nofollow" />
+    <meta http-equiv="Page-Enter" content="RevealTrans(Duration=10, Transition=50)">
+    <meta http-equiv="Page-Exit" content="RevealTrans(Duration=10, Transition=50)">
+    <title>Portfolio | Choi Jin Ju</title>
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/resets.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/introduce.css">
-    <link rel="stylesheet" href="assets/css/website.css">
-    <link rel="stylesheet" href="assets/css/study.css">
-    <link rel="stylesheet" href="assets/css/values.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
+
 <body>
     <div id="skip">
-        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#header">헤더 바로가기</a>
         <a href="#menu">메뉴 바로가기</a>
-        <a href="#main">메인 영역 바로가기</a>
+        <a href="#main">메인 바로가기</a>
         <a href="#introduce">자기소개 바로가기</a>
         <a href="#website">웹사이트 소개 바로가기</a>
         <a href="#study">공부자료 소개 바로가기</a>
@@ -36,29 +44,27 @@
     </div>
     <!-- //skip -->
 
-    <div id="top-nav">
-        <div class="navbar-inner">
-            <a class="brand" href="#header">pOr</a>
-            <span id="menu" class="btn-menu">Menu</span>
-        </div>
-    </div>
-    <!-- //top-nav -->
-
     <header id="header">
+        <h1 class="brand" href="#header">pOr</h1>
+        <nav id="menu" class="btn-menu">Menu</nav>
+    </header>
+    <!-- //header -->
+
+    <main id="main">
         <h2 class="blind">Ideas</h2>
-        <div class="header-bg">
+        <div class="main-bg">
             <iframe src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index95.html" frameborder="0" allowfullscreen=""></iframe>
         </div>
 
-        <div class="header__title">
-            <h3 class="headerSubject">Ideas</h3>
-            <div class="headerDesc1">
+        <div class="main__title">
+            <h3 class="mainSubject">Ideas</h3>
+            <div class="mainDesc1">
                 <p class="leftFlow1">저를 새롭게 두근거리게 하는</p>
                 <p class="leftFlow2">코딩에 대한 꿈과 생각이 빛날 수 있도록</p>
             </div>
         </div>
-        <!-- //header__title -->
-        <div class="headerDesc2">
+        <!-- //main__title -->
+        <div class="mainDesc2">
             <p class="wordDrop1">
                 I want to create
             </p>
@@ -69,11 +75,10 @@
                 with you.
             </p>
         </div>
-    </header>
-    <!-- //header -->
+    </main>
+    <!-- //main -->
 
-    <main id="main">
-        <section id="introduce">
+    <section id="introduce">
             <h2 class="blind">personality</h2>
             <div class="personality__tit">
                 <img class="myPhoto" src="assets/img/CJJ_01.jpg" alt="최진주 사진">
@@ -195,10 +200,10 @@
             <!-- //personality__box -->
 
 
-        </section>
-        <!-- //introduce -->
+    </section>
+    <!-- //introduce -->
 
-        <section id="website">
+    <section id="website">
             <h2 class="blind">Configured Websites</h2>
             <div class="horizontalWrap">
                 <div class="horizontalSection">
@@ -249,10 +254,10 @@
                     
                 </div>
             </div>
-        </section>
-        <!-- //website -->
+    </section>
+    <!-- //website -->
 
-        <section id="study">
+    <section id="study">
             <h2 class="blind">Coding study</h2>
             <div class="study-bg">
                 <iframe src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index95.html" frameborder="0" allowfullscreen=""></iframe>
@@ -432,10 +437,10 @@
                 </ul>
             </div>
             <!-- //study__list -->
-        </section>
-        <!-- //study -->
+    </section>
+    <!-- //study -->
 
-        <section id="values">
+    <section id="values">
             <div class="values-bg">
                 <iframe src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index95.html" frameborder="0" allowfullscreen=""></iframe>
             </div>
@@ -520,10 +525,8 @@
                     <div class="circle bead20"></div>
                 </div>
             </div>
-        </section>
-        <!-- //values -->
-    </main>
-    <!-- //main -->
+    </section>
+    <!-- //values -->
 
     <footer id="footer">
         <h2>Contact me</h2>
@@ -608,12 +611,12 @@
     <script src="assets/js/lenis.js"></script> -->
     <!-- ScrollTrigger 플러그인 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
-    <!-- header 영역 (애니메이션) -->
-    <script src="assets/js/header.js"></script>
+    <!-- main 영역 (애니메이션) -->
+    <script src="assets/js/main.js"></script>
     <!-- introcuce 영역 -->
     <script src="assets/js/introduce.js"></script>
     <!-- websites 영역 (가로 모드) -->
-    <script src="assets/js/webHorizon.js"></script>
+    <script src="assets/js/websiteHorizon.js"></script>
     <!-- study 영역 -->
     <script src="assets/js/study.js"></script>
     <!-- values 영역 -->
