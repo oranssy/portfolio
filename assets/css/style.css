@@ -190,13 +190,12 @@ iframe {
     left: 48.2%;
     top: 11%;
 }
-
-
+/* person */
+.person {}
 .person__item {
     width: max-content;
     font-family: var(--font-sub);
 }
-
 .person__item-image_wrap {
     position: fixed;
     top: 50%;
@@ -268,8 +267,11 @@ iframe {
 }
 .person__item-title {
     position: relative;
-    font-weight: 700;
-    text-transform: uppercase;
+    font-family: var(--font-sub);
+    font-size: 3.8vw;
+    font-weight: 500;
+    line-height: 1.3;
+    /* text-transform: uppercase; */
     font-size: 5vw;
     line-height: 1;
     color: #e6e3d8;
