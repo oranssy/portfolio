@@ -577,6 +577,7 @@ iframe {
 }
 
 
+
 /* section5 */
 #section5 {
     /* width: 100vw;
@@ -807,6 +808,25 @@ iframe {
     left: 79.7vw;
     top: 57.3vh;
 }
+
+
+
+/* #parallax__info */
+#parallax__info {
+    position: fixed;        /* 왼쪽 아래에 고정시킴 */
+    left: 20px;
+    bottom: 20px;
+    z-index: 2000;          /* 가려지지 않도록 맨 윗쪽(표면)에 위치시킴 */
+    background: rgba(0, 0, 0, 0.4);
+    color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#parallax__info li, .scroll {
+    line-height: 1.4;           /* parallax__info li 와 .scroll 의 내용 글자에 대한 줄간격 설정 */
+}
+
 
 
 /* footer */
