@@ -49,6 +49,7 @@ iframe {
 }
 
 
+
 /* header */
 #header {
     width: 100vw;
@@ -143,39 +144,43 @@ iframe {
 }
 
 
+
 /* section2 */
 #section2 {
     width: 100vw;
     overflow: hidden;
-    /* height: 200vh; */
     /* background: rgb(234, 165, 165); */
 }
-.personality__tit {
+.sec2 .personal {
     padding-top: 14vh;
-    text-align: right;
     margin-bottom: 10vh;
+    align-items: end;
 }
-.myPhoto {
+.sec2 .personal .myPhoto {
     width: 29vw;
+    height: 29vw;
+    background: url(../img/CJJ_01.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
     border-radius: 50%;
-    margin-right: 9vw;
-    opacity: 0;
+    margin-left: 62vw;
+    /* opacity: 0; */
 }
-.fade-up {
+/* .fade-up {
     opacity: 1;
-}
-.personality__tit h3 {
+} */
+.sec2 .personal h3 {
     width: 115vw;
     font-size: 15.5vw;
     color: var(--title);
     line-height: 1.2;
     margin-left: -16vw;
-    margin-top: -7vh;
+    margin-top: -9vh;
     white-space: nowrap;
     /* overflow: hidden; */
     position: relative;
 }
-.personality__tit h3 .bead1 {
+.sec2 .personal h3 .bead1 {
     background: url(../img/circle_01.jpg) no-repeat;
     background-size: cover;
     width: 3.2vw;

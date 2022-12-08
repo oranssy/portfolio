@@ -23,6 +23,7 @@ document.querySelectorAll(".splitWord").forEach(text => {
 // 스크롤 값에 따라 페이지가 움직이도록 gsap 플러그인 설정      // scrollTrigger: css 및 javascript를 활용하여 스크롤 동작 및 기타 다양한 svg 애니메이션을 제작할 수 있게 도와주는 플러그인
 gsap.registerPlugin(ScrollTrigger);
 
+
 // Smooth Scroll (lenis 효과)
 const lenis = new Lenis({           // gsap 스크롤 기본 셋팅
     duration: 1.2,
@@ -58,18 +59,18 @@ setTimeout ( () => {
 
 
 
-// section2
-ScrollTrigger.create({
-    trigger: "#section2",
-    start: "top 6%",
-    // end: "top 50%",
-    markers: true,
-    toggleClass: { targets: "myPhoto", className: "fade-up" },
-    onEnter: () => console.log("onEnter"),
-    onLeave: () => console.log("onLeave"),
-    onEnterBack: () => console.log("onEnterBack"),
-    onLeaveBack: () => console.log("onLeaveBack"),
-})
+// // section2
+// ScrollTrigger.create({
+//     trigger: "#section2",
+//     start: "top 6%",
+//     // end: "top 50%",
+//     markers: true,
+//     toggleClass: { targets: "myPhoto", className: "fade-up" },
+//     onEnter: () => console.log("onEnter"),
+//     onLeave: () => console.log("onLeave"),
+//     onEnterBack: () => console.log("onEnterBack"),
+//     onLeaveBack: () => console.log("onLeaveBack"),
+// })
 
 // gsap.to(".personality__tit h3", { xPercent: -70, ease: "none", scrollTrigger: { scrub: 1 } })
 
