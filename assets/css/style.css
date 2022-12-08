@@ -117,6 +117,17 @@ iframe {
     transform: translate(10px, 10px);
     opacity: 0;
 }
+.syllable1 span:nth-child(3), 
+.syllable1 span:nth-child(7), 
+.syllable1 span:nth-child(13), 
+.syllable2 span:nth-child(4), 
+.syllable2 span:nth-child(7), 
+.syllable2 span:nth-child(10), 
+.syllable2 span:nth-child(14), 
+.syllable2 span:nth-child(17), 
+.syllable2 span:nth-child(19) {
+    margin-right: 0.3vw;
+}
 .sec1-desc {
     font-size: 3.12vw;
     line-height: 1.2;
@@ -148,6 +159,7 @@ iframe {
     width: 29vw;
     border-radius: 50%;
     margin-right: 9vw;
+    opacity: 0;
 }
 .personality__tit h3 {
     width: 115vw;

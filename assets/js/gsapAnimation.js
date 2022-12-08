@@ -47,23 +47,37 @@ requestAnimationFrame(raf)
 setTimeout ( () => {
     let mainTl = gsap.timeline();
    
-    mainTl.to(".ideas h3 span",  { duration: 1.2, x: 0, opacity: 1, stagger: 0.3, ease: Power1.easeOut })
-    mainTl.to(".ideas-desc span", { duration: 0.4, x: 0, y: 0, opacity: 1, stagger: 0.03, ease: Power1.easeOut })
-    mainTl.to(".ideas", { duration: 1.2, x: "80%", ease: Power4.easeInOut }, "+= 0.85")
+    mainTl.to(".ideas h3 span",  { duration: 0.5, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
+    mainTl.to(".ideas-desc span", { duration: 0.4, x: 0, y: 0, opacity: 1, stagger: 0.04, ease: Power1.easeOut })
+    mainTl.to(".ideas", { duration: 1.2, x: "92%", ease: Power3.easeInOut }, "+=0.5")
     mainTl.to(".sec1-bg iframe", { duration: 1, opacity: 1, scale: 1 })
-    mainTl.to(".sec1-desc span", { duration: 0.6, x: 0, y: 0, opacity: 1, stagger: 0.01, ease: Power1.easeOut })
-    mainTl.to("#header", { duration: 0.3, top: 0, opacity: 1, ease: Power1.easeOut })
+    mainTl.to(".sec1-desc span", { duration: 0.7, x: 0, y: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
+    mainTl.to("#header", { duration: 0.2, top: 0, opacity: 1, ease: Power1.easeOut })
 
 }, 3000 );
 
 
-gsap.to (".personality__tit h3", {
-    xPercent: -30,
-    ease: "none",
-    scrollTrigger: {
-        scrub: 1,
-    }
-})
+
+// section2
+
+
+gsap.to(".personality__tit h3", { xPercent: -70, ease: "none", scrollTrigger: { scrub: 1 } })
+
+setTimeout ( () => {
+    let sec2Tl = gsap.timeline();
+
+    sec2Tl.to(".myPhoto", { duration: 0.4, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
+});
+
+
+
+// gsap.to (".personality__tit h3", {
+//     xPercent: -50,
+//     ease: "none",
+//     scrollTrigger: {
+//         scrub: 1,
+//     }
+// })
 // gsap.to(".tit2, .tit5", {
 //     x: 400,
 //     scrollTrigger: {
