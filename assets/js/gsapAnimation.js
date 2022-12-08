@@ -59,15 +59,25 @@ setTimeout ( () => {
 
 
 // section2
+ScrollTrigger.create({
+    trigger: "#section2",
+    start: "top 6%",
+    // end: "top 50%",
+    markers: true,
+    toggleClass: { targets: "myPhoto", className: "fade-up" },
+    onEnter: () => console.log("onEnter"),
+    onLeave: () => console.log("onLeave"),
+    onEnterBack: () => console.log("onEnterBack"),
+    onLeaveBack: () => console.log("onLeaveBack"),
+})
 
+// gsap.to(".personality__tit h3", { xPercent: -70, ease: "none", scrollTrigger: { scrub: 1 } })
 
-gsap.to(".personality__tit h3", { xPercent: -70, ease: "none", scrollTrigger: { scrub: 1 } })
+// setTimeout ( () => {
+//     let sec2Tl = gsap.timeline();
 
-setTimeout ( () => {
-    let sec2Tl = gsap.timeline();
-
-    sec2Tl.to(".myPhoto", { duration: 0.4, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
-});
+//     sec2Tl.to(".myPhoto", { duration: 0.4, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
+// });
 
 
 

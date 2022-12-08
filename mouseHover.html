@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseHover</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            width: 100%;
+            height: 100vh;
+            background: #131313;
+            padding: 4em;
+            overflow: hidden;
+        }
+
+        .menu__item {
+            width: max-content;
+        }
+
+        .menu__item-image_wrapper {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 600px;
+            height: 400px;
+            pointer-events: none;
+            opacity: 0;
+        }
+        .menu__item-image_inner {}
+        .menu__item-image_inner .menu__item-image {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .menu__item-text {
+            position: relative;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 5vw;
+            line-height: 1;
+            color: #e6e3d8;
+            opacity: 1;
+            transition: opacity 350ms ease;
+            white-space: nowrap;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .menu__item-innertext {}
+        .menu__item:hover .menu__item-text {
+            color: #c24628;
+        }
+        .menu__item:hover .menu__item-image_wrapper {
+            z-index: -2;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <nav class="menu">
+            <div class="menu__item">
+                <div class="menu__item-image_wrapper">
+                    <div class="menu__item-image_inner">
+                        <img src="assets/img/my_Img01.jpg" alt="이미지" class="menu__item-image" />
+                    </div>
+                </div>
+                <span class="menu__item-text">
+                    <span class="menu__item-innertext">oranssy1</span>
+                </span>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <div class="menu__item-image_wrapper">
+                    <div class="menu__item-image_inner">
+                        <img src="assets/img/my_Img02.jpg" alt="이미지" class="menu__item-image" />
+                    </div>
+                </div>
+                <span class="menu__item-text">
+                    <span class="menu__item-innertext">oranssy2</span>
+                </span>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <div class="menu__item-image_wrapper">
+                    <div class="menu__item-image_inner">
+                        <img src="assets/img/my_Img03.jpg" alt="이미지" class="menu__item-image" />
+                    </div>
+                </div>
+                <span class="menu__item-text">
+                    <span class="menu__item-innertext">oranssy3</span>
+                </span>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <div class="menu__item-image_wrapper">
+                    <div class="menu__item-image_inner">
+                        <img src="assets/img/my_Img04.jpg" alt="이미지" class="menu__item-image" />
+                    </div>
+                </div>
+                <span class="menu__item-text">
+                    <span class="menu__item-innertext">oranssy4</span>
+                </span>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <div class="menu__item-image_wrapper">
+                    <div class="menu__item-image_inner">
+                        <img src="assets/img/my_Img05.jpg" alt="이미지" class="menu__item-image" />
+                    </div>
+                </div>
+                <span class="menu__item-text">
+                    <span class="menu__item-innertext">oranssy5</span>
+                </span>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <div class="menu__item-image_wrapper">
+                    <div class="menu__item-image_inner">
+                        <img src="assets/img/my_Img06.jpg" alt="이미지" class="menu__item-image" />
+                    </div>
+                </div>
+                <span class="menu__item-text">
+                    <span class="menu__item-innertext">oranssy6</span>
+                </span>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <div class="menu__item-image_wrapper">
+                    <div class="menu__item-image_inner">
+                        <img src="assets/img/my_Img07.jpg" alt="이미지" class="menu__item-image" />
+                    </div>
+                </div>
+                <span class="menu__item-text">
+                    <span class="menu__item-innertext">oranssy7</span>
+                </span>
+            </div>
+            <!-- //menu__item -->
+        </nav>
+    </div>
+
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script>
+        const { gsap } = window;
+
+        gsap.timeline()
+            .set(".menu", { autoAlpha: 1 })
+            .from(".menu__item-innertext", {
+                delay: 1,
+                duration: 0.85,
+                xPercent: 25,
+                yPercent: 125,
+                stagger: 0.095,
+                skewY: gsap.utils.wrap([-8, 8]),
+                ease: "expo.out",
+            })
+            .set(".menu", { pointerEvents: "all" });
+
+            gsap.defaults({
+                duration: 0.55,
+                ease: "expo.out",
+            });
+
+            const menuItems = document.querySelectorAll(".menu__item");
+
+            menuItems.forEach( (item) => {
+                const imageWrapper = item.querySelector(".menu__item-image_wrapper");
+                const imageWrapperBounds = imageWrapper.getBoundingClientRect();
+
+                let itemBounds = item.getBoundingClientRect();
+
+                const onMouseEnter = () => {
+                    gsap.set(imageWrapper, {
+                        scale: 0.8,
+                        xPercent: 25,
+                        yPercent: 50,
+                        rotation: -15,
+                    });
+                    gsap.to(imageWrapper, { opacity: 1, scale: 1, yPercent: 0, rotation: 0 });
+                };
+
+                const onMouseLeave = () => {
+                    gsap.to(imageWrapper, {
+                        opacity: 0,
+                        yPercent: -50,
+                        xPercent: 25,
+                        scale: 0.8,
+                        rotation: -15,
+                    });
+                };
+
+                const onMouseMove = ({ x, y }) => {
+                    let yOffset = itemBounds.top / imageWrapperBounds.height;
+                    yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
+
+                    gsap.to(imageWrapper, {
+                        duration: 1.25,
+                        x: Math.abs(x - itemBounds.left) - imageWrapperBounds.width / 1.55,
+                        y: Math.abs(y - itemBounds.top) - imageWrapperBounds.height / 2 - yOffset,
+                    });
+                };
+
+
+                    item.addEventListener("mouseenter", onMouseEnter);
+                    item.addEventListener("mouseleave", onMouseLeave);
+                    item.addEventListener("mousemove", onMouseMove);
+
+                    window.addEventListener("resize", () => {
+                        itemBounds = item.getBoundingClientRect();
+                });
+            });
+
+
+
+    </script>
+</body>
+</html>

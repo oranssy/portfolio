@@ -155,11 +155,14 @@ iframe {
     text-align: right;
     margin-bottom: 10vh;
 }
-.personality__tit .myPhoto {
+.myPhoto {
     width: 29vw;
     border-radius: 50%;
     margin-right: 9vw;
     opacity: 0;
+}
+.fade-up {
+    opacity: 1;
 }
 .personality__tit h3 {
     width: 115vw;
