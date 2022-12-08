@@ -821,6 +821,7 @@ iframe {
     color: #fff;
     padding: 20px;
     border-radius: 10px;
+    font-family: var(--font-sub);
 }
 
 #parallax__info li, .scroll {
