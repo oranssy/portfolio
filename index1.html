@@ -1,73 +1,85 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | Choi Jin Ju</title>
 
-    <!-- SEO -->
-    <meta name="author" content="oranssy">
-    <mata name="description" content="최진주의 포트폴리오 입니다.">
-    <meta name="keyword" content="포트폴리오, 최진주, 오란씨, oranssy, publisher, frontend">
-    <title>Portfolio_ChoiJinJu</title>
+    <!-- meta tags -->
+    <meta name="Generator" content="Visual Studio Code(1.73.1)">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Scription-Type" content="text/javascription">
+
+    <meta name="subject" content="portfolio">
+    <meta name="Title" content="Portfolio -ChoiJinJu">
+    <meta name="author" content="최진주">
+    <meta name="description" content="프론트엔드 개발자를 목표로 하는 최진주의 포트폴리오 페이지 입니다.">
+    <meta name="keywords" content="포트폴리오, 최진주, 오란씨, oranssy, publisher, frontend, html5, css3, javascript">
+
+    <!-- <meta http-equiv="Last-Modified" content="Wed,7 Dec 2022 18:30:20">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta name="robots" content="noindex,nofollow" /> -->
+
 
     <!-- css -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/resets.css">
-    <link rel="stylesheet" href="assets/css/common.css">
-    <link rel="stylesheet" href="assets/css/header.css">
-    <link rel="stylesheet" href="assets/css/introduce.css">
-    <link rel="stylesheet" href="assets/css/website.css">
-    <link rel="stylesheet" href="assets/css/study.css">
-    <link rel="stylesheet" href="assets/css/values.css">
-    <link rel="stylesheet" href="assets/css/footer.css">
-
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body>
     <div id="skip">
-        <a href="#header">헤더 영역 바로가기</a>
+        <a href="#header">헤더 바로가기</a>
         <a href="#menu">메뉴 바로가기</a>
-        <a href="#main">메인 영역 바로가기</a>
-        <a href="#introduce">자기소개 바로가기</a>
-        <a href="#website">웹사이트 소개 바로가기</a>
-        <a href="#study">공부자료 소개 바로가기</a>
-        <a href="#values">성격 장단점 바로가기</a>
-        <a href="#footer">푸터 영역 바로가기</a>
+        <a href="#section1">메인 바로가기</a>
+        <a href="#section2">자기소개 바로가기</a>
+        <a href="#section3">웹사이트 소개 바로가기</a>
+        <a href="#section4">공부자료 소개 바로가기</a>
+        <a href="#section5">성격 장단점 바로가기</a>
+        <a href="#footer">푸터 바로가기</a>
     </div>
     <!-- //skip -->
 
-    <div id="top-nav">
-        <div class="navbar-inner">
-            <a class="brand" href="#header">pOr</a>
-            <span id="menu" class="btn-menu">Menu</span>
-        </div>
-    </div>
-    <!-- //top-nav -->
-
     <header id="header">
-        <h2 class="blind">Ideas</h2>
-        <div class="header-bg">
-            <iframe src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index95.html" frameborder="0" allowfullscreen=""></iframe>
-        </div>
-
-        <div class="header__title">
-            <h3>Ideas</h3>
-            <p class="desc1">
-                저를 새롭게 두근거리게 하는 <br>
-                코딩에 대한 꿈과 생각이 빛날 수 있도록
-            </p>
-        </div>
-        <!-- //header__title -->
-        <p class="desc2">
-            I want to create <br>
-            an ingenious websites <br>
-            with you.
-        </p>
+        <h1 href="#header">pOr</h1>
+        <nav id="menu" class="btn-menu">Menu</nav>
     </header>
     <!-- //header -->
 
     <main id="main">
-        <section id="introduce">
+        <section id="section1">
+            <h2 class="blind">Ideas</h2>
+            <div class="sec1">
+                <div class="sec1-bg">
+                    <iframe src="https://oranssy.github.io/portfolio/rainbowDrop.html" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <!-- //sec1-bg -->
+                <div class="ideas">
+                    <h3 class="split">Ideas</h3>
+                    <div class="ideas-desc">
+                        <div class="split syllable1">저를 새롭게 두근거리게 하는</div>
+                        <div class="split syllable2">코딩에 대한 꿈과 생각이 빛날 수 있도록</div>
+                    </div>
+                </div>
+                <!-- //ideas -->
+                <div class="sec1-desc">
+                    <div class="splitWord">
+                        I want to create
+                    </div>
+                    <div class="splitWord">
+                        an ingenious websites
+                    </div>
+                    <div class="splitWord">
+                        with you.
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
             <h2 class="blind">personality</h2>
             <div class="personality__tit">
                 <img class="myPhoto" src="assets/img/CJJ_01.jpg" alt="최진주 사진">
@@ -164,9 +176,9 @@
                             <h3>playful</h3>
                             <p>
                                 단점보다는 유머를 찾습니다. <br>
-                                행복해서 웃는 게 아니라 웃어서 행복해진다는 말이 이전에는 와닿지 않았습니다. 그러나 이제는 <br>
-                                조금 알 것도 같습니다. 하루 동안 웃을 일이 얼마나 있을까요? 지치고 무너져도 미소를 회복하며 <br>
-                                힘을 내봅니다. 힘든 일은 웃어넘겨버리고, 한 걸음 더 나아갈 힘을 만듭니다.
+                                행복해서 웃는 게 아니라 웃어서 행복해진다는 말이 이전에는 와닿지 않았습니다. 시간이 <br>
+                                흐르니 조금 알 것도 같습니다. 하루 동안 웃을 일이 얼마나 있을까요? 지치고 무너져도 미소를 회복합니다. <br>
+                                힘들었던 일은 웃어 넘겨버리고, 한 걸음 더 나아갈 힘을 만듭니다.
                             </p>
                         </div>
                     </div>
@@ -190,202 +202,66 @@
 
 
         </section>
-        <!-- //introduce -->
+        <!-- //section2 -->
 
-        <section id="website">
+        <section id="section3">
             <h2 class="blind">Configured Websites</h2>
             <div class="horizontalWrap">
-                <div class="horizontalSection">
-                    <div class="website__main horizon">
-                        <h3 class="title">Configured Websites</h3>
-                        <div class="website__cont">
-                            <div class="website__contL">
-                                <h3>website design</h3>
-                                <p>6개월 동안 배운 HTML, CSS, JAVASCRIPT, <br>
-                                    PHP, REACT, VUE 를 이용하여 웹 사이트를 제작하였습니다. 최신 트렌드를 <br>
-                                    반영하기 위해 지속적으로 스터디 모임에 참여하고, 핵심 사이트를 <br>
-                                    벤치마킹하며 부족한 부분을 채워가겠습니다.
-                                </p>
+                    <div class="horizontalSection">
+                        <div class="website__main horizon">
+                            <h3 class="title">Configured Websites</h3>
+                            <div class="website__cont">
+                                <div class="website__contL">
+                                    <h3>website design</h3>
+                                    <p>6개월 동안 배운 HTML, CSS, JAVASCRIPT, <br>
+                                        PHP, REACT, VUE 를 이용하여 웹 사이트를 제작하였습니다. 최신 트렌드를 <br>
+                                        반영하기 위해 지속적으로 스터디 모임에 참여하고, 핵심 사이트를 <br>
+                                        벤치마킹하며 부족한 부분을 채워가겠습니다.
+                                    </p>
+                                </div>
+                                <div class="website__contR">
+                                    <div class="web__listNum">01</div>
+                                    <ul class="website__list">
+                                        <li>Webstandard</li>
+                                        <li>Responsive</li>
+                                        <li>React</li>
+                                        <li>vue</li>
+                                        <li>PHP</li>
+                                    </ul>
+                                </div>
+                            </div> 
+                        </div>
+                        <!-- //website__main -->
+                        <div class="websites__view horizon imgDown">
+                            <div class="webNum">01</div>
+                            <div class="webImg img01"></div>
+                            <div class="webpage__info">
+                                <h3><em>webstandard</em> <span></span></h3>
+                                <div class="webpage__desc">
+                                    웹 표준을 준수한 사이트를 구성하였습니다. <br>
+                                    사용자의 편의 및 웹 접근성을 위한 스킵 메뉴, 탭 메뉴, alt 속성 대체 텍스트, <br>
+                                    IR 효과를 적용하였습니다.  W3C Validation을 통과하였으며 <br>
+                                    크로스 브라우징 작업을 완료하였습니다.
+                                </div>
                             </div>
-                            <div class="website__contR">
-                                <div class="web__listNum">01</div>
-                                <ul class="website__list">
-                                    <li>Webstandard</li>
-                                    <li>Responsive</li>
-                                    <li>React</li>
-                                    <li>vue</li>
-                                    <li>PHP</li>
-                                </ul>
+                            <!-- //webpage__info -->
+                            <div class="website__link">
+                                <a href="#">view</a>
+                                <a href="#">code</a>
                             </div>
-                        </div> 
+                        </div>
+                        <!-- //websites__view 01 -->
+    
+                        
                     </div>
-                    <!-- //website__main -->
-                    <div class="websites__view horizon imgDown">
-                        <div class="webNum">01</div>
-                        <div class="webImg img01"></div>
-                        <div class="webpage__info">
-                            <h3><em>webstandard</em> <span></span></h3>
-                            <div class="webpage__desc">
-                                웹 표준을 준수한 사이트를 구성하였습니다. <br>
-                                사용자의 편의 및 웹 접근성을 위한 스킵 메뉴, 탭 메뉴, alt 속성 대체 텍스트, <br>
-                                IR 효과를 적용하였습니다.  W3C Validation을 통과하였으며 <br>
-                                크로스 브라우징 작업을 완료하였습니다.
-                            </div>
-                        </div>
-                        <!-- //webpage__info -->
-                        <div class="website__link">
-                            <a href="#">view</a>
-                            <a href="#">code</a>
-                        </div>
-                    </div>
-                    <!-- //websites__view 01 -->
-                    <div class="websites__view horizon imgUp">
-                        <div class="webNum">02</div>
-                        <div class="webImg img02"></div>
-                        <div class="webpage__info">
-                            <h3><em>responsive</em> <span></span></h3>
-                            <div class="webpage__desc">
-                                미디어쿼리를 사용하여 제작한 반응형 사이트 입니다. <br>
-                                viewport 및 다양한 크기의 디바이스 화면에서 렌더링되도록 구성하였고 <br>
-                                Swiper Plugin 을 이용한 슬라이드 기능, 마우스 오버 효과, <br>
-                                패럴랙스 효과 등의 다양한 기능을 넣었습니다.
-                            </div>
-                        </div>
-                        <!-- //webpage__info -->
-                        <div class="website__link">
-                            <a href="#">view</a>
-                            <a href="#">code</a>
-                        </div>
-                    </div>
-                    <!-- //websites__view 02 -->
-                    <div class="websites__view horizon imgDown">
-                        <div class="webNum">03</div>
-                        <div class="webImg img03"></div>
-                        <div class="webpage__info">
-                            <h3><em>react site</em> <span></span></h3>
-                            <div class="webpage__desc">
-                                Rapid API 를 활용한 유튜브 리액트 사이트입니다. <br>
-                                npm 라이브러리 중에서 react-router-dom, react-player 를 활용하였고, <br>
-                                useEffect 훅으로 출력하였습니다. useParams 에 정보를 저장하여 <br>
-                                출력하는 채널 컨텐츠를 구성하였으며 카테고리 목록, 검색창, <br>
-                                영상 플레이, 관련 영상 목록 등을 구현하였습니다.
-                            </div>
-                        </div>
-                        <!-- //webpage__info -->
-                        <div class="website__link">
-                            <a href="#">view</a>
-                            <a href="#">code</a>
-                        </div>
-                    </div>
-                    <!-- //websites__view 03 -->
-                    <div class="websites__view horizon imgUp">
-                        <div class="webNum">04</div>
-                        <div class="webImg img04"></div>
-                        <div class="webpage__info">
-                            <h3><em>react site</em> <span></span></h3>
-                            <div class="webpage__desc">
-                                json 파일에서 정보를 가져오는 리액트 사이트입니다. <br>
-                                카페 음료 추천을 주제로 랜덤 선택, 기분에 따른 추천 및 검색 기능을 구현하였고, <br>
-                                앞서 제작한 유튜브 사이트를 참고하였습니다. 저는 전체적인 <br>
-                                디자인 작업을 맡았으며 json 데이터 파일 및 <br>
-                                검색 페이지를 제작하였습니다.
-                            </div>
-                        </div>
-                        <!-- //webpage__info -->
-                        <div class="website__link">
-                            <a href="#">view</a>
-                            <a href="#">code</a>
-                        </div>
-                    </div>
-                    <!-- //websites__view 04 -->
-                    <div class="websites__view horizon imgDown">
-                        <div class="webNum">05</div>
-                        <div class="webImg img05"></div>
-                        <div class="webpage__info">
-                            <h3><em>react site</em> <span></span></h3>
-                            <div class="webpage__desc">
-                                Youtube, Unsplash, TMDB API 를 이용한 리액트 사이트 입니다. <br>
-                                Postman API 및 npm 라이브러리 중 react-router-dom 을 활용하였고, props 와 <br>
-                                map( ) 메서드로 데이터를 출력하였습니다. 랜덤 데이터를 <br>
-                                Swiper slide 로 보여주고 검색창 및 카테고리 버튼 등을 <br>
-                                구현하였으며, netlify 로 배포하였습니다.
-                            </div>
-                        </div>
-                        <!-- //webpage__info -->
-                        <div class="website__link">
-                            <a href="#">view</a>
-                            <a href="#">code</a>
-                        </div>
-                    </div>
-                    <!-- //websites__view 05 -->
-                    <div class="websites__view horizon imgUp">
-                        <div class="webNum">06</div>
-                        <div class="webImg img06"></div>
-                        <div class="webpage__info">
-                            <h3><em>vue site</em> <span></span></h3>
-                            <div class="webpage__desc">
-                                앞서 제작한 리액트 사이트를 뷰 방식으로 구성한 사이트 입니다. <br>
-                                Postman API 및 firebase 를 활용하였고, v-for 구문을 이용한 리스트 렌더링을 <br>
-                                구현하였습니다. 뷰는 리액트 방식과 달리 &lt;template&gt; 에 HTML, JS, CSS <br>
-                                영역을 구분하여 정해진 문법에 따라 작성하기에, 코드의 <br>
-                                통일성을 가질 수 있다는 것을 알게 되었습니다.
-                            </div>
-                        </div>
-                        <!-- //webpage__info -->
-                        <div class="website__link">
-                            <a href="#">view</a>
-                            <a href="#">code</a>
-                        </div>
-                    </div>
-                    <!-- //websites__view 06 -->
-                    <div class="websites__view horizon imgDown">
-                        <div class="webNum">07</div>
-                        <div class="webImg img07"></div>
-                        <div class="webpage__info">
-                            <h3><em>vue site</em> <span></span></h3>
-                            <div class="webpage__desc">
-                                vue 방식의 구조를 연습하기 위해 만든 사이트 입니다. <br>
-                                firebase 를 활용하였고 컴포넌트와 props 및 Swiper slide 를 사용하였습니다. <br>
-                                각 섹션 별 데이터는 배열 안의 객체에 저장하여 출력하였으며, <br>
-                                마우스 오버 효과, 반응형 등을 작업하였습니다.
-                            </div>
-                        </div>
-                        <!-- //webpage__info -->
-                        <div class="website__link">
-                            <a href="#">view</a>
-                            <a href="#">code</a>
-                        </div>
-                    </div>
-                    <!-- //websites__view 07 -->
-                    <div class="websites__view horizon imgUp">
-                        <div class="webNum">08</div>
-                        <div class="webImg img08"></div>
-                        <div class="webpage__info">
-                            <h3><em>PHP site</em> <span></span></h3>
-                            <div class="webpage__desc">
-                                PHP 언어로 제작한 팀 프로젝트 사이트 입니다. <br>
-                                ‘기후 위기 대응’을 주제로 메인, 회원가입, 로그인, 마이페이지, 기후 소식, 게시판, 기후 실천, <br>
-                                제로 웨이스트 상품 추천 등의 페이지를 구성하였습니다. 저는 디자인 컨셉을 잡고 <br>
-                                전반적인 피그마 디자인 작업을 도왔으며 메인, 게시판, 마이페이지, <br>
-                                기후 퀴즈 등의 페이지를 구현하였습니다.
-                            </div>
-                        </div>
-                        <!-- //webpage__info -->
-                        <div class="website__link">
-                            <a href="#">view</a>
-                            <a href="#">code</a>
-                        </div>
-                    </div>
-                    <!-- //websites__view 08 -->
-                </div>
             </div>
         </section>
-        <!-- //website -->
+        <!-- //section3 -->
 
-        <section id="study">
+        <section id="section4">
             <h2 class="blind">Coding study</h2>
             <div class="study-bg">
-                <iframe src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index95.html" frameborder="0" allowfullscreen=""></iframe>
+                <iframe src="https://oranssy.github.io/portfolio/rainbowDrop.html" frameborder="0" allowfullscreen></iframe>
             </div>
             <h3>Coding study Coding</h3>
             <div class="study__info">
@@ -563,11 +439,11 @@
             </div>
             <!-- //study__list -->
         </section>
-        <!-- //study -->
-
-        <section id="values">
+        <!-- //section4 -->
+        
+        <section id="section5">
             <div class="values-bg">
-                <iframe src="https://webstoryboy.github.io/web2022/webstoryboy_three/three.js/index95.html" frameborder="0" allowfullscreen=""></iframe>
+                <iframe src="https://oranssy.github.io/portfolio/rainbowDrop.html" frameborder="0" allowfullscreen></iframe>
             </div>
             <h3>My values My values</h3>
             <h4>My values</h4>
@@ -651,10 +527,23 @@
                 </div>
             </div>
         </section>
-        <!-- //values -->
-
+        <!-- //section5 -->
     </main>
     <!-- //main -->
+
+    <aside id="parallax__info">
+        <div class="scroll">scrollTop: <span>0</span>px</div>
+        <div class="info">
+            <ul>
+                <li>#section1 : <span class="offset1">0</span>px</li>
+                <li>#section2 : <span class="offset2">0</span>px</li>
+                <li>#section3 : <span class="offset3">0</span>px</li>
+                <li>#section4 : <span class="offset4">0</span>px</li>
+                <li>#section5 : <span class="offset5">0</span>px</li>
+            </ul>
+        </div>
+    </aside>
+    <!-- //parallax__info -->
 
     <footer id="footer">
         <h2>Contact me</h2>
@@ -734,169 +623,50 @@
     <!-- script -->
     <!-- gsap : 스크립트 애니메이션을 위한 도구 모음 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
     <!-- ScrollTrigger 플러그인 -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+
+    <!-- gsap 애니메이션 -->
+    <script src="assets/js/gsapAnimation.js"></script>
+
+    <!-- section2 : personality 마우스 오버 -->
+    <script src="assets/js/section2.js"></script>
+    <!-- section3 : websites 가로 모드 -->
+    <script src="assets/js/section3.js"></script>
+    <!-- section4 : studies -->
+    <!-- <script src="assets/js/section4.js"></script> -->
+    <!-- section5 : values -->
+    <!-- <script src="assets/js/section5.js"></script> -->
+    <!-- footer 날짜 & 시간 -->
+    <script src="assets/js/footer.js"></script>
+
     <script>
-        // introduce section 마우스 오버시 내용 띄우기 (반복문으로 바꾸기!!)
-        const Select1 = document.querySelector(".select01");
-        const Select2 = document.querySelector(".select02");
-        const Select3 = document.querySelector(".select03");
-        const Select4 = document.querySelector(".select04");
-        const Select5 = document.querySelector(".select05");
-        const Select6 = document.querySelector(".select06");
-        const Select7 = document.querySelector(".select07");
+        window.addEventListener("scroll", () => {           // 브라우저를 스크롤 했을 때,
+            // let scrollTop = window.pageYOffset;                      // 3가지 식은
+            // let scrollTop = window.scrollY;                          // 모두 같은 값을 가진다.
+            // let scrollTop = document.documentElement.scrollTop;      // 브라우저에서 지원하는 것이 다를 수 있기 때문에, 아래와 같이 합쳐서 표현함
 
-        const Intro1 = document.querySelector(".person01");
-        const Intro2 = document.querySelector(".person02");
-        const Intro3 = document.querySelector(".person03");
-        const Intro4 = document.querySelector(".person04");
-        const Intro5 = document.querySelector(".person05");
-        const Intro6 = document.querySelector(".person06");
-        const Intro7 = document.querySelector(".person07");
+            // scrollTop 변수 안에 브라우저 기준의 세로 스크롤 값을 저장하시오.  |또는|
+            let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
-        Select1.addEventListener("mouseenter", () => {
-            Select1.style.cursor = "cell";
-            Select1.style.color = "#8c89b0";
-            Intro1.style.display = "block";
+            // 그리고 scrollTop 값을 parallax__info .scroll span 안에 출력하시오.
+            document.querySelector("#parallax__info .scroll span").innerText = Math.round(scrollTop);       // 소수점; 내림 Math.floor( ), 올림 Math.ceil( ), 반올림 Math.round( )
+            // script 맨 위쪽에   const scroll = document.querySelector("#parallax__info .scroll span");    이렇게 scroll 상수 설정 후,
+            // scroll.innerText = Math.round(scrollTop);    이렇게 입력해도 출력됨
+
+            // offset 값 출력하기  01. 일일이 하나씩 불러오는 방법
+            // 요소 offset$ 안에 출력하시오 = 아이디(section$)요소의 Y축 값(문서 기준)을
+            // document.querySelector(".offset1").innerText = document.getElementById("section1").offsetTop;
+
+            // offset 값 출력하기  02. for문으로 불러오는 방법
+            for (let i=1; i<=9; i++) {            // i 가 1부터 9까지 증가할 때,
+                document.querySelector(".offset" + i).innerText = document.getElementById("section" + i).offsetTop;
+            }   // 요소 (offset + i) 안에 출력하시오. = 아이디 (section + i) 요소의 Y축 값(문서 기준)을
         });
-        Select1.addEventListener("mouseleave", () => {
-            Select1.style.color = "#ffffff";
-            Intro1.style.display = "none";
-        });
-
-        Select2.addEventListener("mouseenter", () => {
-            Select2.style.cursor = "cell";
-            Select2.style.color = "#8c89b0";
-            Intro2.style.display = "block";
-        });
-        Select2.addEventListener("mouseleave", () => {
-            Select2.style.color = "#ffffff";
-            Intro2.style.display = "none";
-        });
-
-        Select3.addEventListener("mouseenter", () => {
-            Select3.style.cursor = "cell";
-            Select3.style.color = "#8c89b0";
-            Intro3.style.display = "block";
-        });
-        Select3.addEventListener("mouseleave", () => {
-            Select3.style.color = "#ffffff";
-            Intro3.style.display = "none";
-        });
-
-        Select4.addEventListener("mouseenter", () => {
-            Select4.style.cursor = "cell";
-            Select4.style.color = "#8c89b0";
-            Intro4.style.display = "block";
-        });
-        Select4.addEventListener("mouseleave", () => {
-            Select4.style.color = "#ffffff";
-            Intro4.style.display = "none";
-        });
-
-        Select5.addEventListener("mouseenter", () => {
-            Select5.style.cursor = "cell";
-            Select5.style.color = "#8c89b0";
-            Intro5.style.display = "block";
-        });
-        Select5.addEventListener("mouseleave", () => {
-            Select5.style.color = "#ffffff";
-            Intro5.style.display = "none";
-        });
-
-        Select6.addEventListener("mouseenter", () => {
-            Select6.style.cursor = "cell";
-            Select6.style.color = "#8c89b0";
-            Intro6.style.display = "block";
-        });
-        Select6.addEventListener("mouseleave", () => {
-            Select6.style.color = "#ffffff";
-            Intro6.style.display = "none";
-        });
-
-        Select7.addEventListener("mouseenter", () => {
-            Select7.style.cursor = "cell";
-            Select7.style.color = "#8c89b0";
-            Intro7.style.display = "block";
-        });
-        Select7.addEventListener("mouseleave", () => {
-            Select7.style.color = "#ffffff";
-            Intro7.style.display = "none";
-        });
-
-
-        // Website section 가로 모드
-        // 스크롤할 때 움직이도록 gsap 플러그인 설정
-        gsap.registerPlugin(ScrollTrigger);
-
-        // 섹션 모두를 선택
-        const sections = gsap.utils.toArray(".horizon");
-
-        gsap.to(sections, {
-            // xPercent : x좌표의 위치를 %로 표현 ( - 는 오른쪽방향으로 넘기기 위함 / 100은 %이기 때문에 곱해줌 / length에 -1을 해주는 이유는 처음에 뜨는 화면을 포함하지 않기 위함 / -1을 없애면 다음 섹션만큼 빈 공간이 생김)
-            xPercent: -100 * (sections.length -1),
-            // ease: true,      // 스크롤할 때 질척거림
-            ease: "none",
-            scrollTrigger: {
-                trigger: ".horizontalWrap",     // 스크롤 대상
-                pin: true,                      // 고정
-                scrub: 1,                       // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
-                // snap: 1 / (sections.length -1),      // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
-                end: "+=1000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
-                // markers: true,               // 보조 기준선 표시
-            }
-        })
-
-
-        // // // values section 반원 그리기
-        // // <canvas id="cnvs" width="1920" height="1080" style="background-color: #ffffff;"></canvas>        // (html)
-        // // 반원 출력
-        // let chi = document.getElementById("cnvs");
-        // let chet = chi.getContext("2d");
-
-        // chet.beginPath();
-        // // chet.fillStyle = "";     // 반원호에 채울 색깔
-        // chet.strokeStyle = "#9796B9";
-        // chet.lineWidth = 20;
-        // chet.arc(960, 0, 900, 0, Math.PI, false);
-        // // chet.fill();     // 반원호에 색깔 채우기
-        // chet.stroke();
-
-
-        // footer section 날짜 & 시간 구현하기
-        function printTime() {
-        const clock = document.querySelector(".dateTime");
-        const now = new Date();
-        // // clock.innerText = now;   // 날짜 및 시간 데이터가 나오는지 확인
-
-        let year = now.getFullYear() -2000;  // getFullYear() -> 날짜의 연도에 해당하는 숫자
-
-        let month = now.getMonth() + 1; // 월 (0에서 11 사이의 정수. 0은 1월, 1은 2월... 을 나타냄) 숫자로 표시되므로 월에는 +1 을 해줘야 함.
-        if (month < 10) month = "0" + month;
-
-        let date = now.getDate();       // getDate() -> 일 (1 이상 31 이하의 정수)
-        if (date < 10) date = "0" + date;
-
-        let hr = now.getHours();        // 시 (0에서 23 사이의 정수)
-        if (hr < 10) hr = "0" + hr;     // 일의 자리 숫자 앞에 0 붙이기
-        // if (hr > 12) hr = hr - 12;      // '16시' 로 나오지 않고 4시로 나올 수 있도록
-
-        let min = now.getMinutes();     // 분 (0에서 59 사이의 정수)
-        if (min < 10) min = "0" + min;
-
-        let sec = now.getSeconds();     // 초 (0에서 59 사이의 정수)
-        if (sec < 10) sec = "0" + sec;
-
-        // 날짜 & 시간 출력
-        const nowTime = year + " " + month + " " + date + " " + hr + " " + min + " " + sec;
-        clock.innerText = nowTime;
-        setTimeout("printTime()", 1000); // 1000 = 1초 간격으로
-      }
-
-      // 실행문 : 윈도우가 시작하자마자, 작동하시오. (맨 아래에 있어야 함)
-      window.onload = function () {
-        printTime();
-      };
+        
     </script>
+
 </body>
 </html>
