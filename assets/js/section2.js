@@ -1,4 +1,4 @@
-// introduce section 마우스 오버시 내용 띄우기 (반복문으로 바꾸기!!)
+// section2 : personality 마우스 오버시 내용 띄우기
 
 const Select1 = document.querySelector(".select01");
 const Select2 = document.querySelector(".select02");

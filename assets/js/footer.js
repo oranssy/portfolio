@@ -1,4 +1,4 @@
-// footer section 날짜 & 시간 구현하기
+// footer 날짜 & 시간 구현하기
 
 function printTime() {
 

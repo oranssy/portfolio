@@ -1,4 +1,4 @@
-// Website section 가로 모드
+// section3 : websites 가로 모드
 
 gsap.registerPlugin(ScrollTrigger);        // 스크롤할 때 움직이도록 gsap 플러그인 설정
 

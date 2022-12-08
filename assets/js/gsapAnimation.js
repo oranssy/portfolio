@@ -1,5 +1,5 @@
-// 문장을 음절 또는 단어로 나눠주기
-// 클래스에 split를 넣어주고, 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
+// 문장을 음절 또는 단어로 나눠주기 (1), (2)
+// (1) 클래스에 split를 넣어주고, 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
 document.querySelectorAll(".split").forEach(text => {
     let splitText = text.innerText;
     let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
@@ -9,7 +9,7 @@ document.querySelectorAll(".split").forEach(text => {
     text.setAttribute("aria-label", splitText);
 });
 
-// 클래스에 splitWord를 넣어주고, 단어로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
+// (2) 클래스에 splitWord를 넣어주고, 단어로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
 document.querySelectorAll(".splitWord").forEach(text => {
     let splitWordText = text.innerText;
     let splitWordWrap = splitWordText.split(' ').join("</span><span aria-hidden='true'>");
@@ -20,13 +20,13 @@ document.querySelectorAll(".splitWord").forEach(text => {
 });
 
 
-// 
+// 스크롤 값에 따라 페이지가 움직이도록 gsap 플러그인 설정      // scrollTrigger: css 및 javascript를 활용하여 스크롤 동작 및 기타 다양한 svg 애니메이션을 제작할 수 있게 도와주는 플러그인
 gsap.registerPlugin(ScrollTrigger);
 
 // Smooth Scroll (lenis 효과)
 const lenis = new Lenis({           // gsap 스크롤 기본 셋팅
     duration: 1.2,
-    // easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
     // direction: 'vertical', // vertical, horizontal
     // gestureDirection: 'vertical', // vertical, horizontal, both
 })
@@ -36,43 +36,38 @@ lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
 })
 
 
-// main 애니메이션
+// section 애니메이션 효과
 function raf(time) {
     lenis.raf(time)
-    requestAnimationFrame(raf);
+    requestAnimationFrame(raf)
 }
+requestAnimationFrame(raf)
 
-requestAnimationFrame(raf);
-
-setTimeout(() => {
+// section1
+setTimeout ( () => {
     let mainTl = gsap.timeline();
+   
+    mainTl.to(".ideas h3 span",  { duration: 1.2, x: 0, opacity: 1, stagger: 0.3, ease: Power1.easeOut })
+    mainTl.to(".ideas-desc span", { duration: 0.4, x: 0, y: 0, opacity: 1, stagger: 0.03, ease: Power1.easeOut })
+    mainTl.to(".ideas", { duration: 1.2, x: "80%", ease: Power4.easeInOut }, "+= 0.85")
+    mainTl.to(".sec1-bg iframe", { duration: 1, opacity: 1, scale: 1 })
+    mainTl.to(".sec1-desc span", { duration: 0.6, x: 0, y: 0, opacity: 1, stagger: 0.01, ease: Power1.easeOut })
+    mainTl.to("#header", { duration: 0.3, top: 0, opacity: 1, ease: Power1.easeOut })
 
-    // mainTl.to(".main-bg", {duration: 5, ease: "power2.inOut", opacity: 1})
-    // mainTl.to(".sec1__subject span", { duration: 2, x: 0, opacity: 1, stagger: 0.3, ease: "power2.inOut"})
-    mainTl.to(".sec1 .ideas h3 span", {duration: 0.3, x: 0, y:0, opacity:1, stagger: 0.01, ease: Power1.easeOut})
-            // .to("leftFlow1", {duration: 2, })
-            // .to("leftFlow2", {duration: 2, })
-            // .to("wordDrop1", {duration: 2, })
-            // .to("wordDrop2", {duration: 2, })
-            // .to("wordDrop3", {duration: 2, }, "+=2")
-}, 2000);
+}, 3000 );
 
-// gsap.to("#section1 h3", {
-//     xPercent: -30,
-//     ease: "none",
+
+gsap.to (".personality__tit h3", {
+    xPercent: -30,
+    ease: "none",
+    scrollTrigger: {
+        scrub: 1,
+    }
+})
+// gsap.to(".tit2, .tit5", {
+//     x: 400,
 //     scrollTrigger: {
 //         scrub: 1,
 //     }
 // })
 
-
-
-// (1) mainSubject 애니메이션
-
-// (2) mainDesc1 애니메이션
-
-// (3) main__title 애니메이션
-
-// (4) main-bg  애니메이션
-
-// (5) mainDesc2 애니메이션
