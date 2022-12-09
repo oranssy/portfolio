@@ -179,7 +179,7 @@ iframe {
     width: 100vw;
     padding: 4em;
     overflow: hidden;
-    margin-bottom: 50vh;
+    margin-bottom: 30vh;
 }
 .person__item {
     width: max-content;
@@ -260,7 +260,7 @@ iframe {
 
 /* section3 */
 #section3 {
-    /* height: 100vh; */
+    height: 100vh;
     background: var(--webBG);
     /* background: rgb(234, 165, 165); */
 }
