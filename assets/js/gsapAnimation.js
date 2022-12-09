@@ -47,30 +47,31 @@ requestAnimationFrame(raf)
 // section1
 setTimeout ( () => {
     let mainTl = gsap.timeline();
+    const sec1Desc = document.querySelectorAll(".sec1-desc");
    
     mainTl.to(".ideas h3 span",  { duration: 0.5, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
-    mainTl.to(".ideas-desc span", { duration: 0.2, x: 0, y: 0, opacity: 1, stagger: 0.04, ease: Power1.easeOut })
-    mainTl.to(".ideas", { duration: 1.2, x: "92%", ease: Power3.easeInOut }, "+=0.4")
+    mainTl.to(".ideas-desc span", { duration: 0.2, x: 0, y: 0, opacity: 1, stagger: 0.02, ease: Power1.easeOut })
+    mainTl.to(".ideas", { duration: 1.2, x: "86%", ease: Power3.easeInOut }, "+=0.4")
     mainTl.to(".sec1-bg iframe", { duration: 1, opacity: 1, scale: 1 })
-    mainTl.to(".sec1-desc span", { duration: 0.4, x: 0, y: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
-    mainTl.to("#header", { duration: 0.2, top: 0, opacity: 1, ease: Power1.easeOut })
+    mainTl.to(".sec1-desc span", { duration: 0.25, y: 0, opacity: 1, stagger: 0.15, ease: Power1.easeOut })
+    mainTl.to("#header", { duration: 0.3, top: 0, opacity: 1, ease: Power1.easeOut })
 
-}, 3000 );
+}, 2000 );
 
 
 
 // section2
-ScrollTrigger.create({
-    trigger: "#section2",
-    start: "top 10%",
-    // end: "top 50%",
-    markers: true,
-    toggleClass: { targets: "myPhoto", className: "fade-up" },
-    onEnter: () => console.log("onEnter"),
-    onLeave: () => console.log("onLeave"),
-    onEnterBack: () => console.log("onEnterBack"),
-    onLeaveBack: () => console.log("onLeaveBack"),
-})
+// ScrollTrigger.create({
+//     trigger: "#section2",
+//     start: "top 10%",
+//     // end: "top 50%",
+//     markers: true,
+//     toggleClass: { targets: "myPhoto", className: "fade-up" },
+//     onEnter: () => console.log("onEnter"),
+//     onLeave: () => console.log("onLeave"),
+//     onEnterBack: () => console.log("onEnterBack"),
+//     onLeaveBack: () => console.log("onLeaveBack"),
+// })
 
 gsap.to(".personal h3", { xPercent: -100, ease: "none", scrollTrigger: { scrub: 1 } })
 

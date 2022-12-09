@@ -13,7 +13,7 @@ gsap.timeline()
         skewY: gsap.utils.wrap([-8, 8]),
         ease: "expo.out",
     })
-    .set(".person", { pointerEvents: "all" });
+    .set(".person__item", { pointerEvents: "all" });       // .person
 
     gsap.defaults({
         duration: 0.55,

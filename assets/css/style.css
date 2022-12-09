@@ -51,7 +51,7 @@ iframe {
 /* header */
 #header {
     width: 100vw;
-    padding: 1.7vw 2vw;
+    padding: 1.3vw 1.7vw;
     position: fixed;
     left: 0;
     top: 0;
@@ -84,8 +84,6 @@ iframe {
 }
 .sec1 .ideas {
     position: absolute;
-    /* right: 0.5vw;
-    top: 31vh; */
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -110,7 +108,7 @@ iframe {
 .ideas-desc span {
     display: inline-block;
     margin-right: 0.025vw;
-    transform: translate(10px, 10px);
+    transform: translate(20px, 20px);
     opacity: 0;
 }
 .syllable1 span:nth-child(3), 
@@ -134,7 +132,7 @@ iframe {
 .sec1-desc span {
     display: inline-block;
     margin-right: 1vw;
-    transform: translateY(50px);
+    transform: translateY(-100px);
     opacity: 0;
 }
 
@@ -169,10 +167,11 @@ iframe {
     font-size: 15.5vw;
     color: var(--title);
     line-height: 1.2;
-    margin-left: -16vw;
+    /* margin-left: -16vw; */
+    margin: -5vw;
     margin-top: -8.5vh;
+    margin-left: -10vw;
     white-space: nowrap;
-    /* overflow: hidden; */
     position: relative;
 }
 .sec2 .personal h3 .bead1 {
@@ -187,7 +186,7 @@ iframe {
 }
 /* person */
 .person {
-    width: 100%;
+    width: 100vw;
     /* height: 100vh; */
     padding: 4em;
     overflow: hidden;
@@ -196,9 +195,7 @@ iframe {
 .person__item {
     width: max-content;
     font-family: var(--font-sub);
-    /* color: var(--white); */
-    /* color: var(--title); */
-    color: var(--webBG);
+    color: var(--white);
     position: relative;
 }
 .person__item-image_wrap {
@@ -231,7 +228,7 @@ iframe {
     font-size: 3.8vw;
     font-weight: 500;
     line-height: 1.3;
-    margin-bottom: 3vh;
+    margin-bottom: 2vh;
     z-index: 1;
 }
 .person__item-cont_desc {
@@ -258,8 +255,7 @@ iframe {
 }
 .person__item-innertext {}
 .person__item:hover .person__item-text {
-    /* color: var(--title); */
-    color: var(--white);
+    color: var(--title);
 }
 .person__item:hover .person__item-image_wrap {
     z-index: -2;
