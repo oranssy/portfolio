@@ -1,6 +1,5 @@
 body {
-    /* background: var(--bg); */
-    background: var(--black);
+    background: var(--bg);
 }
 .container {
   max-width: 1520px;
@@ -23,8 +22,7 @@ iframe {
 }
 /* 스크롤 배경 */
 ::-webkit-scrollbar-track {
-    /* background: var(--bg); */
-    background: var(--black);
+    background: var(--bg);
 }
 
 /* 스킵 메뉴 */
@@ -61,10 +59,8 @@ iframe {
     align-items: center;
     justify-content: space-between;
     font-size: 1.5vw;
-    /* background: rgba(0, 0, 0, 0.3); */
-    background: rgba(0, 0, 0, 0.4);
-    /* backdrop-filter: blur(5px); */
-    backdrop-filter: blur(10px);
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(5px);
     z-index: 1000;
     opacity: 0;
 }
@@ -79,7 +75,6 @@ iframe {
 /* section1 */
 #section1 {
     width: 100vw;
-    /* overflow: hidden; */
     position: relative;
 }
 .sec1-bg iframe {
@@ -153,7 +148,7 @@ iframe {
 }
 .sec2 .personal {
     padding-top: 14vh;
-    margin-bottom: 10vh;
+    margin-bottom: 6.5vh;
     align-items: end;
 }
 .sec2 .personal .myPhoto {
@@ -175,7 +170,7 @@ iframe {
     color: var(--title);
     line-height: 1.2;
     margin-left: -16vw;
-    margin-top: -9vh;
+    margin-top: -8.5vh;
     white-space: nowrap;
     /* overflow: hidden; */
     position: relative;
@@ -191,70 +186,93 @@ iframe {
     top: 11%;
 }
 /* person */
-.person {}
+.person {
+    margin-left: 68vw;
+    margin-bottom: 50vh;
+}
 .person__item {
     width: max-content;
     font-family: var(--font-sub);
 }
 .person__item-image_wrap {
     position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 20%;
+    top: -20%;
+    /* transform: translate(-50%, -50%); */
     width: 33vw;
     height: 33vw;
     pointer-events: none;
     opacity: 0;
 }
-.person__item-image_inner {}
+.person__item-image_inner {
+    position: relative;
+}
 .person__item-image_inner .myImg1 {
     width: 33vw;
     height: 33vw;
     background: url(../img/my_Img01.jpg) no-repeat;
-    background-position: center center;
     background-size: cover;
+    background-position: center center;
 }
 .person__item-image_inner .myImg2 {
     width: 33vw;
     height: 33vw;
     background: url(../img/my_Img02.jpg) no-repeat;
-    background-position: center center;
     background-size: cover;
+    background-position: center center;
 }
 .person__item-image_inner .myImg3 {
     width: 33vw;
     height: 33vw;
     background: url(../img/my_Img03.jpg) no-repeat;
-    background-position: center center;
     background-size: cover;
+    background-position: center center;
 }
 .person__item-image_inner .myImg4 {
     width: 33vw;
     height: 33vw;
     background: url(../img/my_Img04.jpg) no-repeat;
-    background-position: center center;
     background-size: cover;
+    background-position: center center;
 }
 .person__item-image_inner .myImg5 {
     width: 33vw;
     height: 33vw;
     background: url(../img/my_Img05.jpg) no-repeat;
-    background-position: center center;
     background-size: cover;
+    background-position: center center;
 }
 .person__item-image_inner .myImg6 {
     width: 33vw;
     height: 33vw;
     background: url(../img/my_Img06.jpg) no-repeat;
-    background-position: center center;
     background-size: cover;
+    background-position: center center;
 }
 .person__item-image_inner .myImg7 {
     width: 33vw;
     height: 33vw;
     background: url(../img/my_Img07.jpg) no-repeat;
-    background-position: center center;
     background-size: cover;
+    background-position: center center;
+}
+.person__item-cont {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    z-index: 50;
+}
+.person__item-cont_tit {
+    font-size: 3.8vw;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 3vh;
+}
+.person__item-cont_desc {
+    font-family: var(--font-kor);
+    font-size: 1.1vw;
+    font-weight: 300;
+    line-height: 1.5;
 }
 .person__item-image_inner .person__item-image {
     position: absolute;
@@ -264,11 +282,12 @@ iframe {
     height: 100%;
     border-radius: 50%;
     object-fit: cover;
+
 }
 .person__item-title {
     position: relative;
     font-family: var(--font-sub);
-    font-size: 3.8vw;
+    font-size: 3.7vw;
     font-weight: 500;
     line-height: 1.3;
     opacity: 1;

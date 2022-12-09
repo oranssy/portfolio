@@ -32,7 +32,7 @@ const lenis = new Lenis({           // gsap 스크롤 기본 셋팅
     // gestureDirection: 'vertical', // vertical, horizontal, both
 })
 
-//get scroll value
+// get scroll value
 lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
 })
 
@@ -59,20 +59,20 @@ setTimeout ( () => {
 
 
 
-// // section2
-// ScrollTrigger.create({
-//     trigger: "#section2",
-//     start: "top 6%",
-//     // end: "top 50%",
-//     markers: true,
-//     toggleClass: { targets: "myPhoto", className: "fade-up" },
-//     onEnter: () => console.log("onEnter"),
-//     onLeave: () => console.log("onLeave"),
-//     onEnterBack: () => console.log("onEnterBack"),
-//     onLeaveBack: () => console.log("onLeaveBack"),
-// })
+// section2
+ScrollTrigger.create({
+    trigger: "#section2",
+    start: "top 10%",
+    // end: "top 50%",
+    markers: true,
+    toggleClass: { targets: "myPhoto", className: "fade-up" },
+    onEnter: () => console.log("onEnter"),
+    onLeave: () => console.log("onLeave"),
+    onEnterBack: () => console.log("onEnterBack"),
+    onLeaveBack: () => console.log("onLeaveBack"),
+})
 
-// gsap.to(".personality__tit h3", { xPercent: -70, ease: "none", scrollTrigger: { scrub: 1 } })
+gsap.to(".personal h3", { xPercent: -100, ease: "none", scrollTrigger: { scrub: 1 } })
 
 // setTimeout ( () => {
 //     let sec2Tl = gsap.timeline();
@@ -82,7 +82,7 @@ setTimeout ( () => {
 
 
 
-// gsap.to (".personality__tit h3", {
+// gsap.to (".personal h3", {
 //     xPercent: -50,
 //     ease: "none",
 //     scrollTrigger: {
