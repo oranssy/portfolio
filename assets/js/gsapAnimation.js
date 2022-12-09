@@ -54,7 +54,7 @@ setTimeout ( () => {
     mainTl.to(".ideas", { duration: 1.2, x: "86%", ease: Power3.easeInOut }, "+=0.4")
     mainTl.to(".sec1-bg iframe", { duration: 1, opacity: 1, scale: 1 })
     mainTl.to(".sec1-desc span", { duration: 0.15, y: 0, opacity: 1, stagger: 0.12, ease: Power1.easeOut })
-    mainTl.to("#header", { duration: 0.3, top: 0, opacity: 1, ease: Power1.easeOut })
+    mainTl.to("#header", { duration: 0.2, top: 0, opacity: 1, ease: Power4.easeOut })
 
 }, 2000 );
 
