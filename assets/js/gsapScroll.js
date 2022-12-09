@@ -86,7 +86,7 @@ gsap.to(".sec2 .personal .myPhoto", {
 gsap.to(".sec2 .person__item-innertext span", {
     scrollTrigger: {
         trigger: ".person__item",
-        start: "top 50%",
+        start: "top 80%",
         end: "top 20%",
         scrub: 1,
     },
@@ -97,7 +97,7 @@ gsap.to(".sec2 .person__item-innertext span", {
 // section3 (가로 모드)
 const Horizons = gsap.utils.toArray(".horizon");        // 가로로 스크롤할 페이지 모두를 선택
 
-gsap.to(Horizons, {
+gsap.to( Horizons, {
     // xPercent : x좌표의 위치를 %로 표현 ( - 는 오른쪽방향으로 넘기기 위함 / 100은 %이기 때문에 곱해줌 / length에 -1을 해주는 이유는 처음에 뜨는 화면을 포함하지 않기 위함 / -1을 없애면 다음 페이지만큼 빈 공간이 생김)
     xPercent: -100 * (Horizons.length -1),
     // ease: true,      // 스크롤할 때 질척거림
@@ -107,12 +107,41 @@ gsap.to(Horizons, {
         pin: true,                      // 고정
         scrub: 1,                       // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
         // snap: 1 / (Horizons.length -1),      // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
-        end: "+=2000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
-        markers: true,               // 보조 기준선 표시
+        end: "+=1000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
+        // markers: true,               // 보조 기준선 표시
     }
 })
 
+gsap.to(".sec3 .website .title", {
+    scrollTrigger: {
+        trigger: ".website",
+        start: "top 80%",
+        end: "top 10%",
+        scrub: 1,
+    },
+    xPercent: -19, duration: 2, stagger: 0.1, ease: "none"
+});
 
+gsap.to(".sec3 .website__cont", {
+    scrollTrigger: {
+        trigger: ".website",
+        start: "top 25%",
+        end: "top 21%",
+        scrub: 1,
+        markers: true,
+    },
+    opacity: 1, duration: 0.07, stagger: 0.1, ease: Power1.easeOut
+});
+
+gsap.to(".sec3 .website__contR ul li span", {
+    scrollTrigger: {
+        trigger: ".website",
+        start: "top -30%",
+        end: "top -45%",
+        scrub: 1,
+    },
+    y: "100%", duration: 2, stagger: 1, ease: "SlowMo.easeOut"
+});
 
 
 
