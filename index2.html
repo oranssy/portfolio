@@ -565,16 +565,7 @@
     <!-- //main -->
 
     <aside id="parallax__info">
-        <div class="scroll">scrollTop : <span>0</span>px</div>
-        <div class="info">
-            <ul>
-                <li>#section1 : <span class="offset1">0</span>px</li>
-                <li>#section2 : <span class="offset2">0</span>px</li>
-                <li>#section3 : <span class="offset3">0</span>px</li>
-                <li>#section4 : <span class="offset4">0</span>px</li>
-                <li>#section5 : <span class="offset5">0</span>px</li>
-            </ul>
-        </div>
+        <div class="scroll"><span>0</span></div>
     </aside>
     <!-- //parallax__info -->
 
@@ -687,15 +678,6 @@
             document.querySelector("#parallax__info .scroll span").innerText = Math.round(scrollTop);       // 소수점; 내림 Math.floor( ), 올림 Math.ceil( ), 반올림 Math.round( )
             // script 맨 위쪽에   const scroll = document.querySelector("#parallax__info .scroll span");    이렇게 scroll 상수 설정 후,
             // scroll.innerText = Math.round(scrollTop);    이렇게 입력해도 출력됨
-
-            // offset 값 출력하기  01. 일일이 하나씩 불러오는 방법
-            // 요소 offset$ 안에 출력하시오 = 아이디(section$)요소의 Y축 값(문서 기준)을
-            // document.querySelector(".offset1").innerText = document.getElementById("section1").offsetTop;
-
-            // offset 값 출력하기  02. for문으로 불러오는 방법
-            for (let i=1; i<=9; i++) {            // i 가 1부터 9까지 증가할 때,
-                document.querySelector(".offset" + i).innerText = document.getElementById("section" + i).offsetTop;
-            }   // 요소 (offset + i) 안에 출력하시오. = 아이디 (section + i) 요소의 Y축 값(문서 기준)을
         });
         
     </script>

@@ -56,6 +56,7 @@ setTimeout ( () => {
     mainTl.to(".sec1-bg iframe", { duration: 1, opacity: 1, scale: 1 })
     mainTl.to(".sec1-desc span", { duration: 0.15, y: 0, opacity: 1, stagger: 0.12, ease: Power1.easeOut })
     mainTl.to("#header", { duration: 0.2, top: 0, opacity: 1, ease: Power4.easeOut })
+    mainTl.to("#parallax__info", { duration: 0.1, opacity: 1, ease: Power4.easeOut })
 
 }, 2000 );
 
@@ -106,7 +107,7 @@ gsap.to(Horizons, {
         pin: true,                      // 고정
         scrub: 1,                       // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
         // snap: 1 / (Horizons.length -1),      // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
-        end: "+=5000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
+        end: "+=2000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
         markers: true,               // 보조 기준선 표시
     }
 })
