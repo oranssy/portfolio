@@ -4,7 +4,7 @@ document.querySelectorAll(".split").forEach(text => {
     let splitText = text.innerText;
     let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
 
-    splitWrap = "<span aria-hidden='true' class='' >" + splitWrap + "</span>";
+    splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
     text.innerHTML = splitWrap;
     text.setAttribute("aria-label", splitText);
 });
@@ -14,7 +14,7 @@ document.querySelectorAll(".splitWord").forEach(text => {
     let splitWordText = text.innerText;
     let splitWordWrap = splitWordText.split(' ').join("</span><span aria-hidden='true'>");
     
-    splitWordWrap = "<span aria-hidden='true' class='' >" + splitWordWrap + "</span>";
+    splitWordWrap = "<span aria-hidden='true'>" + splitWordWrap + "</span>";
     text.innerHTML = splitWordWrap;
     text.setAttribute("aria-label", splitWordText);
 });
@@ -53,47 +53,46 @@ setTimeout ( () => {
     mainTl.to(".ideas-desc span", { duration: 0.2, x: 0, y: 0, opacity: 1, stagger: 0.02, ease: Power1.easeOut })
     mainTl.to(".ideas", { duration: 1.2, x: "86%", ease: Power3.easeInOut }, "+=0.4")
     mainTl.to(".sec1-bg iframe", { duration: 1, opacity: 1, scale: 1 })
-    mainTl.to(".sec1-desc span", { duration: 0.25, y: 0, opacity: 1, stagger: 0.15, ease: Power1.easeOut })
+    mainTl.to(".sec1-desc span", { duration: 0.15, y: 0, opacity: 1, stagger: 0.12, ease: Power1.easeOut })
     mainTl.to("#header", { duration: 0.3, top: 0, opacity: 1, ease: Power1.easeOut })
 
 }, 2000 );
 
-
-
 // section2
-// ScrollTrigger.create({
-//     trigger: "#section2",
-//     start: "top 10%",
-//     // end: "top 50%",
-//     markers: true,
-//     toggleClass: { targets: "myPhoto", className: "fade-up" },
-//     onEnter: () => console.log("onEnter"),
-//     onLeave: () => console.log("onLeave"),
-//     onEnterBack: () => console.log("onEnterBack"),
-//     onLeaveBack: () => console.log("onLeaveBack"),
-// })
+// gsap.to(".personal h3", { xPercent: -75, ease: "none", scrollTrigger: { scrub: 1 } })
 
-gsap.to(".personal h3", { xPercent: -100, ease: "none", scrollTrigger: { scrub: 1 } })
+gsap.to(".personal h3", {
+    scrollTrigger: {
+        trigger: "#section2",
+        start: "top 40%",
+        scrub: 1,
+    },
+    xPercent: -75, ease: "none"
+});
 
-// setTimeout ( () => {
-//     let sec2Tl = gsap.timeline();
+gsap.to(".sec2 .personal .myPhoto", {
+    scrollTrigger: {
+        trigger: "#section2",
+        start: "top 80%",
+        end: "top 10%",
+        scrub: 1,
+    },
+    opacity: 1, ease: "none"
+});
 
-//     sec2Tl.to(".myPhoto", { duration: 0.4, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
-// });
+gsap.to(".sec2 .person__item-innertext span", {
+    scrollTrigger: {
+        trigger: ".person__item",
+        markers: true,
+        start: "top 50%",
+        end: "top 20%",
+        scrub: 1,
+    },
+    y: "0%", duration: 0.7, stagger: 0.01, ease: "SlowMo.easeOut"
+});
 
 
 
-// gsap.to (".personal h3", {
-//     xPercent: -50,
-//     ease: "none",
-//     scrollTrigger: {
-//         scrub: 1,
-//     }
-// })
-// gsap.to(".tit2, .tit5", {
-//     x: 400,
-//     scrollTrigger: {
-//         scrub: 1,
-//     }
-// })
+
+
 

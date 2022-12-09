@@ -1,11 +1,6 @@
 body {
     background: var(--bg);
 }
-.container {
-  max-width: 1520px;
-  width: 100%;
-  margin: 0 auto;
-}
 iframe {
   pointer-events: none;
 }
@@ -142,7 +137,7 @@ iframe {
 #section2 {
     width: 100vw;
     overflow: hidden;
-    /* background: rgb(234, 165, 165); */
+    margin-top: 20vh;
 }
 .sec2 .personal {
     padding-top: 14vh;
@@ -157,20 +152,15 @@ iframe {
     background-position: center center;
     border-radius: 50%;
     margin-left: 62vw;
-    /* opacity: 0; */
+    opacity: 0;
 }
-/* .fade-up {
-    opacity: 1;
-} */
 .sec2 .personal h3 {
     width: 115vw;
     font-size: 15.5vw;
     color: var(--title);
     line-height: 1.2;
-    /* margin-left: -16vw; */
-    margin: -5vw;
-    margin-top: -8.5vh;
-    margin-left: -10vw;
+    margin-top: -8vh;
+    margin-left: -8vw;
     white-space: nowrap;
     position: relative;
 }
@@ -187,7 +177,6 @@ iframe {
 /* person */
 .person {
     width: 100vw;
-    /* height: 100vh; */
     padding: 4em;
     overflow: hidden;
     margin-bottom: 50vh;
@@ -253,9 +242,18 @@ iframe {
     /* padding-left: 68vw;
     padding-bottom: 50vh; */
 }
-.person__item-innertext {}
+.person__item-innertext {
+    display: block;
+    background: var(--bg);
+    overflow: hidden;
+}
+.person__item-innertext span {
+    display: inline-block;
+    transform: translateY(100%);
+}
 .person__item:hover .person__item-text {
     color: var(--title);
+
 }
 .person__item:hover .person__item-image_wrap {
     z-index: -2;
@@ -266,6 +264,7 @@ iframe {
 #section3 {
     /* height: 100vh; */
     background: var(--webBG);
+    /* background: rgb(234, 165, 165); */
 }
 .horizontalWrap {
     width: 110%;
