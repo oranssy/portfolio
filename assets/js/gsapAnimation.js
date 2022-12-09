@@ -83,12 +83,11 @@ gsap.to(".sec2 .personal .myPhoto", {
 gsap.to(".sec2 .person__item-innertext span", {
     scrollTrigger: {
         trigger: ".person__item",
-        markers: true,
         start: "top 50%",
         end: "top 20%",
         scrub: 1,
     },
-    y: "0%", duration: 0.7, stagger: 0.01, ease: "SlowMo.easeOut"
+    y: "0%", duration: 0.95, stagger: 0.01, ease: "SlowMo.easeOut"
 });
 
 

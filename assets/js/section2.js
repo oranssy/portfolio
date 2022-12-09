@@ -6,7 +6,7 @@ gsap.timeline()
     .set(".person__item", { autoAlpha: 1 })       // .person
     .from(".person__item-innertext", {
         delay: 1,
-        duration: 0.85,
+        duration: 2.5,     // 0.85
         xPercent: 25,
         yPercent: 125,
         stagger: 0.095,
