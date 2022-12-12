@@ -48,13 +48,12 @@ requestAnimationFrame(raf)
 // section1
 setTimeout ( () => {
     let mainTl = gsap.timeline();
-    const sec1Desc = document.querySelectorAll(".sec1-desc");
    
     mainTl.to(".ideas h3 span",  { duration: 0.5, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
-    mainTl.to(".ideas-desc span", { duration: 0.2, x: 0, y: 0, opacity: 1, stagger: 0.02, ease: Power1.easeOut })
-    mainTl.to(".ideas", { duration: 1.2, x: "86%", ease: Power3.easeInOut }, "+=0.4")
-    mainTl.to(".sec1-bg iframe", { duration: 1, opacity: 1, scale: 1 })
-    mainTl.to(".sec1-desc span", { duration: 0.15, y: 0, opacity: 1, stagger: 0.12, ease: Power1.easeOut })
+    mainTl.to(".ideas-desc span", { duration: 0.2, x: 0, y: 0, opacity: 1, stagger: 0.025, ease: Power1.easeOut })
+    mainTl.to(".ideas", { duration: 1.2, x: "86%", ease: Power3.easeInOut }, "+=1")
+    mainTl.to(".sec1-bg iframe", { duration: 0.8, opacity: 1, scale: 1 })
+    mainTl.to(".sec1-desc span", { duration: 0.25, y: 0, opacity: 1, stagger: 0.15, ease: Power2.easeOut })
     mainTl.to("#header", { duration: 0.2, top: 0, opacity: 1, ease: Power4.easeOut })
     mainTl.to("#parallax__info", { duration: 0.1, opacity: 1, ease: Power4.easeOut })
 
@@ -62,39 +61,76 @@ setTimeout ( () => {
 
 
 // section2
-// gsap.to(".personal h3", { xPercent: -75, ease: "none", scrollTrigger: { scrub: 1 } })
+gsap.to(".sec2 .personal .myPhoto", {
+    scrollTrigger: {
+        trigger: "#section2",
+        start: "top 48%",
+        end: "top 10%",
+        scrub: 1,
+    },
+    opacity: 1, ease: Power1.easeIn
+});
 
 gsap.to(".personal h3", {
     scrollTrigger: {
         trigger: "#section2",
-        start: "top 40%",
+        start: "top 30%",
         scrub: 1,
     },
-    xPercent: -75, ease: "none"
+    xPercent: -30, ease: "none"
 });
 
-gsap.to(".sec2 .personal .myPhoto", {
+gsap.to(".personal h3 .bead1", {
     scrollTrigger: {
         trigger: "#section2",
-        start: "top 80%",
-        end: "top 10%",
+        start: "top 10%",
         scrub: 1,
     },
-    opacity: 1, ease: "none"
+    rotation: 90, ease: "elastic"
 });
 
 gsap.to(".sec2 .person__item-innertext span", {
     scrollTrigger: {
         trigger: ".person__item",
-        start: "top 80%",
+        start: "top 75%",
         end: "top 20%",
         scrub: 1,
     },
-    y: "0%", duration: 0.95, stagger: 0.01, ease: "SlowMo.easeOut"
+    y: "0%", duration: 5, stagger: 0.02, ease: "SlowMo.easeOut"
 });
 
 
 // section3 (가로 모드)
+// gsap.to("#header", {
+//     scrollTrigger: {
+//         trigger: "#section3",
+//         start: "top 100%",
+//         end: "top 60%",
+//         scrub: 1,
+//     },
+//     opacity: 1, duration: 20, delay: 5, ease: Power1.easeIn
+// });
+
+gsap.to("#section3", {
+    scrollTrigger: {
+        trigger: "#section3",
+        start: "top 75%",
+        end: "top 60%",
+        scrub: 1,
+    },
+    opacity: 1, duration: 20, delay: 5, ease: Power1.easeIn
+});
+
+gsap.to(".website", {
+    scrollTrigger: {
+        trigger: "#section3",
+        start: "top 65%",
+        end: "top 40%",
+        scrub: 1,
+    },
+    x: "0%", opacity: 1, duration: 10, stagger: 2.5, ease: "none"
+});
+
 const Horizons = gsap.utils.toArray(".horizon");        // 가로로 스크롤할 페이지 모두를 선택
 
 gsap.to( Horizons, {
@@ -107,7 +143,7 @@ gsap.to( Horizons, {
         pin: true,                      // 고정
         scrub: 1,                       // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
         // snap: 1 / (Horizons.length -1),      // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
-        end: "+=1000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
+        end: "+=5000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
         // markers: true,               // 보조 기준선 표시
     }
 })
@@ -115,33 +151,147 @@ gsap.to( Horizons, {
 gsap.to(".sec3 .website .title", {
     scrollTrigger: {
         trigger: ".website",
-        start: "top 80%",
+        start: "top 60%",
         end: "top 10%",
         scrub: 1,
     },
-    xPercent: -19, duration: 2, stagger: 0.1, ease: "none"
+    xPercent: -11, duration: 30, stagger: 1, ease: "none"
 });
 
-gsap.to(".sec3 .website__cont", {
+gsap.to(".sec3 .website__contL p", {
     scrollTrigger: {
         trigger: ".website",
-        start: "top 25%",
-        end: "top 21%",
+        start: "top 6%",
+        end: "top 5%",
         scrub: 1,
-        markers: true,
     },
-    opacity: 1, duration: 0.07, stagger: 0.1, ease: Power1.easeOut
+    opacity: 1, duration: 0.3, stagger: 0.5, ease: Power1.easeOut
 });
 
 gsap.to(".sec3 .website__contR ul li span", {
     scrollTrigger: {
         trigger: ".website",
-        start: "top -30%",
-        end: "top -45%",
+        start: "top 35%",
+        end: "top 8%",
         scrub: 1,
     },
-    y: "100%", duration: 2, stagger: 1, ease: "SlowMo.easeOut"
+    x: "0%", opacity: 1, duration: 10, stagger: 1, ease: Power1.easeOut
+});
+// websites__view
+// gsap.to(".websites__view:nth-child(1)", {
+//     scrollTrigger: {
+//         trigger: ".websites__view",
+//         start: "top 95%",
+//         end: "top 85%",
+//         scrub: 1,
+//         markers: true,
+//     },
+//     y: "0%", opacity: 1, duration: 10, stagger: 1, ease: Power1.easeOut
+// });
+
+
+
+// section4
+gsap.to(".sec4 h3", {
+    scrollTrigger: {
+        trigger: "#section4",
+        start: "top 40%",
+        end: "top 10%",
+        scrub: 1,
+    },
+    opacity: 1, xPercent: -40, duration: 10, stagger: 2, ease: "none"
+});
+
+gsap.to(".study__contDesc", {
+    scrollTrigger: {
+        trigger: ".study__cont",
+        start: "top 55%",
+        end: "top 40%",
+        scrub: 1,
+    },
+    opacity: 1, duration: 10, stagger: 2, ease: Power1.easeOut
+});
+
+gsap.to(".study__list li", {
+    scrollTrigger: {
+        trigger: ".study__list",
+        start: "top 75%",
+        end: "top 5%",
+        scrub: 1,
+    },
+    scaleX: 1, scaleY: 1, duration: 20, stagger: 5, ease: Power1.easeInOut
+});
+
+gsap.to(".study__list li span", {
+    scrollTrigger: {
+        trigger: ".study__list li",
+        start: "top 38%",
+        end: "top 0%",
+        scrub: 1,
+    },
+    opacity: 1, y: "0%", duration: 30, stagger: 1, ease: "SlowMo.easeOut"
+});
+
+// section5
+gsap.to(".sec5 h3", {
+    scrollTrigger: {
+        trigger: "#section5",
+        start: "top 50%",
+        end: "top 0%",
+        scrub: 1,
+    },
+    xPercent: 20, duration: 10, stagger: 2, ease: "none"
+});
+
+gsap.to(".sec5 h4", {
+    scrollTrigger: {
+        trigger: "#section5",
+        start: "top 50%",
+        end: "top 0%",
+        scrub: 1,
+    },
+    xPercent: -40, duration: 30, stagger: 2, ease: "none"
+});
+
+gsap.to(".sec5-bg iframe", {
+    scrollTrigger: {
+        trigger: ".sec5 h3",
+        start: "top 50%",
+        end: "top 10%",
+        scrub: 1,
+    },
+    opacity: 1, duration: 1, stagger: 0.5, ease: Power1.easeIn
+});
+
+gsap.to(".values__contDesc", {
+    scrollTrigger: {
+        trigger: ".values__cont",
+        start: "top 60%",
+        end: "top 30%",
+        scrub: 1,
+    },
+    opacity: 1, duration: 10, stagger: 2, ease: Power1.easeOut
 });
 
 
+// footer
+gsap.to("#footer h2", {
+    scrollTrigger: {
+        trigger: "#footer",
+        start: "top 50%",
+        end: "top 0%",
+        scrub: 1,
+        markers: true,
+    },
+    xPercent: -20, duration: 10, stagger: 2, ease: "none"
+});
 
+gsap.to("#footer h3", {
+    scrollTrigger: {
+        trigger: "#footer",
+        start: "top 50%",
+        end: "top 0%",
+        scrub: 1,
+    },
+    xPercent: 40, duration: 30, stagger: 2, ease: "none"
+});

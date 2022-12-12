@@ -127,7 +127,7 @@ iframe {
 .sec1-desc span {
     display: inline-block;
     margin-right: 1vw;
-    transform: translateY(-100px);
+    transform: translateY(-15px);
     opacity: 0;
 }
 
@@ -137,7 +137,6 @@ iframe {
 #section2 {
     width: 100vw;
     overflow: hidden;
-    margin-top: 20vh;
 }
 .sec2 .personal {
     padding-top: 14vh;
@@ -160,7 +159,7 @@ iframe {
     color: var(--title);
     line-height: 1.2;
     margin-top: -8vh;
-    margin-left: -8vw;
+    margin-left: -12vw;
     white-space: nowrap;
     position: relative;
 }
@@ -251,7 +250,6 @@ iframe {
 }
 .person__item:hover .person__item-text {
     color: var(--title);
-
 }
 .person__item:hover .person__item-image_wrap {
     z-index: -2;
@@ -262,6 +260,7 @@ iframe {
 #section3 {
     height: 100vh;
     background: var(--webBG);
+    opacity: 0;
 }
 .horizontalWrap {
     width: 110%;
@@ -271,7 +270,8 @@ iframe {
 .horizontalSection {
     /* 브라우저에서는 기본적으로 scroll chaining이 발생 : 내부 스크롤이 끝나면 바깥쪽 혹은 같은 레벨에 있는 Element에서 스크롤이 계속됨. overscroll-behavior: none;은 scroll chaining이 발생을 방지 */
     overscroll-behavior: none;
-    width: 220%;
+    width: 1000%;
+    /* width: 220%; */
     display: flex;      /* 가로 정렬 */
     flex-wrap: nowrap;  /* 넘치면 보이지 않게 */
 }
@@ -282,13 +282,15 @@ iframe {
 /* website */
 .website {
     /* background: rgb(234, 165, 165); */
+    transform: translateX(10%);
+    opacity: 0;
 }
 .website .title {
     font-family: var(--font-main);
     font-size: 15.5vw;
     padding-top: 6vh;
     padding-bottom: 13vh;
-    margin-left: 22vw;
+    margin-left: 14vw;
     line-height: 1.2;
     white-space: nowrap;
 }
@@ -297,7 +299,6 @@ iframe {
     font-family: var(--font-sub);
     display: flex;
     flex-wrap: wrap;
-    opacity: 0;
 }
 .website__contL {
     padding-top: 1vh;
@@ -314,6 +315,7 @@ iframe {
     font-size: 1vw;
     font-weight: 300;
     line-height: 1.5;
+    opacity: 0;
 }
 .website__contR {
     font-size: 3.6vw;
@@ -340,7 +342,8 @@ iframe {
 }
 .website__contR ul li span {
     display: inline-block;
-    transform: translateY(0%);
+    transform: translateX(-100%);
+    opacity: 0;
 }
 
 /* websites__view */
@@ -352,6 +355,8 @@ iframe {
     font-size: 24.5vw;
     color: var(--webNum);
     z-index: -200;
+    transform: translateY(-100%);
+    opacity: 0;
 }
 .websites__view .webImg {
     width: 53vw;
@@ -495,38 +500,40 @@ iframe {
     overflow: hidden;
     position: relative;
 }
-#section4 .study-bg iframe {
+.sec4 .sec4-bg iframe {
     width: 40vw;
     height: 40vh;
     z-index: -2;
     margin-left: 54vw;
     margin-top: 10vh;
+    /* opacity: 0; */
 }
-#section4 h3 {
+.sec4 h3 {
     font-size: 15.5vw;
     color: var(--title);
     line-height: 1.2;
-    margin-left: -9vw;
+    margin-left: 22vw;
     margin-top: -25vh;
     margin-bottom: 12vh;
     white-space: nowrap;
-    /* overflow: hidden; */
+    opacity: 0;
 }
-.study__info {
+.study__cont {
     margin-left: 10.2vw;
     margin-bottom: 20vh;
 }
-.study__infoTit {
+.study__contTit {
     font-family: var(--font-sub);
     font-size: 3.6vw;
     font-weight: 500;
     margin-bottom: 4vh;
 }
-.study__infoDesc {
+.study__contDesc {
     font-family: var(--font-kor);
     font-size: 1vw;
     font-weight: 300;
     line-height: 1.5;
+    opacity: 0;
 }
 .study__list {
     padding: 0 10.2vw;
@@ -536,6 +543,8 @@ iframe {
 .study__list ul li {
     border-top: 0.1vw solid #8b8b8b;
     padding: 3vh 0;
+    transform: scaleX(0.01) scaleY(0);
+    background: var(--bg);
 }
 .study__list ul li:nth-child(13) {
     border-bottom: 0.1vw solid #8b8b8b;
@@ -543,6 +552,8 @@ iframe {
 .study__list ul li span {
     display: flex;
     width: 100%;
+    transform: translateY(100%);
+    opacity: 0;
 }
 .study__list ul li span em {
     text-align: left;
@@ -575,60 +586,63 @@ iframe {
 
 /* section5 */
 #section5 {
-    /* width: 100vw;
-    overflow: hidden; */
+    width: 100vw;
+    overflow: hidden;
 }
-.values-bg {
+.sec5-bg {
     margin-left: 55vw;
     margin-top: 30vh;
 }
-.values-bg iframe {
+.sec5-bg iframe {
     width: 60vw;
     height: 60vh;
+    opacity: 0;
 }
-#section5 h3, #section5 h4 {
+.sec5 h3, .sec5 h4 {
     font-size: 15.5vw;
     color: var(--title);
     line-height: 1.2;
     white-space: nowrap;
     overflow: hidden;
 }
-#section5 h3 {
-    margin-left: -36vw;
+.sec5 h3 {
+    margin-left: -70vw;
     margin-top: -70vh;
     margin-bottom: -10vh;
 }
-#section5 h4 {
-    margin-left: -23vw;
+.sec5 h4 {
+    /* margin-left: -23vw; */
+    margin-left: 13vw;
     margin-top: 2vh;
     margin-bottom: 10vh;
 }
-.values__info {
+.values__cont {
     margin-left: 10.2vw;
     margin-bottom: 40vh;
 }
-.values__infoTit {
+.values__contTit {
     font-family: var(--font-sub);
     font-size: 3.6vw;
     font-weight: 500;
     margin-bottom: 4vh;
 }
-.values__infoDesc {
+.values__contDesc {
     font-family: var(--font-kor);
     font-size: 1vw;
     font-weight: 300;
     line-height: 1.5;
+    opacity: 0;
 }
 .values__brand {
     position: relative;
 }
-.shape__arc {
+/* .shape__arc {
     width: 100vw;
     height: 100vh;
     background: url(../img/bowl.svg);
     background-size: cover;
     background-position: center center;
-}
+} */
 .shape__circles {}
 .shape__circles .bead2 {
     background: url(../img/circle_02.jpg) no-repeat;
