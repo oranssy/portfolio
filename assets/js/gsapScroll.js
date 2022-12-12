@@ -278,20 +278,20 @@ gsap.to(".values__contDesc", {
 gsap.to("#footer h2", {
     scrollTrigger: {
         trigger: "#footer",
-        start: "top 50%",
-        end: "top 0%",
+        start: "top 65%",
+        end: "top 10%",
         scrub: 1,
-        markers: true,
     },
-    xPercent: -20, duration: 10, stagger: 2, ease: "none"
+    xPercent: 42, duration: 10, stagger: 2, ease: "none"
 });
 
 gsap.to("#footer h3", {
     scrollTrigger: {
         trigger: "#footer",
-        start: "top 50%",
+        start: "top 55%",
         end: "top 0%",
         scrub: 1,
+        markers: true,
     },
-    xPercent: 40, duration: 30, stagger: 2, ease: "none"
+    xPercent: -50, duration: 30, stagger: 2, ease: "none"
 });

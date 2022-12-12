@@ -603,7 +603,6 @@ iframe {
     color: var(--title);
     line-height: 1.2;
     white-space: nowrap;
-    overflow: hidden;
 }
 .sec5 h3 {
     margin-left: -70vw;
@@ -851,13 +850,12 @@ iframe {
     color: var(--title);
     line-height: 1.2;
     white-space: nowrap;
-    overflow: hidden;
 }
 #footer h2 {
-    margin-left: 50vw;
+    margin-left: 10vw;
 }
 #footer h3 {
-    margin-left: -8.5vw;
+    margin-left: 27.5vw;
     margin-top: -13.5vh;
 }
 
@@ -903,7 +901,7 @@ iframe {
     padding: 14vh 2vw 12vh 5.2vw;
     font-family: var(--font-sub);
 }
-.determination {
+.footer__contDesc {
     font-size: 1.7vw;
     font-weight: 500;
     line-height: 1.1;
