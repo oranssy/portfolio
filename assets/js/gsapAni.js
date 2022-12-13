@@ -8,7 +8,6 @@ document.querySelectorAll(".split").forEach(text => {
     text.innerHTML = splitWrap;
     text.setAttribute("aria-label", splitText);
 });
-
 // (2) 클래스에 splitWord를 넣어주고, 단어로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
 document.querySelectorAll(".splitWord").forEach(text => {
     let splitWordText = text.innerText;
@@ -18,7 +17,6 @@ document.querySelectorAll(".splitWord").forEach(text => {
     text.innerHTML = splitWordWrap;
     text.setAttribute("aria-label", splitWordText);
 });
-
 
 // 스크롤 값에 따라 페이지가 움직이도록 gsap 플러그인 설정      // scrollTrigger: css 및 javascript를 활용하여 스크롤 동작 및 기타 다양한 svg 애니메이션을 제작할 수 있게 도와주는 플러그인
 gsap.registerPlugin(ScrollTrigger);
@@ -30,7 +28,6 @@ const lenis = new Lenis({           // gsap 스크롤 기본 셋팅
     // direction: 'vertical', // vertical, horizontal
     // gestureDirection: 'vertical', // vertical, horizontal, both
 })
-
 // get scroll value
 lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
 })
@@ -48,14 +45,14 @@ requestAnimationFrame(raf)
 // section1
 setTimeout ( () => {
     let mainTl = gsap.timeline();
-   
-    mainTl.to(".ideas h3 span",  { duration: 0.5, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
-    mainTl.to(".ideas-desc span", { duration: 0.2, x: 0, y: 0, opacity: 1, stagger: 0.025, ease: Power1.easeOut })
-    mainTl.to(".ideas", { duration: 1.2, x: "86%", ease: Power3.easeInOut }, "+=1")
-    mainTl.to(".sec1-bg iframe", { duration: 0.8, opacity: 1, scale: 1 })
-    mainTl.to(".sec1-desc span", { duration: 0.25, y: 0, opacity: 1, stagger: 0.15, ease: Power2.easeOut })
-    mainTl.to("#header", { duration: 0.2, top: 0, opacity: 1, ease: Power4.easeOut })
-    mainTl.to("#parallax__info", { duration: 0.1, opacity: 1, ease: Power4.easeOut })
+
+    mainTl.to(".ideas h3 span",  { duration: 0.7, x: 0, opacity: 1, stagger: 0.1, ease: Power1.easeOut })
+    mainTl.to(".ideas-desc span", { duration: 0.3, x: 0, y: 0, opacity: 1, stagger: 0.01, ease: Power1.easeOut })
+    mainTl.to(".ideas", { duration: 1.6, x: "86%", ease: Power4.easeInOut }, "+=1.2")
+    mainTl.to(".sec1-bg iframe", { duration: 1, opacity: 1, scale: 1 })
+    mainTl.to(".sec1-desc span", { duration: 0.3, x: 0, y: 0, opacity: 1, stagger: 0.012, ease: Power1.easeOut })
+    mainTl.to("#header", { duration: 0.3, y: "0%", opacity: 1, ease: Power1.easeOut })
+    mainTl.to("#parallax__info", { duration: 0.2, y: "0%", opacity: 1, ease: Power1.easeOut })
 
 }, 2000 );
 
@@ -86,7 +83,7 @@ gsap.to(".personal h3 .bead1", {
         start: "top 10%",
         scrub: 1,
     },
-    rotation: 90, ease: "elastic"
+    rotation: 160, ease: "elastic"
 });
 
 gsap.to(".sec2 .person__item-innertext span", {
@@ -101,21 +98,11 @@ gsap.to(".sec2 .person__item-innertext span", {
 
 
 // section3 (가로 모드)
-// gsap.to("#header", {
-//     scrollTrigger: {
-//         trigger: "#section3",
-//         start: "top 100%",
-//         end: "top 60%",
-//         scrub: 1,
-//     },
-//     opacity: 1, duration: 20, delay: 5, ease: Power1.easeIn
-// });
-
 gsap.to("#section3", {
     scrollTrigger: {
         trigger: "#section3",
-        start: "top 75%",
-        end: "top 60%",
+        start: "top 90%",
+        end: "top 65%",
         scrub: 1,
     },
     opacity: 1, duration: 20, delay: 5, ease: Power1.easeIn
@@ -143,51 +130,65 @@ gsap.to( Horizons, {
         pin: true,                      // 고정
         scrub: 1,                       // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
         // snap: 1 / (Horizons.length -1),      // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
-        end: "+=5000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
+        end: "+=13000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
         // markers: true,               // 보조 기준선 표시
     }
 })
 
-gsap.to(".sec3 .website .title", {
+gsap.to(".sec3 .website h3", {
     scrollTrigger: {
         trigger: ".website",
-        start: "top 60%",
+        start: "top 55%",
         end: "top 10%",
         scrub: 1,
     },
     xPercent: -11, duration: 30, stagger: 1, ease: "none"
 });
 
-gsap.to(".sec3 .website__contL p", {
+gsap.to(".sec3 .website-contL p", {
     scrollTrigger: {
         trigger: ".website",
-        start: "top 6%",
-        end: "top 5%",
+        start: "top 4%",
+        end: "top 3%",
         scrub: 1,
     },
     opacity: 1, duration: 0.3, stagger: 0.5, ease: Power1.easeOut
 });
 
-gsap.to(".sec3 .website__contR ul li span", {
+gsap.to(".sec3 .website-contR ul li span", {
     scrollTrigger: {
         trigger: ".website",
-        start: "top 35%",
-        end: "top 8%",
+        start: "top 40%",
+        end: "top 3%",
         scrub: 1,
     },
     x: "0%", opacity: 1, duration: 10, stagger: 1, ease: Power1.easeOut
 });
+
 // websites__view
-// gsap.to(".websites__view:nth-child(1)", {
-//     scrollTrigger: {
-//         trigger: ".websites__view",
-//         start: "top 95%",
-//         end: "top 85%",
-//         scrub: 1,
-//         markers: true,
-//     },
-//     y: "0%", opacity: 1, duration: 10, stagger: 1, ease: Power1.easeOut
-// });
+gsap.to(".websites__view1 .web-num", {
+    scrollTrigger: {
+        trigger: ".websites__view1",
+        start: "top 95%",
+        end: "top 85%",
+        scrub: 1,
+        markers: true,
+    },
+    y: "0%", opacity: 1, duration: 0.5, stagger: 0.05, ease: Power1.easeOut
+});
+
+// setTimeout ( () => {
+//     let veiwTl = gsap.timeline();
+
+//     veiwTl.to(".websites__view .web-num",  { y: "0%", opacity: 1, duration: 1, stagger: 1, ease: Power1.easeOut })
+//     veiwTl.to(".websites__view .web-img", { duration: 0.3, x: 0, y: 0, opacity: 1, stagger: 0.01, ease: Power1.easeOut })
+//     veiwTl.to(".web-info h3 em", { duration: 1.6, x: "86%", ease: Power4.easeInOut }, "+=1.2")
+//     veiwTl.to(".web-info h3 span", { duration: 1, opacity: 1, scale: 1 })
+//     veiwTl.to(".sec1-desc span", { duration: 0.3, x: 0, y: 0, opacity: 1, stagger: 0.012, ease: Power1.easeOut })
+//     veiwTl.to("#header", { duration: 0.3, y: "0%", opacity: 1, ease: Power1.easeOut })
+//     veiwTl.to("#parallax__info", { duration: 0.2, y: "0%", opacity: 1, ease: Power1.easeOut })
+
+// }, 3000 );
 
 
 
@@ -199,14 +200,14 @@ gsap.to(".sec4 h3", {
         end: "top 10%",
         scrub: 1,
     },
-    opacity: 1, xPercent: -40, duration: 10, stagger: 2, ease: "none"
+    opacity: 1, xPercent: 8, duration: 10, stagger: 2, ease: "none"
 });
 
-gsap.to(".study__contDesc", {
+gsap.to(".study-desc", {
     scrollTrigger: {
-        trigger: ".study__cont",
-        start: "top 55%",
-        end: "top 40%",
+        trigger: ".study",
+        start: "top 65%",
+        end: "top 45%",
         scrub: 1,
     },
     opacity: 1, duration: 10, stagger: 2, ease: Power1.easeOut
@@ -214,23 +215,35 @@ gsap.to(".study__contDesc", {
 
 gsap.to(".study__list li", {
     scrollTrigger: {
-        trigger: ".study__list",
-        start: "top 75%",
+        trigger: ".study__list ul",
+        start: "top 85%",
         end: "top 5%",
         scrub: 1,
+        // markers: true,
     },
-    scaleX: 1, scaleY: 1, duration: 20, stagger: 5, ease: Power1.easeInOut
+    scaleX: 1, scaleY: 1, duration: 100, stagger: 10, ease: Power1.easeInOut
+});
+
+gsap.to(".study__list li span em", {
+    scrollTrigger: {
+        trigger: ".study__list ul",
+        start: "top 35%",
+        end: "top 2%",
+        scrub: 1,
+    },
+    x: "0%", duration: 100, stagger: 2, ease: "SlowMo.easeOut"
 });
 
 gsap.to(".study__list li span", {
     scrollTrigger: {
         trigger: ".study__list li",
-        start: "top 38%",
+        start: "top 36%",
         end: "top 0%",
         scrub: 1,
     },
-    opacity: 1, y: "0%", duration: 30, stagger: 1, ease: "SlowMo.easeOut"
+    opacity: 1, y: "0%", duration: 200, delay: 5, stagger: 20, ease: "SlowMo.easeOut"
 });
+
 
 // section5
 gsap.to(".sec5 h3", {
@@ -263,9 +276,9 @@ gsap.to(".sec5-bg iframe", {
     opacity: 1, duration: 1, stagger: 0.5, ease: Power1.easeIn
 });
 
-gsap.to(".values__contDesc", {
+gsap.to(".values-desc", {
     scrollTrigger: {
-        trigger: ".values__cont",
+        trigger: ".values",
         start: "top 60%",
         end: "top 30%",
         scrub: 1,
@@ -279,7 +292,7 @@ gsap.to("#footer h2", {
     scrollTrigger: {
         trigger: "#footer",
         start: "top 65%",
-        end: "top 10%",
+        end: "bottom 100%",
         scrub: 1,
     },
     xPercent: 42, duration: 10, stagger: 2, ease: "none"
@@ -289,9 +302,29 @@ gsap.to("#footer h3", {
     scrollTrigger: {
         trigger: "#footer",
         start: "top 55%",
-        end: "top 0%",
+        end: "bottom 100%",
         scrub: 1,
-        markers: true,
     },
     xPercent: -50, duration: 30, stagger: 2, ease: "none"
+});
+
+gsap.to(".end-desc div span", {
+    scrollTrigger: {
+        trigger: ".flow__cont",
+        start: "top 65%",
+        end: "top 40%",
+        scrub: 1,
+    },
+    y: "0%", duration: 3, stagger: 0.07, ease: "SlowMo.easeOut"
+});
+
+gsap.to(".end-info div", {
+    scrollTrigger: {
+        trigger: ".end-desc",
+        start: "top 65%",
+        end: "top 40%",
+        scrub: 1,
+        // markers: true,
+    },
+    y: "0%", duration: 3, stagger: 0.07, ease: "SlowMo.easeOut"
 });

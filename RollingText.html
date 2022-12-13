@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rolling Text</title>
+
+    <style>
+        body {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          margin: 0;
+        }
+        .rolling-text {
+          margin-top: 40vh;
+          display: inline-block;
+          /* font-family: "Playfair Display", serif; */
+          font-size: 48px;
+          line-height: 72px;
+          letter-spacing: 24px;
+          height: 72px;
+          /* text-decoration: none; */
+          overflow: hidden;
+        }
+        .rolling-text:hover .letter, .rolling-text.play .letter {
+          transform: translateY(-100%);
+        }
+        .rolling-text .letter {
+          display: inline-block;
+          transition: transform 0.6s cubic-bezier(0.76, 0, 0.24, 1);
+        }
+
+        /* .letter:nth-child(1) {
+          transition-delay: 0s;
+        }
+
+        .letter:nth-child(2) {
+          transition-delay: 0.015s;
+        }
+
+        .letter:nth-child(3) {
+          transition-delay: 0.03s;
+        }
+
+        .letter:nth-child(4) {
+          transition-delay: 0.045s;
+        }
+
+        .letter:nth-child(5) {
+          transition-delay: 0.06s;
+        }
+
+        .letter:nth-child(6) {
+          transition-delay: 0.075s;
+        }
+
+        .letter:nth-child(7) {
+          transition-delay: 0.09s;
+        }
+
+        .letter:nth-child(8) {
+          transition-delay: 0.105s;
+        }
+
+        .letter:nth-child(9) {
+          transition-delay: 0.12s;
+        }
+
+        .letter:nth-child(10) {
+          transition-delay: 0.135s;
+        }
+
+        .letter:nth-child(11) {
+          transition-delay: 0.15s;
+        }
+
+        .letter:nth-child(12) {
+          transition-delay: 0.165s;
+        }
+
+        .letter:nth-child(13) {
+          transition-delay: 0.18s;
+        }
+
+        .letter:nth-child(14) {
+          transition-delay: 0.195s;
+        }
+
+        .letter:nth-child(15) {
+          transition-delay: 0.21s;
+        }
+
+        .letter:nth-child(16) {
+          transition-delay: 0.225s;
+        }
+
+        .letter:nth-child(17) {
+          transition-delay: 0.24s;
+        }
+
+        .letter:nth-child(18) {
+          transition-delay: 0.255s;
+        }
+
+        .letter:nth-child(19) {
+          transition-delay: 0.27s;
+        }
+
+        .letter:nth-child(20) {
+          transition-delay: 0.285s;
+        }
+
+        .letter:nth-child(21) {
+          transition-delay: 0.3s;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="rolling-text split">
+        Thanks you.
+    </div>
+
+    <!-- gsap : 스크립트 애니메이션을 위한 도구 모음 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+    <!-- ScrollTrigger 플러그인 -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@latest/bundled/lenis.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+
+    <script>
+        document.querySelectorAll(".split").forEach(text => {
+            let splitText = text.innerText;
+            let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
+
+            splitWrap = "<span aria-hidden='true'>" + splitWrap + "</span>";
+            text.innerHTML = splitWrap;
+            text.setAttribute("aria-label", splitText);
+        });
+
+
+        let elements = document.querySelectorAll('.rolling-text');
+
+        elements.forEach(element => {
+            let innerText = element.innerText;
+            element.innerHTML = '';
+            
+            let textContainer = document.createElement('div');
+            textContainer.classList.add('block');
+
+            for (let letter of innerText) {
+                let span = document.createElement('span');
+
+                span.innerText = letter.trim() === '' ? '\xa0': letter;
+                span.classList.add('letter');
+                textContainer.appendChild(span);
+            }
+
+            element.appendChild(textContainer);
+            element.appendChild(textContainer.cloneNode(true));
+        });
+        
+
+        // for presentation purpose
+        setTimeout(() => {
+            elements.forEach(element => {
+                element.classList.add('play');
+            })
+        }, 600);
+        
+        elements.forEach(element => {
+            element.addEventListener('mouseover', () => {
+                element.classList.remove('play');
+                    // // gsap
+                    // gsap.to('.rolling-text span', {
+                    //     x: 100,
+                    //     opacity: 0,
+                    // },
+                    // {
+                    //     delay: 0, // 3 : 2초 후에 진행됨
+                    //     duration: 1.5,    // 0.5초 동안
+                    //     x: 0,
+                    //     opacity: 1,
+                    //     ease: 'power3.easeOut',
+                    //     stagger: {
+                    //         from: 'start', // 왼쪽부터 진행
+                    //         amount: 1, // 0.7초 간격으로
+                    //     },
+                    // })
+            });
+        });
+
+    </script>
+</body>
+
+
+</html>

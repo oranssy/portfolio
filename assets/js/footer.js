@@ -1,3 +1,36 @@
+// footer 문구 마우스 오버할 때 Animation
+let thanks = document.querySelectorAll(".end-link h4");
+
+thanks.forEach( item => {
+  let innerText = item.innerText;
+  item.innerHTML = '';
+
+  let textContainer = document.createElement('div');
+  textContainer.classList.add('block');
+
+  for ( let letter of innerText ){
+    let span = document.createElement('span');
+    span.innerText = letter.trim() === '' ? '\xa0' : letter;
+    span.classList.add('letter');
+    textContainer.appendChild(span);
+  }
+
+  item.appendChild(textContainer);
+  item.appendChild(textContainer.cloneNode(true));
+});
+
+setTimeout(() => {
+  thanks.forEach(item => {
+    item.classList.add('play');
+  })
+}, 600);
+
+thanks.forEach(item => {
+  item.addEventListener('mouseover', () => {
+    item.classList.remove('play');
+  });
+});
+
 // footer 날짜 & 시간 구현하기
 
 function printTime() {
