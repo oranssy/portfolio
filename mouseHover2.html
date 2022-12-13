@@ -19,17 +19,55 @@
             width: 100vw;
             background: var(--bg);
         }
+        /* section2 */
+        #section2 {
+            width: 100vw;
+            overflow: hidden;
+        }
+        .sec2 .personal {
+            padding-top: 14vh;
+            margin-bottom: 6.5vh;
+            align-items: end;
+        }
+        .sec2 .personal .myPhoto {
+            width: 29vw;
+            height: 29vw;
+            background: url(../img/CJJ_01.jpg) no-repeat;
+            background-size: cover;
+            background-position: center center;
+            border-radius: 50%;
+            margin-left: 62vw;
+            opacity: 0;
+        }
+        .sec2 .personal h3 {
+            width: 115vw;
+            font-size: 15.5vw;
+            color: var(--title);
+            line-height: 1.2;
+            margin-top: -8vh;
+            margin-left: -12vw;
+            white-space: nowrap;
+            position: relative;
+        }
+        .sec2 .personal h3 .bead1 {
+            background: url(../img/circle_01.svg) no-repeat;
+            background-size: cover;
+            width: 3.2vw;
+            height: 3.2vw;
+            border-radius: 50%;
+            position: absolute;
+            left: 48.2%;
+            top: 11%;
+        }
         /* person */
         .person {
-                float: right;
             width: 100vw;
             padding: 4em;
             overflow: hidden;
             margin-bottom: 30vh;
         }
         .person__item {
-            /* width: max-content; */
-            width: 30%;
+            width: max-content;
             font-family: var(--font-sub);
             color: var(--white);
             position: relative;
@@ -82,6 +120,10 @@
             white-space: nowrap;
             overflow: hidden;
             cursor: cell;
+            /* margin-left: 68vw;
+            margin-bottom: 50vh; */
+            /* padding-left: 68vw;
+            padding-bottom: 50vh; */
         }
         .person__item-innertext {
             display: block;
@@ -91,18 +133,14 @@
         .person__item-innertext span {
             display: inline-block;
             transform: translateY(100%);
-            margin-left: 68vw;
-            /* margin-bottom: 50vh; */
-            /* padding-left: 68vw; */
-            /* padding-bottom: 50vh; */
         }
         .person__item:hover .person__item-text {
             color: var(--title);
-        
         }
         .person__item:hover .person__item-image_wrap {
             z-index: -2;
         }
+
 
     </style>
 
@@ -279,14 +317,14 @@
         //         ease: "expo.out",
         //     })
         //     .set(".person__item", { pointerEvents: "all" });       // .person
-        
+            
         //     gsap.defaults({
         //         duration: 0.55,
         //         ease: "expo.out",
         //     });
-        
+            
             const personItems = document.querySelectorAll(".person__item");
-        
+            
             personItems.forEach( (item) => {
                 const imageWrap = item.querySelector(".person__item-image_wrap");
                 const imageWrapBounds = imageWrap.getBoundingClientRect();
@@ -314,15 +352,19 @@
                 };
             
                 const onMouseMove = ({ x, y }) => {
-                    let yOffset = itemBounds.top / imageWrapBounds.height;
-                    yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
+                    // let yOffset = itemBounds.top / imageWrapBounds.height;
+                    // yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
                 
+                    // gsap.to(imageWrap, {
+                    //     duration: 1.25,
+                    //     x: Math.abs(x - itemBounds.left) - imageWrapBounds.width / 1.55,
+                    //     y: Math.abs(y - itemBounds.top) - imageWrapBounds.height / 2 - yOffset,
+                    // });
+
                     gsap.to(imageWrap, {
                         duration: 1.25,
-                        // x: Math.abs(x - itemBounds.left) - imageWrapBounds.width / 1.55,
-                        // y: Math.abs(y - itemBounds.top) - imageWrapBounds.height / 2 - yOffset,
-                        x: Math.abs(x - itemBounds.left) - imageWrapBounds.width / 1.55,
-                        y: Math.abs(y - itemBounds.top) - imageWrapBounds.height / 2,
+                        x: Math.abs(x - itemBounds.left) - imageWrapBounds.width / 5,
+                        y: Math.abs(y - itemBounds.top) - imageWrapBounds.height / 6,
                     });
                 };
             
@@ -331,9 +373,9 @@
                     item.addEventListener("mouseleave", onMouseLeave);
                     item.addEventListener("mousemove", onMouseMove);
             
-                    window.addEventListener("resize", () => {
-                        // itemBounds = item.getBoundingClientRect();
-                });
+                //     window.addEventListener("resize", () => {
+                //         itemBounds = item.getBoundingClientRect();
+                // });
             });
 
     </script>

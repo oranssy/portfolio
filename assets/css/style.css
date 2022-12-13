@@ -166,13 +166,13 @@ iframe {
 }
 /* person */
 .person {
-    width: 100vw;
+    /* width: 100vw; */
     padding: 4em;
     overflow: hidden;
     margin-bottom: 30vh;
 }
 .person__item {
-    width: max-content;
+    /* width: max-content; */
     font-family: var(--font-sub);
     color: var(--white);
     position: relative;
@@ -183,7 +183,8 @@ iframe {
     top: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
-    opacity: 0;
+    /* opacity: 0; */
+    background: #d56a6a;
 }
 .person__item-image_inner {}
 .person__item-image_inner .person__item-image {
@@ -225,14 +226,15 @@ iframe {
     white-space: nowrap;
     overflow: hidden;
     cursor: cell;
-    /* margin-left: 68vw;
-    margin-bottom: 50vh; */
+    margin-left: 68vw;
+    margin-bottom: 50vh;
     /* padding-left: 68vw;
     padding-bottom: 50vh; */
+    background: #696bd6;
 }
 .person__item-innertext {
-    display: block;
-    background: var(--bg);
+    /* display: block; */
+    /* background: var(--bg); */
     overflow: hidden;
 }
 .person__item-innertext span {
