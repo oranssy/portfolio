@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>mouseHover02</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+        .menu__item {
+            position: relative;
+            padding: 0 6vw;
+        }
+        .menu__item-link {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            -webkit-text-stroke: 1.5px #000000;
+            -webkit-text-fill-color: transparent;
+            color: transparent;
+            transition: opacity 0.4s;
+        }
+        .menu__item-link::before {
+            all: initial;
+            counter-increment: menu;
+            position: absolute;
+            bottom: 60%;
+            pointer-events: none;
+        }
+        .menu__item-link:hover {
+            transition-duration: 0.1s;
+            opacity: 0;
+        }
+        .menu__item-img {
+            pointer-events: none;
+            position: absolute;
+            height: 33vw;
+            border-radius: 50%;
+            opacity: 0;
+            left: 50%;
+            top: 25%;
+            transform: translate3d(calc(-100% -6vw), -30%, 0) translate3d(0, 20px, 0);
+        }
+        .menu__item-link:hover + .menu__item-img {
+            opacity: 1;
+            transform: translate3d(calc(-100% -6vw), -30%, 0) rotate3d(0, 0, 1, 4deg);
+            transition: all 0.4s;
+        }
+        .menu {
+            padding: 10vh 0 25vh;
+            --offset: 20vw;
+            --move-initial: calc(-25% + var(--offset));
+            --move-final: calc(-50% + var(--offset));
+            font-size: 7vw;
+        }
+        .marquee {
+            position: absolute;
+            top: 0;
+            left: 0;
+            overflow: hidden;
+            color: #000000;
+            pointer-events: none;
+            mix-blend-mode: difference;
+        }
+        .marquee__inner {
+            width: fit-content;
+            display: flex;
+            position: relative;
+            animation: marquee 5s linear infinite;
+            animation-play-state: paused;
+            opacity: 0;
+            transition: opacity 0.1s;
+        }
+        .menu__item-link:hover ~ .marquee .marquee__inner {
+            animation-play-state: running;
+            opacity: 1;
+            transition-duration: 0.4s;
+        }
+        .menu__item-link,
+        .marquee span {
+            white-space: nowrap;
+            font-size: 7vw;
+            padding: 0 1vw;
+            font-weight: 900;
+            line-height: 1.20;
+        }
+        .marquee span {
+            font-style: italic;
+        }
+        @keyframes marquee {
+            0% {
+                transform: translate3d(var(--move-initial), 0, 0);
+            }
+            100% {
+                transform: translate3d(var(--move-final), 0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <nav class="menu">
+            <div class="menu__item">
+                <a class="menu__item-link" href="#">oranssy1</a>
+                <img class="menu__item-img" src="assets/img/my_Img01.jpg" alt="사진1">
+                <div class="marquee">
+                    <div class="marquee__inner">
+                        <span>oranssy1</span>
+                        <span>oranssy1</span>
+                        <span>oranssy1</span>
+                        <span>oranssy1</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <a class="menu__item-link" href="#">oranssy2</a>
+                <img class="menu__item-img" src="assets/img/my_Img02.jpg" alt="사진2">
+                <div class="marquee">
+                    <div class="marquee__inner">
+                        <span>oranssy2</span>
+                        <span>oranssy2</span>
+                        <span>oranssy2</span>
+                        <span>oranssy2</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <a class="menu__item-link" href="#">oranssy3</a>
+                <img class="menu__item-img" src="assets/img/my_Img03.jpg" alt="사진3">
+                <div class="marquee">
+                    <div class="marquee__inner">
+                        <span>oranssy3</span>
+                        <span>oranssy3</span>
+                        <span>oranssy3</span>
+                        <span>oranssy3</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <a class="menu__item-link" href="#">oranssy4</a>
+                <img class="menu__item-img" src="assets/img/my_Img04.jpg" alt="사진4">
+                <div class="marquee">
+                    <div class="marquee__inner">
+                        <span>oranssy4</span>
+                        <span>oranssy4</span>
+                        <span>oranssy4</span>
+                        <span>oranssy4</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //menu__item -->
+            <div class="menu__item">
+                <a class="menu__item-link" href="#">oranssy5</a>
+                <img class="menu__item-img" src="assets/img/my_Img05.jpg" alt="사진5">
+                <div class="marquee">
+                    <div class="marquee__inner">
+                        <span>oranssy5</span>
+                        <span>oranssy5</span>
+                        <span>oranssy5</span>
+                        <span>oranssy5</span>
+                    </div>
+                </div>
+            </div>
+            <!-- //menu__item -->
+        </nav>
+    </div>
+</body>
+</html>

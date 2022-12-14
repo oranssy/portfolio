@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>mouseHover03-1</title>
+
+        <style>
+            html, body {
+              margin: 0;
+              padding: 0;
+              background: #161616;
+              color: white;
+              overflow-x: hidden;
+            }
+            ::-webkit-scrollbar {
+              width: 0;
+            }
+            .progressbar {
+              position: fixed;
+              top: 0;
+              left: 85%;
+              background: rgba(255, 255, 255, 0.4);
+              width: 1px;
+              z-index: 1;
+            }
+            .navigation-wrapper ul {
+              margin-top: 240px;
+              margin-left: 100px;
+              margin-bottom: 200px;
+              list-style: none;
+              position: absolute;
+            }
+            .navigation-item {
+              display: block;
+              user-select: none;
+              margin: 120px 0;
+            }
+            a {
+              font-family: "Cosi Azure";
+              font-size: 100px;
+              text-decoration: none;
+              color: rgba(255, 255, 255, 0.3);
+            }
+            span {
+              position: relative;
+              display: block;
+            }
+            .navigation-item span:before {
+              width: 0;
+              color: #ffffff;
+              overflow: hidden;
+              position: absolute;
+              content: attr(data-text);
+              transition: all 1s cubic-bezier(0.84, 0, 0.08, 0.99);
+            }
+            .navigation-item span:hover:before {
+              width: 100%;
+            }
+            .project-preview-wrapper {
+              width: 100%;
+              height: 100vh;
+              position: fixed;
+              display: flex;
+              justify-content: center;
+            }
+            .project-preview {
+              position: fixed;
+              top: 12%;
+              left: 50%;
+              width: 0px;
+              height: 400px;
+              background: url(assets/img/my_Img01.jpg) no-repeat 50% 50%;
+              background-size: cover;
+              overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="navigation-wrapper">
+            <div class="project-preview-wrapper">
+                <div class="project-preview"></div>
+            </div>
+            <ul class="navigation-list">
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-1" href="#">
+                        <span data-text="oranssy1">oranssy1</span>
+                    </a>
+                </li>
+                <!-- //navigation-item -->
+                <div class="project-overlay"></div>
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-2" href="#">
+                        <span data-text="oranssy2">oranssy2</span>
+                    </a>
+                </li>
+                <!-- //navigation-item -->
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-3" href="#">
+                        <span data-text="oranssy3">oranssy3</span>
+                    </a>
+                </li>
+                <!-- //navigation-item -->
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-4" href="#">
+                        <span data-text="oranssy4">oranssy4</span>
+                    </a>
+                </li>
+                <!-- //navigation-item -->
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-5" href="#">
+                        <span data-text="oranssy5">oranssy5</span>
+                    </a>
+                </li>
+                <!-- //navigation-item -->
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-6" href="#">
+                        <span data-text="oranssy6">oranssy6</span>
+                    </a>
+                </li>
+                <!-- //navigation-item -->
+                <li class="navigation-item">
+                    <a class="navigation-link navigation-link-7" href="#">
+                        <span data-text="oranssy7">oranssy7</span>
+                    </a>
+                </li>
+                <!-- //navigation-item -->
+            </ul>
+        </div>
+        <div class="progressbar"></div>
+
+
+
+        <!-- JQuery -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+        
+        <!-- TweenMax - GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+
+        <script>
+            $(document).ready(function() {
+                TweenMax.set(".project-preview", { width: 0 });
+
+                var tl = new TimelineLite();
+
+                $(document)
+                    .on("mouseover", ".navigation-item", function(evt) {
+                        tl = new TimelineLite();
+                        tl.to($(".project-preview"), 1, {
+                            width: "600px",
+                            ease: Expo.easeInOut
+                        });
+                    })
+                    .on("mouseout", ".navigation-item", function(evt) {
+                        tl = new TimelineLite();
+                        tl.to($(".project-preview"), 0.5, {
+                            width: 0,
+                            ease: Expo.easeInOut
+                        });
+                    });
+            });
+          
+            $(".navigation-link-1").hover(function() {
+                $(".project-preview").css({ "background-image": "url(assets/img/my_Img01.jpg)" });
+            });
+          
+            $(".navigation-link-2").hover(function() {
+                $(".project-preview").css({ "background-image": "url(assets/img/my_Img02.jpg)" });
+            });
+          
+            $(".navigation-link-3").hover(function() {
+                $(".project-preview").css({ "background-image": "url(assets/img/my_Img03.jpg)" });
+            });
+          
+            $(".navigation-link-4").hover(function() {
+                $(".project-preview").css({ "background-image": "url(assets/img/my_Img04.jpg)" });
+            });
+          
+            $(".navigation-link-5").hover(function() {
+                $(".project-preview").css({ "background-image": "url(assets/img/my_Img05.jpg)" });
+            });
+          
+            $(".navigation-link-6").hover(function() {
+                $(".project-preview").css({ "background-image": "url(assets/img/my_Img06.jpg)" });
+            });
+          
+            $(".navigation-link-7").hover(function() {
+                $(".project-preview").css({ "background-image": "url(assets/img/my_Img07.jpg)" });
+            });
+          
+            $(window).scroll(function() {
+                var scroll = $(window).scrollTop(),
+                    dh = $(document).height(),
+                    wh = $(window).height();
+
+                scrollPercent = (scroll / (dh - wh)) * 100;
+
+                $(".progressbar").css("height", scrollPercent + "%");
+            });
+        </script>
+    </body>
+</html>

@@ -31,7 +31,7 @@ gsap.timeline()
         const onMouseEnter = () => {
             gsap.set(imageWrap, {
                 scale: 0.8,     // 0.8
-                xPercent: 25,   // 25
+                xPercent: -100,   // 25
                 yPercent: 50,   // 50
                 rotation: -15,  // -15
             });
@@ -41,9 +41,9 @@ gsap.timeline()
         const onMouseLeave = () => {
             gsap.to(imageWrap, {
                 opacity: 0,
-                yPercent: -50,  // -50
-                xPercent: 25,   // 25
                 scale: 0.8,     // 0.8
+                xPercent: -100,   // 25
+                yPercent: -50,  // -50
                 rotation: -15,  // -15
             });
         };

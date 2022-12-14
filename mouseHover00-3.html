@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>mouseHover2</title>
+    <title>mouseHover00-3</title>
 
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/resets.css">
@@ -61,13 +61,13 @@
         }
         /* person */
         .person {
-            width: 100vw;
+            /* width: 100vw; */
             padding: 4em;
             overflow: hidden;
             margin-bottom: 30vh;
         }
         .person__item {
-            width: max-content;
+            /* width: max-content; */
             font-family: var(--font-sub);
             color: var(--white);
             position: relative;
@@ -78,7 +78,8 @@
             top: 50%;
             transform: translate(-50%, -50%);
             pointer-events: none;
-            opacity: 0;
+            /* opacity: 0; */
+            background: #d56a6a;
         }
         .person__item-image_inner {}
         .person__item-image_inner .person__item-image {
@@ -120,14 +121,15 @@
             white-space: nowrap;
             overflow: hidden;
             cursor: cell;
-            /* margin-left: 68vw;
-            margin-bottom: 50vh; */
+            margin-left: 68vw;
+            margin-bottom: 50vh;
             /* padding-left: 68vw;
             padding-bottom: 50vh; */
+            background: #696bd6;
         }
         .person__item-innertext {
-            display: block;
-            background: var(--bg);
+            /* display: block; */
+            /* background: var(--bg); */
             overflow: hidden;
         }
         .person__item-innertext span {
@@ -305,23 +307,23 @@
     <script>
         // const { gsap } = window;
 
-        // gsap.timeline()
-        //     .set(".person__item", { autoAlpha: 1 })       // .person
-        //     .from(".person__item-innertext", {
-        //         delay: 1,
-        //         duration: 2.5,     // 0.85
-        //         xPercent: 25,
-        //         yPercent: 125,
-        //         stagger: 0.095,
-        //         skewY: gsap.utils.wrap([-8, 8]),
-        //         ease: "expo.out",
-        //     })
-        //     .set(".person__item", { pointerEvents: "all" });       // .person
+        gsap.timeline()
+            .set(".person__item", { autoAlpha: 1 })       // .person
+            .from(".person__item-innertext", {
+                delay: 1,
+                duration: 2.5,      // 0.85
+                xPercent: 25,       // 25
+                yPercent: 125,      // 125
+                stagger: 0.095,     // 0.095
+                skewY: gsap.utils.wrap([-2, 2]),    // -8, 8
+                ease: "expo.out",
+            })
+            // .set(".person__item", { pointerEvents: "all" });       // .person
             
-        //     gsap.defaults({
-        //         duration: 0.55,
-        //         ease: "expo.out",
-        //     });
+            gsap.defaults({
+                duration: 0.55,
+                ease: "expo.out",
+            });
             
             const personItems = document.querySelectorAll(".person__item");
             
@@ -333,10 +335,10 @@
             
                 const onMouseEnter = () => {
                     gsap.set(imageWrap, {
-                        scale: 0.8,
-                        xPercent: 25,
-                        yPercent: 50,
-                        rotation: -15,
+                        scale: 0.8,     // 0.8
+                        xPercent: -200,   // 25
+                        yPercent: 50,   // 50
+                        rotation: -15,  // -15
                     });
                     gsap.to(imageWrap, { opacity: 1, scale: 1, yPercent: 0, rotation: 0 });
                 };
@@ -344,27 +346,21 @@
                 const onMouseLeave = () => {
                     gsap.to(imageWrap, {
                         opacity: 0,
-                        yPercent: -50,
-                        xPercent: 25,
-                        scale: 0.8,
-                        rotation: -15,
+                        xPercent: -200,   // 25
+                        yPercent: -50,  // -50
+                        scale: 0.8,     // 0.8
+                        rotation: -15,  // -15
                     });
                 };
             
                 const onMouseMove = ({ x, y }) => {
-                    // let yOffset = itemBounds.top / imageWrapBounds.height;
-                    // yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
+                    let yOffset = itemBounds.top / imageWrapBounds.height;
+                    yOffset = gsap.utils.mapRange(0, 1.5, -150, 150, yOffset);
                 
-                    // gsap.to(imageWrap, {
-                    //     duration: 1.25,
-                    //     x: Math.abs(x - itemBounds.left) - imageWrapBounds.width / 1.55,
-                    //     y: Math.abs(y - itemBounds.top) - imageWrapBounds.height / 2 - yOffset,
-                    // });
-
                     gsap.to(imageWrap, {
                         duration: 1.25,
-                        x: Math.abs(x - itemBounds.left) - imageWrapBounds.width / 5,
-                        y: Math.abs(y - itemBounds.top) - imageWrapBounds.height / 6,
+                        x: Math.abs(x - itemBounds.left) - imageWrapBounds.width / 1.55,
+                        y: Math.abs(y - itemBounds.top) - imageWrapBounds.height / 2 - yOffset,
                     });
                 };
             

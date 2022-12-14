@@ -179,12 +179,11 @@ iframe {
 }
 .person__item-image_wrap {
     position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 63%;
+    top: 14%;
+    /* transform: translate(-50%, -50%); */
     pointer-events: none;
-    /* opacity: 0; */
-    background: #d56a6a;
+    opacity: 0;
 }
 .person__item-image_inner {}
 .person__item-image_inner .person__item-image {
@@ -230,7 +229,6 @@ iframe {
     margin-bottom: 50vh;
     /* padding-left: 68vw;
     padding-bottom: 50vh; */
-    background: #696bd6;
 }
 .person__item-innertext {
     /* display: block; */
