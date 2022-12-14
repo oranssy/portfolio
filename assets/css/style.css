@@ -227,7 +227,7 @@ iframe {
     background: rgb(249, 60, 60);
 }
 .person__item-innertext {
-    /* background: var(--bg); */
+    background: var(--bg);
     overflow: hidden;
 }
 .person__item-innertext span {
