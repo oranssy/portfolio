@@ -96,6 +96,35 @@ gsap.to(".sec2 .person__item-innertext span", {
     y: "0%", duration: 5, stagger: 0.02, ease: "SlowMo.easeOut"
 });
 
+// section2 단어에 마우스 오버 시 내용 띄우기
+const personItems = document.querySelectorAll(".person__item");
+
+personItems.forEach( (item) => {
+    const imageWrap = item.querySelector(".person__item-image_wrap");
+
+    const onMouseEnter = () => {
+        gsap.set(imageWrap, {
+            scale: 0.8,
+            xPercent: -100,
+            yPercent: 50,
+            rotation: -15,
+        });
+        gsap.to(imageWrap, { opacity: 1, scale: 1, yPercent: 0, rotation: 0 });
+    };
+
+    const onMouseLeave = () => {
+        gsap.to(imageWrap, {
+            opacity: 0,
+            scale: 0.8,
+            xPercent: -100,
+            yPercent: -50,
+            rotation: -15,
+        });
+    };
+
+    item.addEventListener("mouseenter", onMouseEnter);
+    item.addEventListener("mouseleave", onMouseLeave);
+});
 
 // section3 (가로 모드)
 gsap.to("#section3", {
