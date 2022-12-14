@@ -2,23 +2,23 @@
 
 // const { gsap } = window;
 
-gsap.timeline()
-    .set(".person__item", { autoAlpha: 1 })       // .person
-    .from(".person__item-innertext", {
-        delay: 1,
-        duration: 2.5,      // 0.85
-        xPercent: 25,       // 25
-        yPercent: 125,      // 125
-        stagger: 0.095,     // 0.095
-        skewY: gsap.utils.wrap([-8, 8]),    // -8, 8
-        ease: "expo.out",
-    })
-    .set(".person__item", { pointerEvents: "all" });       // .person
+// gsap.timeline()
+//     .set(".person__item", { autoAlpha: 1 })       // .person
+//     .from(".person__item-innertext", {
+//         delay: 1,
+//         duration: 2.5,      // 0.85
+//         xPercent: 25,       // 25
+//         yPercent: 125,      // 125
+//         stagger: 0.095,     // 0.095
+//         skewY: gsap.utils.wrap([-8, 8]),    // -8, 8
+//         ease: "expo.out",
+//     })
+//     .set(".person__item", { pointerEvents: "all" });       // .person
     
-    gsap.defaults({
-        duration: 0.55,
-        ease: "expo.out",
-    });
+    // gsap.defaults({
+    //     duration: 0.55,
+    //     ease: "expo.out",
+    // });
     
     const personItems = document.querySelectorAll(".person__item");
     
@@ -63,7 +63,7 @@ gsap.timeline()
     
             item.addEventListener("mouseenter", onMouseEnter);
             item.addEventListener("mouseleave", onMouseLeave);
-            item.addEventListener("mousemove", onMouseMove);
+            // item.addEventListener("mousemove", onMouseMove);
     
         //     window.addEventListener("resize", () => {
         //         itemBounds = item.getBoundingClientRect();
