@@ -166,13 +166,11 @@ iframe {
 }
 /* person */
 .person {
-    /* width: 100vw; */
     padding: 4em;
-    overflow: hidden;
     margin-bottom: 30vh;
 }
 .person__item {
-    /* width: max-content; */
+    max-width: 0;
     font-family: var(--font-sub);
     color: var(--white);
     position: relative;
@@ -181,7 +179,6 @@ iframe {
     position: fixed;
     left: 63%;
     top: 14%;
-    /* transform: translate(-50%, -50%); */
     pointer-events: none;
     opacity: 0;
 }
@@ -215,7 +212,6 @@ iframe {
     line-height: 1.5;
 }
 .person__item-text {
-    /* position: relative; */
     font-family: var(--font-sub);
     font-size: 3.7vw;
     font-weight: 500;
@@ -227,12 +223,11 @@ iframe {
     cursor: cell;
     margin-left: 68vw;
     margin-bottom: 50vh;
-    /* padding-left: 68vw;
-    padding-bottom: 50vh; */
 }
 .person__item-innertext {
-    /* display: block; */
     /* background: var(--bg); */
+    width: 20vw;
+    background: rgb(249, 60, 60);
     overflow: hidden;
 }
 .person__item-innertext span {
