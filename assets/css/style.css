@@ -1,6 +1,6 @@
 body {
-    /* width: 100vw;
-    overflow: hidden; */
+    width: 100vw;
+    overflow: hidden;
     background: var(--bg);
 }
 iframe {
@@ -133,16 +133,8 @@ iframe {
     #header nav {
         font-size: 2.3vw;
     }
-    .sec1-bg iframe {
-        width: 80vw;
-        height: 80vh;
-        margin-top: 13vh;
-        margin-left: 10vw;
-        margin-bottom: 1.5vh;
-    }
     .sec1 .ideas {
         margin-top: -5vh;
-        margin-left: -2vw;
     }
     .sec1 .ideas h3 {
         font-size: 16.8vw;
@@ -166,12 +158,8 @@ iframe {
     #header nav {
         font-size: 3.4vw;
     }
-    .sec1-bg iframe {
-        margin-top: 20vh;
-    }
     .sec1 .ideas {
         margin-top: -15vh;
-        margin-left: -28vw;
     }
     .sec1 .ideas h3 {
         font-size: 25vw;
@@ -194,16 +182,8 @@ iframe {
     #header nav {
         font-size: 5.2vw;
     }
-    .sec1-bg iframe {
-        width: 65vw;
-        height: 65vh;
-        margin-top: 24vh;
-        margin-left: 18vw;
-        margin-bottom: 10vh;
-    }
     .sec1 .ideas {
         margin-top: -12vh;
-        margin-left: -34vw;
     }
     .sec1 .ideas h3 {
         font-size: 27vw;
