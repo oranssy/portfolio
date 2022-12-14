@@ -313,8 +313,7 @@ iframe {
     cursor: cell;
     margin-left: 68vw;
 
-    min-width: 50vw;
-    background: rgb(249, 60, 60);
+    /* min-width: 50vw; */
 }
 .person__item-innertext {
     background: var(--bg);
@@ -330,8 +329,27 @@ iframe {
 .person__item:hover .person__item-image_wrap {
     z-index: -2;
 }
-@media(max-width: 1600px){}
-@media(max-width: 1220px){}
+@media(max-width: 1220px){
+    .sec2 .personal .myPhoto {
+        margin-top: -10vh;
+    }
+    .sec2 .personal h3 {
+        margin-top: -3vh;
+    }
+    .person {
+        margin-top: 4vh;
+    }
+    .person__item-image_wrap {
+        position: fixed;
+        left: 60%;
+        top: 38%;
+    }
+    .person__item-image_inner .person__item-image {}
+    .person__item-cont {}
+    .person__item-cont_tit {}
+    .person__item-cont_desc {}
+    .person__item-text {}
+}
 @media(max-width: 768px){}
 @media(max-width: 480px){}
 
@@ -591,7 +609,6 @@ iframe {
     background-size: cover;
     background-position: center center;
 }
-@media(max-width: 1600px){}
 @media(max-width: 1220px){}
 @media(max-width: 768px){}
 @media(max-width: 480px){}
@@ -682,7 +699,6 @@ iframe {
     text-decoration: underline;
     text-underline-position: under;
 }
-@media(max-width: 1600px){}
 @media(max-width: 1220px){}
 @media(max-width: 768px){}
 @media(max-width: 480px){}
@@ -917,7 +933,6 @@ iframe {
     left: 79.7vw;
     top: 57.3vh;
 }
-@media(max-width: 1600px){}
 @media(max-width: 1220px){}
 @media(max-width: 768px){}
 @media(max-width: 480px){}
@@ -1106,7 +1121,6 @@ iframe {
     stroke-dashoffset: 302;
     transition: all ease-out .5s;
 }
-@media(max-width: 1600px){}
 @media(max-width: 1220px){}
 @media(max-width: 768px){}
 @media(max-width: 480px){}
