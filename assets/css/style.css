@@ -1,13 +1,18 @@
 body {
+    width: 100vw;
+    overflow-x: hidden;
     background: var(--bg);
 }
 iframe {
     pointer-events: none;
 }
+::-webkit-scrollbar {
+    display: none;
+}
 
 /* 스킵 메뉴 */
 #skip {
-    z-index: 10000;
+    z-index: 1;
     position: relative;
 }
 #skip a {
@@ -72,8 +77,8 @@ iframe {
 
 /* section1 */
 #section1 {
-    width: 100vw;
-    overflow: hidden;
+    /* width: 100vw;
+    overflow: hidden; */
     position: relative;
 }
 .sec1-bg iframe {
@@ -194,8 +199,8 @@ iframe {
 
 /* section2 */
 #section2 {
-    width: 100vw;
-    overflow: hidden;
+    /* width: 100vw;
+    overflow: hidden; */
 }
 .sec2 .personal {
     padding-top: 14vh;
@@ -334,9 +339,8 @@ iframe {
 
 /* section3 */
 #section3 {
-    width: 100vw;
-    overflow: hidden;
-    height: 100vh;
+    /* width: 100vw;
+    overflow: hidden; */
     background: var(--webBG);
     opacity: 0;
 }
@@ -596,8 +600,8 @@ iframe {
 
 /* section4 */
 #section4 {
-    width: 100vw;
-    overflow: hidden;
+    /* width: 100vw;
+    overflow: hidden; */
     position: relative;
 }
 .sec4 .sec4-bg iframe {
@@ -688,8 +692,8 @@ iframe {
 
 /* section5 */
 #section5 {
-    width: 100vw;
-    overflow: hidden;
+    /* width: 100vw;
+    overflow: hidden; */
 }
 .sec5 .sec5-bg {
     margin-left: 55vw;
