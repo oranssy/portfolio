@@ -1,23 +1,10 @@
 body {
+    width: 100vw;
+    overflow: hidden;
     background: var(--bg);
 }
 iframe {
-  pointer-events: none;
-}
-
-/* 스크롤 크기 */
-::-webkit-scrollbar {
-  width: 0.4vw;
-  height: 0.1vh;
-}
-/* 스크롤 디자인 */
-::-webkit-scrollbar-thumb {
-  background: #8c89b043;
-  border-radius: 20%;
-}
-/* 스크롤 배경 */
-::-webkit-scrollbar-track {
-    background: var(--bg);
+    pointer-events: none;
 }
 
 /* 스킵 메뉴 */
@@ -33,7 +20,7 @@ iframe {
     color: var(--font-color);
     font-family: var(--font-kor);
     position: absolute;
-    left: -50vw;
+    left: -100vw;
     top: 12vh;
 }
 #skip a:active,
@@ -41,11 +28,28 @@ iframe {
     left: 2vw;
 }
 
-
+/* #parallax__info 스크롤 값 */
+#parallax__info {
+    position: fixed;
+    left: 0.5vw;
+    bottom: 1vh;
+    z-index: 2000;
+    font-family: var(--font-sub);
+    text-align: center;
+    transform: translateY(150%);
+    opacity: 0;
+}
+#parallax__info .scroll span {
+    display: inline-block;
+    font-size: 1vw;
+    color: #e6e3d8;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5vw 0.7vw;
+}
 
 /* header */
 #header {
-    width: 100vw;
+    width: 100%;
     padding: 1.3vw 1.7vw;
     position: fixed;
     left: 0;
@@ -60,18 +64,16 @@ iframe {
     transform: translateY(-200%);
     opacity: 0;
 }
-#header h1 {
+#header h1,
+#header nav {
     font-size: 1.5vw;
 }
 #menu {
-    /* cursor: pointer; */
+    cursor: pointer;
 }
-
 
 /* section1 */
 #section1 {
-    width: 100vw;
-    overflow: hidden;
     position: relative;
 }
 .sec1-bg iframe {
@@ -121,14 +123,102 @@ iframe {
     opacity: 0;
     min-width: 0.7vw;
 }
-
+@media(max-width: 1220px){
+    #header {
+        padding: 2.6vw 3.2vw;
+    }
+    #header h1,
+    #header nav {
+        font-size: 2.3vw;
+    }
+    .sec1-bg iframe {
+        width: 80vw;
+        height: 80vh;
+        margin-top: 13vh;
+        margin-left: 10vw;
+        margin-bottom: 1.5vh;
+    }
+    .sec1 .ideas {
+        margin-top: -5vh;
+        margin-left: -2vw;
+    }
+    .sec1 .ideas h3 {
+        font-size: 16.8vw;
+    }
+    .sec1 .ideas .ideas-desc {
+        font-size: 1.2vw;
+        line-height: 1.5;
+    }
+    .sec1-desc {
+        font-size: 3.8vw;
+        position: absolute;
+        left: 9vw;
+        bottom: 1vh;
+    }
+}
+@media(max-width: 768px){
+    #header {
+        padding: 3.1vw 3.9vw;
+    }
+    #header h1,
+    #header nav {
+        font-size: 3.4vw;
+    }
+    .sec1-bg iframe {
+        margin-top: 20vh;
+    }
+    .sec1 .ideas {
+        margin-top: -15vh;
+        margin-left: -28vw;
+    }
+    .sec1 .ideas h3 {
+        font-size: 25vw;
+    }
+    .sec1 .ideas .ideas-desc {
+        font-size: 1.9vw;
+    }
+    .sec1-desc {
+        font-size: 5.4vw;
+        position: absolute;
+        left: 11.5vw;
+        bottom: 7vh;
+    }
+}
+@media(max-width: 480px){
+    #header {
+        padding: 4.5vw 5.2vw;
+    }
+    #header h1,
+    #header nav {
+        font-size: 5.2vw;
+    }
+    .sec1-bg iframe {
+        width: 65vw;
+        height: 65vh;
+        margin-top: 24vh;
+        margin-left: 18vw;
+        margin-bottom: 10vh;
+    }
+    .sec1 .ideas {
+        margin-top: -12vh;
+        margin-left: -34vw;
+    }
+    .sec1 .ideas h3 {
+        font-size: 27vw;
+    }
+    .sec1 .ideas .ideas-desc {
+        font-size: 2.4vw;
+    }
+    .sec1-desc {
+        font-size: 6vw;
+        position: absolute;
+        left: 8vw;
+    }
+}
 
 
 /* section2 */
-#section2 {
-    width: 100vw;
-    overflow: hidden;
-}
+#section2 {}
 .sec2 .personal {
     padding-top: 14vh;
     margin-bottom: 6.5vh;
@@ -240,6 +330,10 @@ iframe {
 .person__item:hover .person__item-image_wrap {
     z-index: -2;
 }
+@media(max-width: 1600px){}
+@media(max-width: 1220px){}
+@media(max-width: 768px){}
+@media(max-width: 480px){}
 
 
 /* section3 */
@@ -497,12 +591,14 @@ iframe {
     background-size: cover;
     background-position: center center;
 }
+@media(max-width: 1600px){}
+@media(max-width: 1220px){}
+@media(max-width: 768px){}
+@media(max-width: 480px){}
 
 
 /* section4 */
 #section4 {
-    width: 100vw;
-    overflow: hidden;
     position: relative;
 }
 .sec4 .sec4-bg iframe {
@@ -586,14 +682,14 @@ iframe {
     text-decoration: underline;
     text-underline-position: under;
 }
-
+@media(max-width: 1600px){}
+@media(max-width: 1220px){}
+@media(max-width: 768px){}
+@media(max-width: 480px){}
 
 
 /* section5 */
-#section5 {
-    width: 100vw;
-    overflow: hidden;
-}
+#section5 {}
 .sec5 .sec5-bg {
     margin-left: 55vw;
     margin-top: 30vh;
@@ -821,28 +917,10 @@ iframe {
     left: 79.7vw;
     top: 57.3vh;
 }
-
-
-
-/* #parallax__info */
-#parallax__info {
-    width: 3vw;
-    padding: 0.4vw;
-    position: fixed;        /* 왼쪽 아래에 고정시킴 */
-    left: 0.5vw;
-    bottom: 1vh;
-    z-index: 2000;          /* 가려지지 않도록 맨 윗쪽(표면)에 위치시킴 */
-    background: rgba(0, 0, 0, 0.3);
-    font-family: var(--font-sub);
-    color: #e6e3d8;
-    text-align: center;
-    transform: translateY(150%);
-    opacity: 0;
-}
-#parallax__info .scroll {
-    line-height: 1.4;
-}
-
+@media(max-width: 1600px){}
+@media(max-width: 1220px){}
+@media(max-width: 768px){}
+@media(max-width: 480px){}
 
 
 /* footer */
@@ -1028,3 +1106,7 @@ iframe {
     stroke-dashoffset: 302;
     transition: all ease-out .5s;
 }
+@media(max-width: 1600px){}
+@media(max-width: 1220px){}
+@media(max-width: 768px){}
+@media(max-width: 480px){}
