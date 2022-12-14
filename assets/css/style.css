@@ -223,11 +223,11 @@ iframe {
     cursor: cell;
     margin-left: 68vw;
     margin-bottom: 50vh;
+    min-width: 20vw;
+    background: rgb(249, 60, 60);
 }
 .person__item-innertext {
     /* background: var(--bg); */
-    width: 20vw;
-    background: rgb(249, 60, 60);
     overflow: hidden;
 }
 .person__item-innertext span {
@@ -256,7 +256,7 @@ iframe {
 .sec3 .horizontal__Section {
     /* 브라우저에서는 기본적으로 scroll chaining이 발생 : 내부 스크롤이 끝나면 바깥쪽 혹은 같은 레벨에 있는 Element에서 스크롤이 계속됨. overscroll-behavior: none;은 scroll chaining이 발생을 방지 */
     overscroll-behavior: none;
-    width: 990%;
+    width: 1000%;
     /* width: 220%; */
     display: flex;      /* 가로 정렬 */
     flex-wrap: nowrap;  /* 넘치면 보이지 않게 */
