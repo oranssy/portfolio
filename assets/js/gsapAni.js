@@ -56,6 +56,27 @@ setTimeout ( () => {
 
 }, 2000 );
 
+// section1 모바일
+// ScrollTrigger.matchMedia({
+	
+// 	"(min-width: 1220px)": function() {
+
+//   }, 
+  
+// 	"(max-width: 768px)": function() {
+
+//   }, 
+
+// 	"(max-width: 480px)": function() {
+
+//   }, 
+  
+// 	"all": function() {
+
+//   }
+  
+// });
+
 
 // section2
 gsap.to(".sec2 .personal .myPhoto", {
