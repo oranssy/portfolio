@@ -4,19 +4,19 @@
     opacity: 0;
 }
 .sec3 .horizontal__Wrap {
-    width: 110vw;
+    width: 100vw;
     height: 100vh;
     overflow: hidden;
 }
 .sec3 .horizontal__Section {
     /* 브라우저에서는 기본적으로 scroll chaining이 발생 : 내부 스크롤이 끝나면 바깥쪽 혹은 같은 레벨에 있는 Element에서 스크롤이 계속됨. overscroll-behavior: none;은 scroll chaining이 발생을 방지 */
     overscroll-behavior: none;
-    width: 990vw;
+    width: 900%;
     display: flex;      /* 가로 정렬 */
     flex-wrap: nowrap;  /* 넘치면 보이지 않게 */
 }
 .sec3 .horizon {
-    width: 110vw;
+    width: 100vw;
     height: 100vh;
 }
 
@@ -86,15 +86,15 @@
     opacity: 0;
 }
 
-/* websites__view */
-.websites__view {
+/* websites__view (horizon) */
+.horizon {
     font-family: var(--font-main);
 }
-.websites__view .web-num {
+.horizon .web-num {
     font-size: 24.5vw;
     color: var(--webNum);
 }
-.websites__view .web-img {
+.horizon .web-img {
     width: 53vw;
     height: 63vh;
 }
@@ -131,7 +131,7 @@
     font-size: 1.1vw;
     font-weight: 300;
     line-height: 1.45;
-    margin-left: 9.5vw;
+    margin-left: 7vw;
 }
 .web-link {
     /* z-index: 100; */
@@ -159,7 +159,7 @@
 
 /* imgDown */
 .imgDown {
-    background: rgb(234, 165, 165);
+    /* background: rgb(234, 165, 165); */
 }
 .imgDown .web-num {
     font-size: 24.5vw;
@@ -213,6 +213,10 @@
     margin-top: 6.5vh;
     margin-left: 45.5vw;
 }
+
+/* .websites__view8 .web-info {
+    margin-left: 49vw;
+} */
 
 .websites__view1 .img01 {
     background: url(../img/Site_Img01.jpg);
