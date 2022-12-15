@@ -1,3 +1,8 @@
+// 새로고침하면 맨 위로 스크롤
+window.onbeforeunload = function() {
+    window.scrollTo(0, 0);
+};
+
 // 문장을 음절 또는 단어로 나눠주기 (1), (2)
 // (1) 클래스에 split를 넣어주고, 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
 document.querySelectorAll(".split").forEach(text => {
@@ -22,24 +27,17 @@ document.querySelectorAll(".splitWord").forEach(text => {
 gsap.registerPlugin(ScrollTrigger);
 
 // Smooth Scroll (lenis 효과)
-const lenis = new Lenis({           // gsap 스크롤 기본 셋팅
+const lenis = new Lenis({
     duration: 1.2,
-    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // https://www.desmos.com/calculator/brs54l4xou
-    // direction: 'vertical', // vertical, horizontal
-    // gestureDirection: 'vertical', // vertical, horizontal, both
-})
-// get scroll value
-lenis.on('scroll', ({ scroll, limit, velocity, direction, progress }) => {
-})
-
-
-
+    easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+    smooth: true,
+});
 // section 애니메이션 효과
 function raf(time) {
-    lenis.raf(time)
-    requestAnimationFrame(raf)
+    lenis.raf(time);
+    requestAnimationFrame(raf);
 }
-requestAnimationFrame(raf)
+requestAnimationFrame(raf);
 
 
 // section1
@@ -56,25 +54,23 @@ setTimeout ( () => {
 
 }, 2000 );
 
-// section1 모바일
+// main 모바일
+// ScrollTrigger.saveStyles(".ideas");
+
 // ScrollTrigger.matchMedia({
-	
+
 // 	"(min-width: 1220px)": function() {
-
-//   }, 
-  
+        
+//     }, 
 // 	"(max-width: 768px)": function() {
-
-//   }, 
-
-// 	"(max-width: 480px)": function() {
-
-//   }, 
-  
+        
+//     }, 
+//     "(max-width: 480px)": function() {
+        
+//     }, 
 // 	"all": function() {
 
-//   }
-  
+//     } 
 // });
 
 
@@ -175,26 +171,27 @@ gsap.to( Horizons, {
     xPercent: -100 * (Horizons.length -1),
     // ease: true,      // 스크롤할 때 질척거림
     ease: "none",
+
     scrollTrigger: {
         trigger: "#section3",     // 스크롤 대상
         start: "top 0%",
-        end: "top 100%",
-        pin: true,                      // 고정
-        scrub: 1,                       // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
-        // snap: 1 / (Horizons.length -1),      // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
-        end: "+=12000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
-        markers: true,               // 보조 기준선 표시
+        // end에서 박스의 height 값을 변경 -> 가로모드에 사용함     // offsetHeight : padding, border 값을 포함한 컨텐츠의 높이를 가져옴 (margin 불포함)
+        end: () => `+=${document.querySelector(".websites__view8").offsetWidth}`,
+        pin: true,                          // 고정
+        scrub: 1,                           // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
+        snap: 1 / (Horizons.length -1),     // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
+        end: "+=12000",                     // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
+        markers: true,                      // 보조 기준선 표시
     }
-})
+});
 
 gsap.to(".sec3 .website h3", {
     scrollTrigger: {
         trigger: ".website",
         start: "top 55%",
-        end: "top 10%",
         scrub: 1,
     },
-    xPercent: -11, duration: 30, stagger: 1, ease: "none"
+    xPercent: -80, duration: 30, stagger: 1, ease: "none"
 });
 
 gsap.to(".sec3 .website-contL p", {

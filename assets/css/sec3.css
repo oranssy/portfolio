@@ -1,0 +1,261 @@
+/* section3 */
+#section3 {
+    background: var(--webBG);
+    opacity: 0;
+}
+.sec3 .horizontal__Wrap {
+    width: 110vw;
+    height: 100vh;
+    overflow: hidden;
+}
+.sec3 .horizontal__Section {
+    /* 브라우저에서는 기본적으로 scroll chaining이 발생 : 내부 스크롤이 끝나면 바깥쪽 혹은 같은 레벨에 있는 Element에서 스크롤이 계속됨. overscroll-behavior: none;은 scroll chaining이 발생을 방지 */
+    overscroll-behavior: none;
+    width: 990vw;
+    display: flex;      /* 가로 정렬 */
+    flex-wrap: nowrap;  /* 넘치면 보이지 않게 */
+}
+.sec3 .horizon {
+    width: 110vw;
+    height: 100vh;
+}
+
+/* website */
+.website {
+    transform: translateX(10%);
+    opacity: 0;
+}
+.website h3 {
+    font-family: var(--font-main);
+    font-size: 15.5vw;
+    padding-top: 6vh;
+    padding-bottom: 13vh;
+    margin-left: 14vw;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+.website__cont {
+    padding: 0 5vw 6.5vh 11vw;
+    font-family: var(--font-sub);
+    display: flex;
+    flex-wrap: wrap;
+}
+.website-contL {
+    padding-top: 1vh;
+    margin-right: 26vw;
+}
+.website-contL h4 {
+    font-size: 3.6vw;
+    font-weight: 500;
+    line-height: 1.1;
+    margin-bottom: 4vh;
+}
+.website-contL p {
+    font-family: var(--font-kor);
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: 0;
+}
+.website-contR {
+    font-size: 3.6vw;
+    font-weight: 500;
+    line-height: 1.1;
+    position: relative;
+}
+.website-contR > div {
+    font-weight: 700;
+    -webkit-text-stroke: 0.5px;
+    -webkit-text-fill-color: transparent;
+    position: absolute;
+    left: -2.8vw;
+    top: -3.7vh;
+}
+.website-contR ul {
+    color: #f3f3f3;
+    line-height: 1.03;
+}
+.website-contR ul li {
+    display: block;
+    background: var(--webBG);
+    overflow: hidden;
+}
+.website-contR ul li span {
+    display: inline-block;
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+/* websites__view */
+.websites__view {
+    font-family: var(--font-main);
+}
+.websites__view .web-num {
+    font-size: 24.5vw;
+    color: var(--webNum);
+}
+.websites__view .web-img {
+    width: 53vw;
+    height: 63vh;
+}
+.web-info {}
+.web-info h3 {
+    font-size: 5.2vw;
+    position: relative;
+    margin-bottom: 4.5vh;
+}
+.web-info h3 em {
+    margin-right: 1vw;
+    z-index: 1;
+}
+.web-info h3 .subject {
+    font-size: 2.1vw;
+    position: absolute;
+    top: 34%;
+}
+.web-info h3 span {
+    display: inline-block;
+    width: 26vw;
+    height: 2.2vw;
+    border-radius: 50px;
+    background: var(--webTitBase);
+    z-index: -100;
+    position: absolute;
+    left: 11.8vw;
+    top: 3.2vw;
+}
+
+.web-info .webDesc {
+    width: 40vw;
+    font-family: var(--font-kor);
+    font-size: 1.1vw;
+    font-weight: 300;
+    line-height: 1.45;
+    margin-left: 9.5vw;
+}
+.web-link {
+    /* z-index: 100; */
+}
+.web-link a {
+    display: inline-block;
+    color: var(--black);
+    font-size: 2.1vw;
+    background: var(--white);
+    width: 5.8vw;
+    height: 5.8vw;
+    border-radius: 50%;
+}
+.web-link a:nth-child(1) {
+    padding: 1.9vw 1vw;
+}
+.web-link a:nth-child(2) {
+    padding: 1.8vw 0.7vw;
+    margin-left: 0.2vw;
+}
+.web-link a:hover {
+    background: rgba(0, 0, 0, 0.3);
+    color: var(--white);
+}
+
+/* imgDown */
+.imgDown {
+    background: rgb(234, 165, 165);
+}
+.imgDown .web-num {
+    font-size: 24.5vw;
+    color: var(--webNum);
+    position: absolute;
+    top: -4%;
+    z-index: -1;
+    transform: translateY(-100%);
+}
+.imgDown .web-img {
+    width: 53vw;
+    height: 63vh;
+    margin-top: 26vh;
+    margin-left: 4vw;
+}
+.imgDown .web-info {
+    margin-top: -58vh;
+    margin-left: 52.5vw;
+}
+.imgDown .web-link {
+    margin-top: 14vh;
+    margin-left: 54vw;
+}
+
+/* imgUp */
+.websites__view .imgUp {}
+.imgUp .web-num {
+    font-size: 24.5vw;
+    color: var(--webNum);
+    position: absolute;
+    top: 53vh;
+    z-index: -1;
+    /* transform: translateY(100%); */
+}
+.imgUp .web-img {
+    width: 53vw;
+    height: 63vh;
+    margin-top: 12vh;
+    margin-left: 4.5vw;
+}
+.imgUp .web-info {
+    margin-top: -31.5vh;
+    margin-left: 53.5vw;
+}
+.imgUp .web-info h3 span {
+    position: absolute;
+    left: 7vw;
+    top: 3.2vw;
+}
+.imgUp .web-link {
+    margin-top: 6.5vh;
+    margin-left: 45.5vw;
+}
+
+.websites__view1 .img01 {
+    background: url(../img/Site_Img01.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view2 .img02 {
+    background: url(../img/Site_Img02.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view3 .img03 {
+    background: url(../img/Site_Img03.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view4 .img04 {
+    background: url(../img/Site_Img04.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view5 .img05 {
+    background: url(../img/Site_Img05.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view6 .img06 {
+    background: url(../img/Site_Img06.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view7 .img07 {
+    background: url(../img/Site_Img07.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.websites__view8 .img08 {
+    background: url(../img/Site_Img08.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* 미디어쿼리 */
+@media(max-width: 1220px){}
+@media(max-width: 768px){}
+@media(max-width: 480px){}

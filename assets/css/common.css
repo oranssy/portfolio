@@ -1,0 +1,70 @@
+body {
+    width: 100vw;
+    /* overflow-x: hidden; */
+    background: var(--bg);
+}
+iframe {
+    pointer-events: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* blind */
+.blind {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+/* ir */
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+/* 스킵 메뉴 */
+#skip {
+    z-index: 1;
+    position: relative;
+}
+#skip a {
+    display: inline-block;
+    padding: 15px 20px;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.2);
+    color: var(--font-color);
+    font-family: var(--font-kor);
+    position: absolute;
+    left: -100vw;
+    top: 12vh;
+}
+#skip a:active,
+#skip a:focus {
+    left: 2vw;
+}
+
+/* #parallax__info 스크롤 값 */
+#parallax__info {
+    position: fixed;
+    left: 0.5vw;
+    bottom: 1vh;
+    z-index: 2000;
+    font-family: var(--font-sub);
+    text-align: center;
+    transform: translateY(150%);
+    opacity: 0;
+}
+#parallax__info .scroll span {
+    display: inline-block;
+    font-size: 1vw;
+    color: #e6e3d8;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 0.5vw 0.7vw;
+}

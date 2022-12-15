@@ -1,0 +1,141 @@
+/* section2 */
+#section2 {
+    /* width: 100vw;
+    overflow: hidden; */
+}
+.sec2 .personal {
+    padding-top: 14vh;
+    margin-bottom: 6.5vh;
+    align-items: end;
+}
+.sec2 .personal .myPhoto {
+    width: 29vw;
+    height: 29vw;
+    background: url(../img/CJJ_01.jpg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 50%;
+    margin-left: 62vw;
+    opacity: 0;
+}
+.sec2 .personal h3 {
+    width: 115vw;
+    font-size: 15.5vw;
+    color: var(--title);
+    line-height: 1.2;
+    margin-top: -8vh;
+    margin-left: -12vw;
+    white-space: nowrap;
+    position: relative;
+}
+.sec2 .personal h3 .bead1 {
+    background: url(../img/circle_01.svg) no-repeat;
+    background-size: cover;
+    width: 3.2vw;
+    height: 3.2vw;
+    border-radius: 50%;
+    position: absolute;
+    left: 48.2%;
+    top: 11%;
+}
+
+/* person */
+.person {
+    margin-top: 8vh;
+    margin-bottom: 30vh;
+}
+.person__item {
+    max-width: 0;
+    font-family: var(--font-sub);
+    color: var(--white);
+    position: relative;
+}
+.person__item-image_wrap {
+    position: fixed;
+    left: 60%;
+    top: 14%;
+    pointer-events: none;
+    opacity: 0;
+}
+.person__item-image_inner {}
+.person__item-image_inner .person__item-image {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 33vw;
+    height: 33vw;
+    border-radius: 50%;
+    object-fit: cover;
+    z-index: -1;
+}
+.person__item-cont {
+    margin-left: -17.5vw;
+    margin-top: 21vw;
+    color: var(--white);
+}
+.person__item-cont_tit {
+    font-size: 3.8vw;
+    font-weight: 500;
+    line-height: 1.3;
+    margin-bottom: 2vh;
+    z-index: 1;
+}
+.person__item-cont_desc {
+    font-family: var(--font-kor);
+    font-size: 1.1vw;
+    font-weight: 300;
+    line-height: 1.5;
+}
+.person__item-text {
+    font-family: var(--font-sub);
+    font-size: 3.7vw;
+    font-weight: 500;
+    line-height: 1.3;
+    opacity: 1;
+    transition: opacity 1500ms ease;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: cell;
+    margin-left: 68vw;
+
+    /* min-width: 50vw; */
+}
+.person__item-innertext {
+    background: var(--bg);
+    overflow: hidden;
+}
+.person__item-innertext span {
+    display: inline-block;
+    transform: translateY(100%);
+}
+.person__item:hover .person__item-text {
+    color: var(--title);
+}
+.person__item:hover .person__item-image_wrap {
+    z-index: -2;
+}
+
+/* 미디어쿼리 */
+@media(max-width: 1220px){
+    .sec2 .personal .myPhoto {
+        margin-top: -10vh;
+    }
+    .sec2 .personal h3 {
+        margin-top: -3vh;
+    }
+    .person {
+        margin-top: 4vh;
+    }
+    .person__item-image_wrap {
+        position: fixed;
+        left: 60%;
+        top: 38%;
+    }
+    .person__item-image_inner .person__item-image {}
+    .person__item-cont {}
+    .person__item-cont_tit {}
+    .person__item-cont_desc {}
+    .person__item-text {}
+}
+@media(max-width: 768px){}
+@media(max-width: 480px){}

@@ -1,0 +1,94 @@
+/* section4 */
+#section4 {
+    /* width: 100vw;
+    overflow: hidden; */
+    position: relative;
+}
+.sec4 .sec4-bg iframe {
+    width: 40vw;
+    height: 40vh;
+    z-index: -2;
+    margin-left: 54vw;
+    margin-top: 10vh;
+}
+.sec4 h3 {
+    font-size: 15.5vw;
+    color: var(--title);
+    line-height: 1.2;
+    margin-left: 6vw;
+    margin-top: -25vh;
+    margin-bottom: 12vh;
+    white-space: nowrap;
+    opacity: 0;
+}
+.study {
+    margin-left: 10.2vw;
+    margin-bottom: 20vh;
+}
+.study-tit {
+    font-family: var(--font-sub);
+    font-size: 3.6vw;
+    font-weight: 500;
+    margin-bottom: 4vh;
+}
+.study-desc {
+    font-family: var(--font-kor);
+    font-size: 1vw;
+    font-weight: 300;
+    line-height: 1.5;
+    opacity: 0;
+}
+
+/* study__list */
+.study__list {
+    padding: 0 10.2vw;
+    margin-bottom: 30vh;
+}
+.study__list ul {}
+.study__list ul li {
+    border-top: 0.1vw solid #8b8b8b;
+    padding: 3vh 0;
+    transform: scaleX(0.01) scaleY(0);
+    background: var(--bg);
+}
+.study__list ul li:nth-child(13) {
+    border-bottom: 0.1vw solid #8b8b8b;
+}
+.study__list ul li span {
+    display: flex;
+    width: 100%;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.study__list ul li span em {
+    text-align: left;
+    transform: translate(15%);
+}
+.study__list ul li span em:nth-child(1) {
+    width: 23%;
+    font-family: var(--font-sub);
+    font-size: 1vw;
+    font-weight: 500;
+}
+.study__list ul li span em:nth-child(2) {
+    width: 24%;
+    font-family: var(--font-sub);
+    font-size: 1.2vw;
+    font-weight: 500;
+}
+.study__list ul li span em:nth-child(3) {
+    width: 51%;
+    font-family: var(--font-kor);
+    font-size: 0.85vw;
+    line-height: 1.45;
+    font-weight: 300;
+}
+.study__list ul li span em:nth-child(3) a {
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+/* 미디어쿼리 */
+@media(max-width: 1220px){}
+@media(max-width: 768px){}
+@media(max-width: 480px){}
