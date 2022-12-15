@@ -226,6 +226,7 @@ iframe {
     margin-left: -12vw;
     white-space: nowrap;
     position: relative;
+    overflow: hidden;
 }
 .sec2 .personal h3 .bead1 {
     background: url(../img/circle_01.svg) no-repeat;
@@ -375,6 +376,7 @@ iframe {
     margin-left: 14vw;
     line-height: 1.2;
     white-space: nowrap;
+    overflow: hidden;
 }
 .website__cont {
     padding: 0 5vw 6.5vh 11vw;
