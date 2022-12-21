@@ -39,8 +39,8 @@
 .sec1-desc {
     font-size: 3.12vw;
     line-height: 1.2;
-    margin-top: -30vh;
-    margin-left: 3.6vw;
+    margin-top: -29.5vh;
+    margin-left: 3.8vw;
 }
 .sec1-desc span {
     display: inline-block;
@@ -52,33 +52,36 @@
 /* 미디어쿼리 */
 @media(max-width: 1220px){
     .sec1 .ideas {
-        margin-top: -5vh;
+        margin-top: 5vh;
     }
     .sec1 .ideas h3 {
-        font-size: 16.8vw;
+        font-size: 16vw;
     }
     .sec1 .ideas .ideas-desc {
-        font-size: 1.2vw;
-        line-height: 1.5;
+        font-size: 1.25vw;
+        line-height: 1.3;
     }
     .sec1-desc {
-        font-size: 3.8vw;
-        bottom: 1vh;
+        font-size: 4vw;
+        margin-top: -23vh;
+        margin-left: 4vw;
     }
 }
 @media(max-width: 768px){
     .sec1 .ideas {
-        margin-top: -15vh;
+        margin-top: -17vh;
     }
     .sec1 .ideas h3 {
-        font-size: 25vw;
+        font-size: 20vw;
     }
     .sec1 .ideas .ideas-desc {
-        font-size: 1.9vw;
+        font-size: 1.7vw;
+        line-height: 1.6;
     }
     .sec1-desc {
-        font-size: 5.4vw;
-        bottom: 7vh;
+        font-size: 5.2vw;
+        margin-top: -18.5vh;
+        margin-left: 4.8vw;
     }
 }
 @media(max-width: 480px){
@@ -86,13 +89,20 @@
         margin-top: -14vh;
     }
     .sec1 .ideas h3 {
-        font-size: 27vw;
+        font-size: 28vw;
     }
     .sec1 .ideas .ideas-desc {
-        font-size: 2.4vw;
+        font-size: 3vw;
+    }
+    .sec1 .ideas .ideas-desc span {
+        min-width: 0.9vw;
+    }
+    .sec1-desc {
+        font-size: 6.8vw;
+        margin-top: -17vh;
+        margin-left: 8.5vw;
     }
     .sec1-desc span {
-        font-size: 8vw;
         min-width: 2vw;
     }
 }
