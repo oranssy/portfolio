@@ -21,7 +21,20 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="fixed">
+    <div class="loading">
+        <div class="loading-container">
+            <span class="spelling">L</span>
+            <span class="spelling">O</span>
+            <span class="spelling">A</span>
+            <span class="spelling">D</span>
+            <span class="spelling">I</span>
+            <span class="spelling">N</span>
+            <span class="spelling">G</span>
+        </div>
+    </div>
+    <!-- //loading -->
+
     <div id="skip">
         <a href="#header">헤더 바로가기</a>
         <a href="#menu">메뉴 바로가기</a>
@@ -773,6 +786,10 @@
     <!-- //footer -->
 
     <!-- script -->
+    <!-- 로딩 소스 -->
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script> -->
+    <script src="https://unpkg.com/imagesloaded@5/imagesloaded.pkgd.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- gsap : 스크립트 애니메이션을 위한 도구 모음 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
 
@@ -781,6 +798,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 
+    <!-- 로딩 소스 -->
+    <script src="assets/js/loading.js"></script>
     <!-- gsap 애니메이션 -->
     <script src="assets/js/gsapAni.js"></script>
     <!-- section5 : values -->
@@ -788,10 +807,11 @@
     <!-- footer 날짜 & 시간 -->
     <script src="assets/js/footer.js"></script>
 
+    <!-- scrollTop 값 표시하기 -->
     <script>
         window.addEventListener("scroll", () => {           // 브라우저를 스크롤 했을 때,
-            // let scrollTop = window.pageYOffset;                      // 3가지 식은
-            // let scrollTop = window.scrollY;                          // 모두 같은 값을 가진다. (얼마 전의 지침서에서 pageYOffset 를 사용하지 않는다고 했다고 함.)
+            // let scrollTop = window.pageYOffset;                      // 3가지 식은 (얼마 전의 지침서에서 pageYOffset 를 사용하지 않는다고 했다고 함.)
+            // let scrollTop = window.scrollY;                          // 모두 같은 값을 가진다.
             // let scrollTop = document.documentElement.scrollTop;      // 브라우저에서 지원하는 것이 다를 수 있기 때문에, 아래와 같이 합쳐서 표현함
 
             // scrollTop 변수 안에 브라우저 기준의 세로 스크롤 값을 저장하시오.  |또는|
@@ -802,7 +822,6 @@
             // script 맨 위쪽에   const scroll = document.querySelector("#parallax__info .scroll span");    이렇게 scroll 상수 설정 후,
             // scroll.innerText = Math.round(scrollTop);    이렇게 입력해도 출력됨
         });
-        
     </script>
 
 </body>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Loading2</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background: #000000;
+        }
+        .loading {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .loading-container {
+            transform: translateY(-50%);
+            position: absolute;
+            top: 50%;
+            width: calc(100% - 200px);
+            color: #ffffff;
+            padding: 0 100px;
+            text-align: center;
+        }
+        .loading-container label {
+            font-size: 20px;
+            opacity: 0;
+            display: inline-block;
+        }
+
+        @keyframes load {
+            0% {
+                opacity: 0;
+                transform: translateX(-300px);
+            }
+            33% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+            66% {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateX(300px);
+            }
+        }
+        /* @keyframes load {
+            0% {
+                opacity: 0;
+                transform: translateY(-300px);
+            }
+            33% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            66% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(300px);
+            }
+        } */
+    </style>
+</head>
+<body>
+    <div class="loading">
+        <div class="loading-container">
+            <span class="spelling">L</span>
+            <span class="spelling">O</span>
+            <span class="spelling">A</span>
+            <span class="spelling">D</span>
+            <span class="spelling">I</span>
+            <span class="spelling">N</span>
+            <span class="spelling">G</span>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            let inputs = $(".loading-container").find($(".spelling") );
+
+            for(let i=0; i<inputs.length; i++)
+            { 
+                let index = i + 1;
+                let time = ( (inputs.length) - i ) * 1000;      // 100 숫자를 높이면 랜덤으로 나오는 효과가 나옴
+
+                $( ".loading-container .spelling:nth-child(" + index + ")" ).css( "-animation", "load 3s " + time + "ms infinite ease-in-out" );        // 따옴표 "" 안의 띄어쓰기 주의할 것! (실행이 안 될 수 있음)
+            }
+        })
+    </script>
+    <!-- <div class="loading">
+        <div class="loading-container">
+            <label>L</label>
+            <label>O</label>
+            <label>A</label>
+            <label>D</label>
+            <label>I</label>
+            <label>N</label>
+            <label>G</label>
+        </div>
+    </div> -->
+</body>
+</html>
