@@ -4,14 +4,14 @@
 // ->  4. 로딩이 끝나면 검은 화면 없애기  ->  5. 로딩 글자 없애기  ->  6. body 고정 풀어주기  
 // ->  7. 메인 애니메이션 실행하기
 
-// 로딩 글자 보여주기 JS  (HTML jQuery + JS)
+// 3. 로딩 글자 보여주기 JS  (HTML jQuery + JS)
 $(document).ready(function() {
     let inputs = $(".loading-container").find($(".spelling") );
 
     for(let i=0; i<inputs.length; i++)
     { 
         let index = i + 1;      // i 가 0부터 시작하므로 + 1 을 해줌
-        let time = ( (inputs.length) - i ) * 30;      // 100 숫자를 높이면 랜덤으로 나오는 효과가 나타남
+        let time = ( (inputs.length) - i ) * 200;      // 100 숫자를 높이면 랜덤으로 나오는 효과가 나타남
 
         $( ".loading-container .spelling:nth-child(" + index + ")" ).css( "-animation", "load 3s " + time + "ms infinite ease-in-out" );
         // "load 3s " -> 따옴표 "" 안의 띄어쓰기 주의할 것! (실행이 안 될 수 있음)

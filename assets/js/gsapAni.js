@@ -4,7 +4,7 @@ window.onbeforeunload = function() {
 };
 
 // 문장을 음절 또는 단어로 나눠주기 (1), (2)
-// (1) 클래스에 split를 넣어주고, 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
+// (1) 클래스에 split를 넣어주고, 음절로 나눠주기 -> 접근성이 좋지 않기 때문에 aria-hidden 효과를 적용해줌
 document.querySelectorAll(".split").forEach(text => {
     let splitText = text.innerText;
     let splitWrap = splitText.split('').join("</span><span aria-hidden='true'>");
@@ -13,7 +13,7 @@ document.querySelectorAll(".split").forEach(text => {
     text.innerHTML = splitWrap;
     text.setAttribute("aria-label", splitText);
 });
-// (2) 클래스에 splitWord를 넣어주고, 단어로 나눠주기 -> 접근성이 좋지 않기 때문에 aria 효과를 적용해줌
+// (2) 클래스에 splitWord를 넣어주고, 단어로 나눠주기 -> 접근성이 좋지 않기 때문에 aria-hidden 효과를 적용해줌
 document.querySelectorAll(".splitWord").forEach(text => {
     let splitWordText = text.innerText;
     let splitWordWrap = splitWordText.split(' ').join("</span><span aria-hidden='true'>");
@@ -40,7 +40,7 @@ function raf(time) {
 requestAnimationFrame(raf);
 
 
-// section1
+// section1 - 로딩 js 에 넣어줌
 // setTimeout ( () => {
 //     let mainTl = gsap.timeline();
 
@@ -180,7 +180,7 @@ gsap.to( Horizons, {
         pin: true,                          // 고정
         scrub: 1,                           // 스크롤 값에 따라 움직임  scrub: true 또는 숫자
         snap: 1 / (Horizons.length -1),     // 조금만 스크롤해도 각 섹션 별로 넘길 수 있음 (화면이 전환되면서 딱 붙는 효과)
-        // end: "+=12000",                  // 스크롤하는 속도: 값이 클수록 느림 // end: () => `+=${document.querySelector(".square2").offsetHeight}`,
+        // end: "+=12000",                  // 스크롤하는 속도: 값이 클수록 느림 // 마지막 페이지로 맞추기 end: () => `+=${document.querySelector(".square2").offsetHeight}`,
         markers: true,                      // 보조 기준선 표시
     }
 });

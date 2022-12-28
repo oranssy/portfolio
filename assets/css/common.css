@@ -59,6 +59,8 @@ iframe {
 
 /* 로딩 소스 */
 .loading {
+    font-family: var(--font-kor);
+    font-size: 1vw;
     width: 100%;
     height: 100%;
     position: absolute;
@@ -71,7 +73,7 @@ iframe {
     transform: translateY(-50%);
     position: absolute;
     top: 50%;
-    width: calc(100% - 200px);
+    width: 100%;
     color: #ffffff;
     padding: 0 100px;
     text-align: center;
@@ -84,25 +86,17 @@ iframe {
 @keyframes load {
             0% {
                 opacity: 0;
-                transform: translateX(-300px);
             }
             33% {
                 opacity: 1;
-                transform: translateX(0px);
             }
             66% {
                 opacity: 1;
-                transform: translateX(0px);
             }
             100% {
                 opacity: 0;
-                transform: translateX(300px);
             }
 }
-/* #section1 {
-    display: none;
-    opacity: 0; 가로모드에서 영향이 있을 수도 있음
-} */
 
 /*" #parallax__info 스크롤 값 */
 #parallax__info {

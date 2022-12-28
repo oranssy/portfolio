@@ -94,7 +94,7 @@
             for(let i=0; i<inputs.length; i++)
             { 
                 let index = i + 1;
-                let time = ( (inputs.length) - i ) * 1000;      // 100 숫자를 높이면 랜덤으로 나오는 효과가 나옴
+                let time = ( (inputs.length) - i ) * 200;      // 100 숫자를 높이면 랜덤으로 나오는 효과가 나옴
 
                 $( ".loading-container .spelling:nth-child(" + index + ")" ).css( "-animation", "load 3s " + time + "ms infinite ease-in-out" );        // 따옴표 "" 안의 띄어쓰기 주의할 것! (실행이 안 될 수 있음)
             }
