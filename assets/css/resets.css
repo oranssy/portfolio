@@ -23,6 +23,7 @@
     --black: #000000;
 }
 
+/* 전체 여백 초기화 */
 * {
     margin: 0;
     padding: 0;
@@ -46,7 +47,7 @@ html {
     text-size-adjust: 100%;
 }
 
-/* 초기화 */
+/* 요소 여백 초기화 */
 body,
 button,
 dd,
